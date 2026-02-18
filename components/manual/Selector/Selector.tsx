@@ -2,7 +2,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectVa
 import { Field, FieldError, FieldLabel } from "@/components/ui/field";
 import { InputHTMLAttributes, ReactNode } from "react";
 
-interface SelectorProps extends InputHTMLAttributes<any> {
+interface SelectorProps extends InputHTMLAttributes<HTMLSelectElement> {
   label: ReactNode;
   options: { key: string, value: string, name: string }[];
   error: string;

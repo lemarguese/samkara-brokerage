@@ -38,10 +38,9 @@ function isValidDate (date: Date | undefined) {
 
 interface DatePickerProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
-  key: string;
 }
 
-export function DatePicker ({ label, key, ...props }: DatePickerProps) {
+export function DatePicker ({ label, ...props }: DatePickerProps) {
   const [open, setOpen] = React.useState(false)
   const [date, setDate] = React.useState<Date | undefined>(
     new Date("2025-06-01")
@@ -51,10 +50,10 @@ export function DatePicker ({ label, key, ...props }: DatePickerProps) {
 
   return (
     <Field className="flex-1 mx-auto w-48 gap-2">
-      <FieldLabel htmlFor={key}>{label}</FieldLabel>
+      <FieldLabel htmlFor={props.key}>{label}</FieldLabel>
       <InputGroup>
         <InputGroupInput
-          id={key}
+          id={props.key}
           value={value}
           placeholder="June 01, 2025"
           onChange={(e) => {

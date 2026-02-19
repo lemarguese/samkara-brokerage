@@ -1,40 +1,131 @@
+"use client"
+
 import Input from "@/components/manual/Input/Input";
-import Selector from "@/components/manual/Selector/Selector";
-import { CarIcon, UsersIcon } from "lucide-react";
+import { UsersIcon } from "lucide-react";
 import Textarea from "@/components/manual/Textarea/Textarea";
 import { Button } from "@/components/ui/button";
+import FleetVehiclesSelector from "./FleetVehiclesSelector/FleetVehiclesSelector";
+import { BaseSyntheticEvent, memo, useCallback, useMemo, useState } from "react";
+import { IFleetForm } from "@/types/form";
+import { fleetSelectorOptionsLabels } from "@/lib/utils";
+import { Spinner } from "@/components/ui/spinner";
 
-export default function FleetTab () {
+function FleetTab () {
+  const [loading, setLoading] = useState(false);
+
+  const [fleetForm, setFleetForm] = useState<IFleetForm>({
+    companyName: '',
+    contactName: '',
+    email: '',
+    phoneNumber: '',
+    vehicles: [
+      { value: undefined, quantity: 0 }
+    ],
+    additionalDetails: ''
+  });
+
+  const changeVehicles = useCallback((value: { value: string, quantity: number }, index: number) => {
+    setFleetForm(prev => ({
+      ...prev,
+      vehicles: prev.vehicles.map((v, i) => i === index ? value : v)
+    }));
+  }, [])
+
+  const addVehicle = useCallback(() => {
+    setFleetForm(prev => ({
+      ...prev,
+      vehicles: prev.vehicles.concat({ value: undefined, quantity: 0 })
+    }));
+  }, []);
+
+  const deleteVehicle = useCallback((value: { value: string, quantity: number }, index: number) => {
+    setFleetForm(prev => ({
+      ...prev,
+      vehicles: prev.vehicles.filter((v, i) => i !== index)
+    }));
+  }, []);
+
+  const changeInput = useCallback((key: keyof Omit<IFleetForm, 'vehicles'>) => {
+    return (value: BaseSyntheticEvent) => {
+      setFleetForm(prev => ({
+        ...prev,
+        [key]: value.target.value
+      }))
+    }
+  }, []);
+
+  const fleetFormValid = useMemo(() => ({
+    companyName: fleetForm.companyName.trim() !== '',
+    contactName: fleetForm.contactName.trim() !== '',
+    email: fleetForm.email.trim() !== '',
+    phoneNumber: fleetForm.phoneNumber.trim() !== '',
+    vehicles: fleetForm.vehicles.every(p => p.quantity !== 0 && p.value !== undefined),
+  }), [fleetForm]);
+
+  const fleetSubmitButtonDisabled = useMemo(() => Object.values(fleetFormValid).every(e => e), [fleetFormValid]);
+
+  const sendFleetQuote = async () => {
+    setLoading(true);
+
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/email/fleet-request`, {
+      method: 'POST',
+      body: {
+        ...fleetForm,
+        vehicles: fleetForm.vehicles.map(v => ({ value: fleetSelectorOptionsLabels[v.value], quantity: v.quantity }))
+      },
+      headers: {
+        'X-Tenant-ID': 'localhost'
+      }
+    });
+
+    setFleetForm({
+      companyName: '',
+      contactName: '',
+      email: '',
+      phoneNumber: '',
+      vehicles: [
+        { value: undefined, quantity: 0 }
+      ],
+      additionalDetails: ''
+    });
+
+    setLoading(false);
+  }
+
   return <div className='flex flex-col gap-4 justify-between'>
     <div className="space-y-5">
       <div className="grid sm:grid-cols-2 gap-5">
-        <Input label='Company Name' key='fleet-tab-company-name-input' required placeholder='ABC Transportation LLC'/>
-        <Input label='Contact Name' key='fleet-tab-contact-name-input' required placeholder='John Doe'/>
+        <Input label='Company Name' onChange={changeInput('companyName')} key='fleet-tab-company-name-input' required
+               placeholder='ABC Transportation LLC' error='Please fill out the Company name'
+               valid={fleetFormValid.companyName}/>
+        <Input label='Contact Name' onChange={changeInput('contactName')} key='fleet-tab-contact-name-input' required
+               placeholder='John Doe' error='Please fill out the Contact name' valid={fleetFormValid.contactName}/>
       </div>
       <div className="grid sm:grid-cols-2 gap-5">
-        <Input label='Email Address' key='fleet-tab-email-address-input' required placeholder='ABC Transportation LLC'/>
-        <Input label='Phone Number' key='fleet-tab-phone-number-input' required placeholder='212-555-0000'/>
+        <Input label='Email Address' onChange={changeInput('email')} key='fleet-tab-email-address-input' required
+               placeholder='ABC Transportation LLC' error='Please fill out the Email' valid={fleetFormValid.email}/>
+        <Input label='Phone Number' onChange={changeInput('phoneNumber')} key='fleet-tab-phone-number-input' required
+               placeholder='212-555-0000' error='Please fill out the Phone number' valid={fleetFormValid.phoneNumber}/>
       </div>
-      <div className="border-t border-gray-200 pt-5">
-        <Selector label={<div className='flex items-center gap-2'>
-          <CarIcon className='w-4 h-4'/>
-          Fleet Vehicles
-        </div>} options={[
-          { key: 'fleet-selector-option-black-car', name: 'Black Car', value: 'black-car' },
-          { key: 'fleet-selector-option-car-service', name: 'Car Service', value: 'car-service' },
-          { key: 'fleet-selector-option-livery', name: 'Livery', value: 'livery' },
-          { key: 'fleet-selector-option-yellow-cab', name: 'Yellow Cab', value: 'yellow-cab' },
-          { key: 'fleet-selector-option-ambulette', name: 'Ambulette', value: 'ambulette' },
-        ]} error='Please select Vehicle Type'/>
+      <div className="flex items-center gap-4 border-t border-gray-200 pt-5">
+        <FleetVehiclesSelector
+          addVehicle={addVehicle}
+          deleteVehicle={deleteVehicle}
+          updateVehicle={changeVehicles}
+          vehicles={fleetForm.vehicles} valid={fleetFormValid.vehicles}/>
       </div>
-      <Textarea label='Additional Details'
+      <Textarea valid label='Additional Details' onChange={changeInput('additionalDetails')}
                 placeholder='Current insurance provider, coverage needs, or any special requirements...'
                 key='fleet-additional-details-textarea'/>
     </div>
     <Button
+      disabled={loading || !fleetSubmitButtonDisabled}
+      onClick={sendFleetQuote}
       className='w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-uber-900 text-taxi-500 hover:bg-uber-800 shadow-lg shadow-uber-900/30 border border-taxi-500'>
-      <UsersIcon/>
+      {loading ? <Spinner data-icon="inline-start"/> : <UsersIcon className='w-5 h-5'/>}
       Get Fleet Quote
     </Button>
   </div>
 }
+
+export default memo(FleetTab);

@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Calendar } from "@/components/ui/calendar"
-import { Field, FieldLabel } from "@/components/ui/field"
+import { Field, FieldError, FieldLabel } from "@/components/ui/field"
 import {
   InputGroup,
   InputGroupAddon,
@@ -38,15 +38,14 @@ function isValidDate (date: Date | undefined) {
 
 interface DatePickerProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
+  valid?: boolean;
+  error?: string;
 }
 
-export function DatePicker ({ label, ...props }: DatePickerProps) {
+export function DatePicker ({ label, valid, error, ...props }: DatePickerProps) {
   const [open, setOpen] = React.useState(false)
-  const [date, setDate] = React.useState<Date | undefined>(
-    new Date("2025-06-01")
-  )
+  const [date, setDate] = React.useState<Date | undefined>()
   const [month, setMonth] = React.useState<Date | undefined>(date)
-  const [value, setValue] = React.useState(formatDate(date))
 
   return (
     <Field className="flex-1 mx-auto w-48 gap-2">
@@ -54,23 +53,16 @@ export function DatePicker ({ label, ...props }: DatePickerProps) {
       <InputGroup>
         <InputGroupInput
           id={props.key}
-          value={value}
           placeholder="June 01, 2025"
+          {...props}
           onChange={(e) => {
             const date = new Date(e.target.value)
-            setValue(e.target.value)
+            props.onChange!(e.target.value)
             if (isValidDate(date)) {
               setDate(date)
               setMonth(date)
             }
           }}
-          onKeyDown={(e) => {
-            if (e.key === "ArrowDown") {
-              e.preventDefault()
-              setOpen(true)
-            }
-          }}
-          {...props}
         />
         <InputGroupAddon align="inline-end">
           <Popover open={open} onOpenChange={setOpen}>
@@ -98,7 +90,7 @@ export function DatePicker ({ label, ...props }: DatePickerProps) {
                 onMonthChange={setMonth}
                 onSelect={(date) => {
                   setDate(date)
-                  setValue(formatDate(date))
+                  props.onChange!(formatDate(date))
                   setOpen(false)
                 }}
               />
@@ -106,6 +98,7 @@ export function DatePicker ({ label, ...props }: DatePickerProps) {
           </Popover>
         </InputGroupAddon>
       </InputGroup>
+      {!valid ? <FieldError>{error}</FieldError> : null}
     </Field>
   )
 }

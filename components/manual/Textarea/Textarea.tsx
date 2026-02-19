@@ -16,7 +16,7 @@ export default function Textarea ({ label, required = false, valid, error = '', 
     <ShadTextarea
       id={props.key}
       {...props}
-      aria-invalid={true}
+      aria-invalid={!valid}
     />
     {!valid ? <FieldDescription>{error}</FieldDescription> : null}
   </Field>

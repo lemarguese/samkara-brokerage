@@ -1,8 +1,9 @@
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Field, FieldError, FieldLabel } from "@/components/ui/field";
-import { InputHTMLAttributes, ReactNode } from "react";
+import { ReactNode } from "react";
+import { Select as SelectPrimitive } from "radix-ui";
 
-interface SelectorProps extends InputHTMLAttributes<HTMLSelectElement> {
+interface SelectorProps extends SelectPrimitive.SelectProps {
   label: ReactNode;
   options: { key: string, value: string, name: string }[];
   error: string;

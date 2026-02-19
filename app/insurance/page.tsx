@@ -1,12 +1,10 @@
 import {
   CarIcon,
   ClockIcon,
-  FileTextIcon,
   MailIcon,
   MapPinIcon,
   PhoneIcon,
-  RefreshCwIcon, SendIcon, ShieldIcon,
-  SmartphoneIcon, TriangleAlertIcon, UsersIcon
+  SmartphoneIcon
 } from "lucide-react";
 import RequestTabs from "@/app/insurance/components/RequestTabs/RequestTabs";
 
@@ -94,7 +92,7 @@ export default function InsurancePage () {
           </div>
         </div>
         <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-          <RequestTabs />
+          <RequestTabs/>
         </div>
       </div>
     </div>

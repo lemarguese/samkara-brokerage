@@ -1,0 +1,23 @@
+{
+  "HomePage": {
+    "Top": {
+      "title": "Drive With Confidence, Save With Us",
+      "description": "NYC's #1 insurance broker for rideshare and TLC drivers. Whether you drive for Uber, Lyft, or operate a taxi—we've got you covered with the best rates in the city.",
+      "advantages": {
+        "first": "Lowest rates for rideshare drivers",
+        "second": "Same-day TLC coverage available",
+        "third": "Uber, Lyft, taxi & black car specialists"
+      },
+      "get_started_today": "Get Started Today",
+      "call_now": "Call Now",
+      "all_platforms": "All Platforms",
+      "tlc_approved": "TLC Approved",
+      "years": "Years",
+      "drivers": "Drivers"
+    }
+  },
+  "Metadata": {
+    "title": "NYC TLC Insurance Brokerage | Affordable Coverage for Rideshare & Taxi Drivers",
+    "description": "Get the best TLC insurance rates in New York City. We specialize in coverage for Uber, Lyft, taxi, and black car drivers. Fast quotes, flexible payments, and expert service."
+  }
+}

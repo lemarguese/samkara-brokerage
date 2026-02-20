@@ -6,7 +6,8 @@ import {
   PhoneIcon,
   SmartphoneIcon
 } from "lucide-react";
-import RequestTabs from "@/app/insurance/components/RequestTabs/RequestTabs";
+import RequestTabs from "@/app/[locale]/insurance/components/RequestTabs/RequestTabs";
+import { Link } from "@/locale/navigation";
 
 export default function InsurancePage () {
   return <section className="pt-20 md:pt-28 pb-20 md:pb-28">
@@ -65,30 +66,30 @@ export default function InsurancePage () {
               <CarIcon className='w-5 h-5 text-taxi-500'/>
               Vehicle Types We Cover
             </h3>
-            <div className="space-y-2"><a href="/black-car"
-                                          className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
+            <div className="space-y-2"><Link href="/black-car"
+                                             className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
               <div className="flex items-center gap-2"><span className="w-2 h-2 bg-taxi-500 rounded-full"></span>Black
                 Car
               </div>
-            </a><a href="/car-service"
-                   className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
+            </Link><Link href="/car-service"
+                         className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
               <div className="flex items-center gap-2"><span className="w-2 h-2 bg-taxi-500 rounded-full"></span>Car
                 Service
               </div>
-            </a><a href="/livery"
-                   className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
+            </><Link href="/livery"
+                     className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
               <div className="flex items-center gap-2"><span className="w-2 h-2 bg-taxi-500 rounded-full"></span>Livery
               </div>
-            </a><a href="/yellow-cab"
-                   className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
+            </Link><Link href="/yellow-cab"
+                         className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
               <div className="flex items-center gap-2"><span className="w-2 h-2 bg-taxi-500 rounded-full"></span>Yellow
                 Cab
               </div>
-            </a><a href="/ambulette"
-                   className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
+            </Link><Link href="/ambulette"
+                         className="block bg-uber-800 rounded-lg px-4 py-2 text-gray-300 hover:bg-taxi-500 hover:text-uber-900 transition-colors cursor-pointer">
               <div className="flex items-center gap-2"><span className="w-2 h-2 bg-taxi-500 rounded-full"></span>Ambulette
               </div>
-            </a></div>
+            </Link></div>
           </div>
         </div>
         <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">

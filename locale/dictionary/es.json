@@ -1,0 +1,23 @@
+{
+  "HomePage": {
+    "Top": {
+      "title": "Drive With Confidence, Save With Us",
+      "description": "El corredor de seguros #1 de NYC para conductores de rideshare y TLC. Ya sea que conduzcas para Uber, Lyft o operes un taxi, te ofrecemos la mejor cobertura con las mejores tarifas de la ciudad.",
+      "advantages": {
+        "first": "Lowest rates for rideshare drivers",
+        "second": "Same-day TLC coverage available",
+        "third": "Uber, Lyft, taxi & black car specialists"
+      },
+      "get_started_today": "Get Started Today",
+      "call_now": "Call Now",
+      "all_platforms": "All Platforms",
+      "tlc_approved": "TLC Approved",
+      "years": "Years",
+      "drivers": "Drivers"
+    }
+  },
+  "Metadata": {
+    "title": "Correduría de Seguros TLC en NYC | Cobertura Asequible para Conductores de Rideshare y Taxi",
+    "description": "Obtén las mejores tarifas de seguro TLC en la Ciudad de Nueva York. Nos especializamos en cobertura para conductores de Uber, Lyft, taxi y autos negros. Cotizaciones rápidas, pagos flexibles y servicio experto."
+  }
+}

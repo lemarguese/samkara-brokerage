@@ -1,3 +1,5 @@
+"use client"
+
 import {
   ArrowRightIcon, AwardIcon,
   CarIcon,
@@ -8,8 +10,10 @@ import {
   PhoneIcon, QuoteIcon,
   SmartphoneIcon, StarIcon, TruckIcon, UsersIcon, ZapIcon
 } from 'lucide-react';
+import { useTranslations } from "next-intl";
 
 export default function Home () {
+  const t = useTranslations('HomePage');
   return (
     <div>
       <section className="pt-20 md:pt-24 bg-uber-900 relative overflow-hidden">
@@ -30,9 +34,7 @@ export default function Home () {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">Drive
                 With<span className="text-taxi-500"> Confidence,</span><br/><span
                   className="text-lyft-400">Save</span> With Us</h1><p
-              className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">NYC's #1 insurance broker for rideshare
-              and TLC drivers. Whether you drive for Uber, Lyft, or operate a taxi—we've got you covered with the best
-              rates in the city.</p>
+              className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">{t('Top.description')}</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3 text-white">
                   <CircleCheckBigIcon className='text-taxi-500 w-5 h-5 flex-shrink-0'/>

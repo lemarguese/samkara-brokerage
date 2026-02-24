@@ -42,11 +42,11 @@ export default function ServicesPage () {
   async function sendServiceRequest () {
     setLoading(true);
 
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/email/full-coverage-request`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/email/new-service-request`, {
       method: 'POST',
       body: serviceForm,
       headers: {
-        'X-Tenant-ID': 'localhost'
+        'X-Tenant-ID': 'samkara'
       }
     });
 

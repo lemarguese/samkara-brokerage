@@ -75,7 +75,7 @@ function ClaimsTab () {
       method: 'POST',
       body: formData,
       headers: {
-        'X-Tenant-ID': 'localhost'
+        'X-Tenant-ID': 'samkara'
       }
     });
 

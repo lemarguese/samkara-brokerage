@@ -76,7 +76,7 @@ function FleetTab () {
         vehicles: fleetForm.vehicles.map(v => ({ value: fleetSelectorOptionsLabels[v.value], quantity: v.quantity }))
       },
       headers: {
-        'X-Tenant-ID': 'localhost'
+        'X-Tenant-ID': 'samkara'
       }
     });
 

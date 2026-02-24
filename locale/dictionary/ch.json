@@ -1,0 +1,300 @@
+{
+  "HomePage": {
+    "Top": {
+      "title": "自信驾驶 <confidence>信心满满</confidence><br></br><save>节省开支</save> 与我们一起",
+      "description": "纽约市领先的网约车和TLC司机保险经纪。无论您为Uber、Lyft工作，还是运营出租车——我们都能为您提供全城最优惠的保险方案。",
+      "advantages": {
+        "first": "网约车司机专属最低费率",
+        "second": "当日即可生效的TLC保险",
+        "third": "Uber、Lyft、出租车及黑车保险专家"
+      },
+      "get_started_today": "立即开始",
+      "call_now": "立即致电",
+      "all_platforms": "支持所有平台",
+      "tlc_approved": "TLC认证",
+      "years": "年",
+      "drivers": "司机"
+    },
+    "Service_Area": {
+      "chip": "服务纽约市所有行政区",
+      "title": "为<every>每一位</every>TLC司机提供保险",
+      "description": "从网约车平台到传统出租车，我们专注于为纽约司机提供所需的保险，并以可负担的价格提供服务。",
+      "list": {
+        "0": {
+          "title": "Uber & Lyft 保险",
+          "description": "为所有网约车司机提供全面保险。我们了解平台驾驶的独特需求。"
+        },
+        "1": {
+          "title": "黄牌与绿牌出租车",
+          "description": "提供具有竞争力价格的纽约出租车保险。支持牌照（Medallion）及SHL保险。"
+        },
+        "2": {
+          "title": "黑车与包车服务",
+          "description": "为黑车服务、企业用车及豪华车辆提供专业保险方案。"
+        },
+        "3": {
+          "title": "车队保险",
+          "description": "为运输公司提供多车辆保险解决方案。享受批量折扣及集中管理。"
+        },
+        "4": {
+          "title": "TLC合规服务",
+          "description": "确保您的保险符合纽约TLC所有要求，让您合法合规持续运营。"
+        }
+      }
+    },
+    "Trust": {
+      "title": "TLC保险专家 <trust>值得司机信赖</trust>",
+      "description": "30多年来，我们帮助成千上万的纽约网约车和出租车司机获得所需保险。我们不仅是保险经纪，更是您成功道路上的合作伙伴。",
+      "list": {
+        "0": {
+          "title": "最低价格保障",
+          "description": "我们与多家保险公司合作，为您找到最优惠的价格。如发现更低报价，我们可为您匹配。"
+        },
+        "1": {
+          "title": "快速便捷流程",
+          "description": "高效流程让您快速上路，减少繁琐步骤。"
+        },
+        "2": {
+          "title": "30年以上经验",
+          "description": "我们服务纽约TLC司机超过30年，深知行业需求。"
+        },
+        "3": {
+          "title": "以司机为中心",
+          "description": "在理赔过程中我们始终为司机争取权益，将您的利益放在首位。"
+        },
+        "4": {
+          "title": "多语言服务",
+          "description": "我们提供英语、西班牙语、中文、俄语和乌兹别克语服务。"
+        }
+      },
+      "quote": {
+        "text": "“无论您是Uber司机、出租车车主，还是经营黑车车队——我们都为您保驾护航。”",
+        "position": "创始人"
+      }
+    },
+    "Testimonials": {
+      "title": "听听我们的<driver>司机</driver>怎么说",
+      "description": "不要只听我们说——看看数千名信任我们的司机的真实评价。",
+      "statistics": {
+        "google_rating": "谷歌评分",
+        "reviews": "五星评价",
+        "renewal_rate": "续保率"
+      }
+    },
+    "Contact": {
+      "title": "立即<touch>联系我们</touch>",
+      "description": "有任何问题？我们的团队随时为您提供帮助。",
+      "list": {
+        "phone": "电话",
+        "email": "邮箱",
+        "office": "办公室",
+        "hours": "营业时间"
+      },
+      "question": "需要帮助？",
+      "question_description": "保险报价、经纪更换、理赔支持或DMV与TLC服务"
+    }
+  },
+  "Insurance": {
+    "title": "今天我们如何<help>帮助您</help>？",
+    "description": "请选择下方服务并填写表单，我们的团队会尽快与您联系。",
+    "contact": {
+      "title": "联系信息",
+      "list": {
+        "phone": "电话",
+        "email": "邮箱",
+        "office": "办公室",
+        "hours": "营业时间"
+      }
+    },
+    "vehicle_cover": "我们承保的车辆类型",
+    "forms": {
+      "quote": {
+        "title": "获取报价",
+        "full_name": "姓名",
+        "phone_number": "电话号码",
+        "email": "电子邮箱",
+        "policy_type": "保险类型",
+        "documents": {
+          "driver_license": "驾驶证",
+          "tlc_license": "TLC执照",
+          "current_fh1": "当前FH1",
+          "vehicle_registration": "车辆注册证明",
+          "bill_of_sale": "产权证、购车合同或税费凭证",
+          "proof_of_address": "地址证明"
+        },
+        "additional_details": "补充信息",
+        "submit": "提交报价申请"
+      },
+      "cob": {
+        "title": "更换经纪",
+        "full_name": "姓名",
+        "phone_number": "电话号码",
+        "email": "电子邮箱",
+        "policy": {
+          "title": "当前保险信息",
+          "policy_number": "保单号码",
+          "policy_expiration": "保单到期日"
+        },
+        "documents": {
+          "title": "上传所需文件",
+          "driver_license": "驾驶证",
+          "current_registration": "当前注册证明",
+          "current_fh1": "当前FH1（保险卡）"
+        },
+        "terms": "我授权SAMKARA BROKERAGE作为上述保单的唯一经纪人。我是授权的保单持有人，所提供的信息真实准确。本电子签名具有法律效力。",
+        "submit": "提交更换申请"
+      },
+      "fleet": {
+        "title": "车队",
+        "company_name": "公司名称",
+        "contact_name": "联系人姓名",
+        "email": "电子邮箱",
+        "phone_number": "电话号码",
+        "fleet_vehicles": "车队车辆数量",
+        "additional_details": "补充信息",
+        "submit": "获取车队报价"
+      },
+      "claims": {
+        "title": "理赔",
+        "full_name": "姓名",
+        "phone_number": "电话号码",
+        "email": "电子邮箱",
+        "policy_number": "保单号码",
+        "incident_date": "事故日期",
+        "incident_type": "事故类型",
+        "incident_description": "事故描述",
+        "documents": {
+          "title": "上传相关文件",
+          "pictures_or_video": "照片或视频",
+          "police_report": "警方报告",
+          "other": "其他文件"
+        },
+        "submit": "提交理赔申请"
+      },
+      "full_coverage": {
+        "title": "全险保障",
+        "full_name": "姓名",
+        "phone_number": "电话号码",
+        "email": "电子邮箱",
+        "policy": {
+          "title": "当前保险信息",
+          "liability_policy_number": "责任险保单号",
+          "coverage_amount": "所需保障额度"
+        },
+        "documents": {
+          "title": "上传所需文件",
+          "bill_of_sale": "购车凭证"
+        },
+        "additional_details": "补充信息",
+        "submit": "获取全险报价"
+      }
+    }
+  },
+  "DMV_TLC": {
+    "notice": {
+      "title": "重要提示",
+      "description": "本机构为持牌的私人服务机构，但并非机动车管理局（DMV）的官方机构。"
+    },
+    "chip": "一站式服务",
+    "title": "DMV 与 TLC <services>服务</services>",
+    "description": "为您提供所有DMV与TLC相关业务的一站式解决方案。我们负责处理所有手续，让您专注于驾驶。",
+    "services": {
+      "title": "我们的服务"
+    },
+    "form": {
+      "title": "申请服务",
+      "full_name": "姓名",
+      "phone_number": "电话号码",
+      "email": "电子邮箱",
+      "service_type": "所需服务",
+      "tlc_license_number": "TLC执照号码（如适用）",
+      "dmv_license_number": "DMV驾照号码（如适用）",
+      "additional_details": "补充信息",
+      "submit": "提交服务申请"
+    }
+  },
+  "FAQ": {
+    "chip": "有疑问吗？",
+    "title": "常见<question>问题</question>",
+    "description": "查找关于TLC保险、保障范围及我们服务的常见问题解答。",
+    "contact": {
+      "title": "还有疑问？",
+      "description": "我们的团队随时为您提供帮助。欢迎致电或给我们留言。",
+      "send": "发送消息"
+    },
+    "tabs": {
+      "all": "全部",
+      "insurance": "保险基础",
+      "coverage": "保障范围",
+      "pricing": "费用",
+      "process": "流程",
+      "broker_change": "更换经纪",
+      "claims": "理赔",
+      "dmv_tlc": "DMV 与 TLC"
+    },
+    "questions_answers": {
+      "0": {
+        "question": "什么是TLC保险？为什么需要它？",
+        "answer": "TLC保险是纽约出租车与豪华车委员会（TLC）要求所有营运车辆必须购买的商业汽车保险。它提供比个人汽车保险更高的责任保障，以保护您、乘客以及其他驾驶者。没有有效的TLC保险，您无法在纽约合法从事营运驾驶。"
+      },
+      "1": {
+        "question": "你们为哪些类型的车辆提供保险？",
+        "answer": "我们为所有TLC注册车辆提供保险，包括Uber、Lyft、黄牌和绿牌出租车、黑车（专车）、包车以及车队车辆。无论您是个人司机还是管理多辆车的公司，我们都能提供合适的保险方案。"
+      },
+      "2": {
+        "question": "责任险和全险有什么区别？",
+        "answer": "责任险用于在您造成事故时赔偿对方的损失，而全险不仅包含责任险，还包括对您自身车辆的保障，例如碰撞险和综合险。大多数TLC司机会选择全险以获得更全面的保护。"
+      },
+      "3": {
+        "question": "TLC司机的最低保险要求是什么？",
+        "answer": "纽约TLC司机必须满足严格的责任保险要求，通常包括每人10万美元、每次事故30万美元以及5万美元的财产损失赔偿。根据车辆类型和所属车队，可能还需要额外保障。"
+      },
+      "4": {
+        "question": "TLC保险的费用是多少？",
+        "answer": "费用取决于您的驾驶记录、车辆类型、保障范围以及驾驶经验。通常来说，TLC保险比个人汽车保险更贵，但我们会帮助您找到最具性价比的方案。"
+      },
+      "5": {
+        "question": "你们提供分期付款吗？",
+        "answer": "是的，我们提供灵活的付款方式，让保险更加负担得起。根据保险公司不同，可选择月付或低首付方案。"
+      },
+      "6": {
+        "question": "办理保险需要多长时间？",
+        "answer": "大多数情况下，我们可以在当天为您完成投保。高效流程帮助您尽快上路，无需长时间等待。"
+      },
+      "7": {
+        "question": "获取报价需要哪些文件？",
+        "answer": "通常需要提供驾驶证、车辆注册证明、TLC执照以及驾驶记录。根据具体情况，可能还需要其他文件。"
+      },
+      "8": {
+        "question": "如何更换保险经纪？",
+        "answer": "更换经纪非常简单。我们会为您处理大部分流程，包括与现有保险公司的沟通，确保在更换过程中不会出现保障中断。"
+      },
+      "9": {
+        "question": "更换经纪能帮我省钱吗？",
+        "answer": "在很多情况下可以。我们会对比多家保险公司，为您找到更优惠的价格和更合适的保障方案，从而节省费用。"
+      },
+      "10": {
+        "question": "如果发生事故我该怎么办？",
+        "answer": "首先确保所有人员安全，如有需要请立即联系紧急服务。随后记录现场情况、交换信息，并第一时间联系我们。我们会一步步指导您完成理赔流程。"
+      },
+      "11": {
+        "question": "你们是否协助TLC执照续期？",
+        "answer": "是的，我们可以协助办理TLC执照续期，并确保您的保险符合所有要求，让您持续合法运营。"
+      }
+    }
+  },
+  "Marketplace": {
+    "title": "TLC 市场",
+    "description": "在纽约TLC司机社区中进行买卖并建立联系",
+    "notice": {
+      "title": "重要提示 - 市场免责声明",
+      "description": "<start>Samkara Brokerage 不参与任何市场交易。</start> 本TLC市场作为一个免费的社区服务平台，供司机和车主发布广告并相互联系。Samkara Brokerage 不对任何发布信息进行审核，也不参与交易或调解买卖双方之间的纠纷。对于本平台上发布的任何信息、产品或服务的准确性、合法性或质量，我们不承担任何责任。所有交易和沟通均由用户自行完成，风险自负。用户有责任自行核实信息的真实性、进行必要的尽职调查，并确保符合所有相关法律法规。使用本平台即表示您已知晓并同意：对于因市场交易或用户互动产生的任何损失、损害或纠纷，Samkara Brokerage 概不负责。"
+    },
+    "not_found": "暂无信息，快来发布第一条吧！",
+    "post": "发布广告"
+  },
+  "Metadata": {
+    "title": "纽约TLC保险经纪 | 网约车与出租车司机实惠保险",
+    "description": "获取纽约市最优惠的TLC保险。我们专注于为Uber、Lyft、出租车及黑车司机提供服务。快速报价，灵活付款，专业支持。"
+  }
+}

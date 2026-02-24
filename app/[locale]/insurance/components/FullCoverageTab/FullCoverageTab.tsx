@@ -8,8 +8,10 @@ import { BaseSyntheticEvent, FormEvent, useState } from "react";
 import { IFullCoverageForm } from "@/types/form";
 import { REGEXES } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
+import { useTranslations } from "next-intl";
 
 export default function FullCoverageTab () {
+  const t = useTranslations('Insurance.forms.full_coverage');
   const [loading, setLoading] = useState(false);
   const [fullCoverageForm, setFullCoverageForm] = useState<IFullCoverageForm>({
     fullName: '',
@@ -92,54 +94,54 @@ export default function FullCoverageTab () {
     </div>
     <div className="grid sm:grid-cols-2 gap-5">
       <Input value={fullCoverageForm.fullName} valid={fullCoverageFormValid.fullName} onChange={changeInput('fullName')}
-             label='Full Name'
+             label={t('full_name')}
              placeholder='John Doe' key='claims-full-name-input'/>
       <Input value={fullCoverageForm.phoneNumber}
              valid={fullCoverageFormValid.phoneNumber}
              onChange={changeInput('phoneNumber')}
-             label='Phone Number'
+             label={t('phone_number')}
              placeholder='(212) 555-0000'
              key='claims-phone-number-input'/>
     </div>
     <Input value={fullCoverageForm.email} valid={fullCoverageFormValid.email} onChange={changeInput('email')}
-           label='Email Address'
+           label={t('email')}
            placeholder='john@example.com' key='claims-email-address-input'/>
     <div className="border-t border-gray-200 pt-5">
       <h4 className="text-sm font-bold text-gray-900 mb-4 flex items-center gap-2">
         <ShieldIcon className='w-4 h-4 text-green-600'/>
-        Current Coverage Information
+        {t('policy.title')}
       </h4>
       <div className="grid sm:grid-cols-2 gap-5">
         <Input valid={fullCoverageFormValid.liabilityPolicyNumber}
                value={fullCoverageForm.liabilityPolicyNumber}
                onChange={changeInput('liabilityPolicyNumber')}
-               label='Liability Policy Number'
+               label={t('policy.liability_policy_number')}
                placeholder='POL-12345678' key='claims-liability-policy-number-input'/>
         <Input valid={fullCoverageFormValid.coverageAmountNeeded}
                value={fullCoverageForm.coverageAmountNeeded}
                onChange={changeInput('coverageAmountNeeded')}
-               label='Coverage Amount Needed'
+               label={t('policy.coverage_amount')}
                placeholder='e.g., $100,000' key='claims-coverage-amount-input'/>
       </div>
     </div>
     <div className="border-t border-gray-200 pt-5">
       <h4 className="text-sm font-bold text-gray-900 mb-4 flex items-center gap-2">
         <UploadIcon className='w-4 h-4 text-green-600'/>
-        Upload Required Documents
+        {t('documents.title')}
       </h4>
-      <Input valid={fullCoverageFormValid.billOfSale} onChange={changeFile} label='Bill of Sale' type='file'
+      <Input valid={fullCoverageFormValid.billOfSale} onChange={changeFile} label={t('documents.bill_of_sale')} type='file'
              key='full-coverage-bill-of-sale-input'
              className='flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed border-gray-300 rounded-xl hover:border-green-500 hover:bg-gray-50 transition-colors cursor-pointer'/>
     </div>
     <Textarea value={fullCoverageForm.additionalDetails} onChange={changeInput('additionalDetails')}
-              label='Additional Details'
+              label={t('additional_details')}
               key='full-coverage-additional-details-textarea'
               placeholder='Any specific coverage requirements or questions...'/>
     <Button
       disabled={!fullCoverageSubmitButtonDisabled || loading}
       className='w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-600/30'>
       {loading ? <Spinner data-icon="inline-start"/> : <ShieldIcon className='w-5 h-5'/>}
-      Get Full Coverage Quote
+      {t('submit')}
     </Button>
   </form>
 }

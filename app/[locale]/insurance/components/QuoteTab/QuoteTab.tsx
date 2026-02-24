@@ -9,8 +9,13 @@ import { BaseSyntheticEvent, FormEvent, memo, useCallback, useMemo, useState } f
 import { IQuoteForm } from "@/types/form";
 import { REGEXES } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
+import createTranslator from "use-intl/dist/types/core/createTranslator";
+import { Messages } from "use-intl/dist/types/core/AppConfig";
+import { useTranslations } from "next-intl";
 
 function QuoteTab () {
+  const t = useTranslations('Insurance.forms.quote');
+
   const [loading, setLoading] = useState(false);
   const [quoteForm, setQuoteForm] = useState<IQuoteForm>({
     fullName: '',
@@ -97,20 +102,20 @@ function QuoteTab () {
       <div className='flex gap-4'>
         <Input valid={quoteFormValid.fullName} key='quote-tab-full-name-input' value={quoteForm.fullName}
                onChange={changeTextInputs('fullName')}
-               label='Full Name'
+               label={t('full_name')}
                placeholder='John Doe' required/>
         <Input valid={quoteFormValid.phoneNumber} key='quote-tab-phone-number-input' value={quoteForm.phoneNumber}
-               onChange={changeTextInputs('phoneNumber')} label='Phone Number'
+               onChange={changeTextInputs('phoneNumber')} label={t('phone_number')}
                placeholder='(212) 555-0000'
                required/>
       </div>
       <Input valid={quoteFormValid.email} key='quote-tab-email-address-input' value={quoteForm.email}
              onChange={changeTextInputs('email')}
-             label='Email Address'
+             label={t('email')}
              placeholder='(212) 555-0000'
              required/>
       <Selector valid={quoteFormValid.policyType} onValueChange={changeSelector} value={quoteForm.policyType}
-                label='Policy Type'
+                label={t('policy_type')}
                 error='Please select the policy type' options={[
         { key: 'tlc-insurance', name: 'TLC Insurance', value: 'tlc-insurance' },
         { key: 'tlc-full-coverage', name: 'TLC Full Coverage', value: 'tlc-full-coverage' },
@@ -136,32 +141,32 @@ function QuoteTab () {
           <Input type='file'
                  onChange={changeFileInputs('driverLicense')}
                  className='border-2 border-dashed border-gray-300 rounded-xl hover:border-taxi-500 hover:bg-gray-50 transition-colors cursor-pointer'
-                 label="Driver's License" key='quote-driver-license-input'/>
+                 label={t('documents.driver_license')} key='quote-driver-license-input'/>
           <Input type='file'
                  onChange={changeFileInputs('tlcLicense')}
                  className='border-2 border-dashed border-gray-300 rounded-xl hover:border-taxi-500 hover:bg-gray-50 transition-colors cursor-pointer'
-                 label="TLC License" key='quote-tlc-license-input'/>
+                 label={t('documents.tlc_license')} key='quote-tlc-license-input'/>
           <Input type='file'
                  onChange={changeFileInputs('fh1')}
                  className='border-2 border-dashed border-gray-300 rounded-xl hover:border-taxi-500 hover:bg-gray-50 transition-colors cursor-pointer'
-                 label="Current FH1" key='quote-fh1-input'/>
+                 label={t('documents.current_fh1')} key='quote-fh1-input'/>
           <Input type='file'
                  onChange={changeFileInputs('vehicleRegistration')}
                  className='border-2 border-dashed border-gray-300 rounded-xl hover:border-taxi-500 hover:bg-gray-50 transition-colors cursor-pointer'
-                 label="Vehicle Registration" key='quote-vehicle-registration-input'/>
+                 label={t('documents.vehicle_registration')} key='quote-vehicle-registration-input'/>
           <Input type='file'
                  onChange={changeFileInputs('billOfSale')}
                  className='border-2 border-dashed border-gray-300 rounded-xl hover:border-taxi-500 hover:bg-gray-50 transition-colors cursor-pointer'
-                 label="Title, Bill of Sale, or Sales Tax Paid Receipt" key='quote-bill-of-sale-input'/>
+                 label={t('documents.bill_of_sale')} key='quote-bill-of-sale-input'/>
           <Input type='file'
                  onChange={changeFileInputs('proofOfAddress')}
                  className='border-2 border-dashed border-gray-300 rounded-xl hover:border-taxi-500 hover:bg-gray-50 transition-colors cursor-pointer'
-                 label="Proof of Address" key='quote-proof-of-address-input'/>
+                 label={t('documents.proof_of_address')} key='quote-proof-of-address-input'/>
         </div> : null
       }
       <Textarea
         key='quote-tab-textarea'
-        label='Additional Details'
+        label={t('additional_details')}
         value={quoteForm.additionalDetails}
         onChange={changeTextInputs('additionalDetails')}
         rows="3"
@@ -173,7 +178,7 @@ function QuoteTab () {
     <Button type="submit" disabled={!quoteSubmitButtonDisabled || loading}
             className="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-taxi-500 text-uber-900 hover:bg-taxi-400 shadow-lg shadow-taxi-500/30">
       {loading ? <Spinner data-icon="inline-start"/> : <SendIcon className='w-5 h-5'/>}
-      Submit Quote Request
+      {t('submit')}
     </Button>
   </form>
 }

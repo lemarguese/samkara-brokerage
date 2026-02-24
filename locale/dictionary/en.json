@@ -1,7 +1,7 @@
 {
   "HomePage": {
     "Top": {
-      "title": "Drive With Confidence, Save With Us",
+      "title": "Drive With <confidence>Confidence</confidence><br></br><save>Save</save> With Us",
       "description": "NYC's #1 insurance broker for rideshare and TLC drivers. Whether you drive for Uber, Lyft, or operate a taxi—we've got you covered with the best rates in the city.",
       "advantages": {
         "first": "Lowest rates for rideshare drivers",
@@ -14,7 +14,284 @@
       "tlc_approved": "TLC Approved",
       "years": "Years",
       "drivers": "Drivers"
+    },
+    "Service_Area": {
+      "chip": "Serving All NYC Boroughs",
+      "title": "Insurance for <every>Every</every> TLC Driver",
+      "description": "From rideshare apps to traditional taxis, we specialize in getting NYC drivers the coverage they need at prices they can afford.",
+      "list": {
+        "0": {
+          "title": "Uber & Lyft Coverage",
+          "description": "Full coverage for all rideshare platform drivers. We understand the unique requirements of app-based driving."
+        },
+        "1": {
+          "title": "Yellow & Green Taxi",
+          "description": "Traditional NYC taxi insurance with competitive rates. Medallion and SHL coverage available."
+        },
+        "2": {
+          "title": "Black Car & Livery",
+          "description": "Specialized insurance for black car services, corporate transportation, and luxury vehicles."
+        },
+        "3": {
+          "title": "Fleet Insurance",
+          "description": "Multi-vehicle solutions for transportation companies. Volume discounts and centralized management."
+        },
+        "4": {
+          "title": "TLC Compliance",
+          "description": "We ensure your insurance meets all NYC TLC requirements. Stay compliant and on the road."
+        }
+      }
+    },
+    "Trust": {
+      "title": "The TLC Insurance Experts <trust>Drivers Trust</trust>",
+      "description": "For over 30 years, we've helped thousands of NYC rideshare and taxi drivers get the coverage they need. We're not just insurance brokers—we're partners in your success.",
+      "list": {
+        "0": {
+          "title": "Best Rates Guaranteed",
+          "description": "We work with multiple carriers to find you the lowest rates. If you find better, we'll match it."
+        },
+        "1": {
+          "title": "Fast & Easy Process",
+          "description": "Our streamlined process gets you driving quickly with minimal hassle."
+        },
+        "2": {
+          "title": "30+ Years Experience",
+          "description": "We've been serving NYC TLC drivers for over 30 years and understand your unique needs."
+        },
+        "3": {
+          "title": "Driver-First Approach",
+          "description": "We advocate for drivers in claims and always put your interests first."
+        },
+        "4": {
+          "title": "Multilingual Staff",
+          "description": "We speak English, Spanish, Mandarin, Russian, and Uzbek to serve our community."
+        }
+      },
+      "quote": {
+        "text": "\"Whether you're an Uber driver, a yellow cab owner, or run a fleet of black cars—we've got your back.\"",
+        "position": "Founder"
+      }
+    },
+    "Testimonials": {
+      "title": "What Our <driver>Drivers</driver> Say",
+      "description": "Don't just take our word for it—hear from thousands of rideshare and taxi drivers who trust us.",
+      "statistics": {
+        "google_rating": "Google Rating",
+        "reviews": "5-Star Reviews",
+        "renewal_rate": "Renewal Rate"
+      }
+    },
+    "Contact": {
+      "title": "Get In <touch>Touch</touch>",
+      "description": "Have questions? Our team is here to help. Reach out to us anytime.",
+      "list": {
+        "phone": "Phone",
+        "email": "Email",
+        "office": "Office",
+        "hours": "Hours"
+      },
+      "question": "Need Help?",
+      "question_description": "For insurance quotes, broker changes, claims support, or DMV & TLC services"
     }
+  },
+  "Insurance": {
+    "title": "How Can We <help>Help You</help> Today?",
+    "description": "Select a service below and fill out the form. Our team will get back to you promptly.",
+    "contact": {
+      "title": "Contact Information",
+      "list": {
+        "phone": "Phone",
+        "email": "Email",
+        "office": "Office",
+        "hours": "Hours"
+      }
+    },
+    "vehicle_cover": "Vehicle Types We Cover",
+    "forms": {
+      "quote": {
+        "title": "Get Quote",
+        "full_name": "Full Name",
+        "phone_number": "Phone Number",
+        "email": "Email Address",
+        "policy_type": "Policy Type",
+        "documents": {
+          "driver_license": "Driver License",
+          "tlc_license": "TLC License",
+          "current_fh1": "Current FH1",
+          "vehicle_registration": "Vehicle Registration",
+          "bill_of_sale": "Title, Bill of Sale, or Sales Tax Paid Receipt",
+          "proof_of_address": "Proof of Address"
+        },
+        "additional_details": "Additional Details",
+        "submit": "Submit Quote Request"
+      },
+      "cob": {
+        "title": "Broker Change",
+        "full_name": "Full Name",
+        "phone_number": "Phone Number",
+        "email": "Email Address",
+        "policy": {
+          "title": "Current Policy Information",
+          "policy_number": "Policy Number",
+          "policy_expiration": "Policy Expiration"
+        },
+        "documents": {
+          "title": "Upload Required Documents",
+          "driver_license": "Driver License",
+          "current_registration": "Current Registration",
+          "current_fh1": "Current FH1 (Insurance ID Card)"
+        },
+        "terms": "I authorize SAMKARA BROKERAGE to act as my exclusive broker of record for the policy above. I am the authorized policyholder and all information provided is true and accurate. This electronic signature is legally binding.",
+        "submit": "Submit Change Request"
+      },
+      "fleet": {
+        "title": "Fleet",
+        "company_name": "Company Name",
+        "contact_name": "Contact Name",
+        "email": "Email Address",
+        "phone_number": "Phone Number",
+        "fleet_vehicles": "Fleet Vehicles",
+        "additional_details": "Additional Details",
+        "submit": "Get Fleet Quote"
+      },
+      "claims": {
+        "title": "Claims",
+        "full_name": "Full Name",
+        "phone_number": "Phone Number",
+        "email": "Email Address",
+        "policy_number": "Policy Number",
+        "incident_date": "Incident Date",
+        "incident_type": "Incident Type",
+        "incident_description": "Description of Incident",
+        "documents": {
+          "title": "Upload Supporting Documents",
+          "pictures_or_video": "Pictures or Video",
+          "police_report": "Police Report",
+          "other": "Other Documents"
+        },
+        "submit": "Submit Claim Request"
+      },
+      "full_coverage": {
+        "title": "Full Coverage",
+        "full_name": "Full Name",
+        "phone_number": "Phone Number",
+        "email": "Email Address",
+        "policy": {
+          "title": "Current Coverage Information",
+          "liability_policy_number": "Liability Policy Number",
+          "coverage_amount": "Coverage Amount Needed"
+        },
+        "documents": {
+          "title": "Upload Required Documents",
+          "bill_of_sale": "Bill Of Sale"
+        },
+        "additional_details": "Additional Details",
+        "submit": "Get Full Coverage Quote"
+      }
+    }
+  },
+  "DMV_TLC": {
+    "notice": {
+      "title": "Important Notice",
+      "description": "This is a licensed private service bureau but is not an official agency of the Department of Motor Vehicles."
+    },
+    "chip": "One-Stop Shop",
+    "title": "DMV & TLC <services>Services</services>",
+    "description": "One-stop shop for all your DMV and TLC needs. We handle the paperwork so you can focus on driving.",
+    "services": {
+      "title": "Our Services"
+    },
+    "form": {
+      "title": "Request Service",
+      "full_name": "Full Name",
+      "phone_number": "Phone Number",
+      "email": "Email Address",
+      "service_type": "Service Needed",
+      "tlc_license_number": "TLC License # (if applicable)",
+      "dmv_license_number": "DMV License # (if applicable)",
+      "additional_details": "Additional Details",
+      "submit": "Submit Service Request"
+    }
+  },
+  "FAQ": {
+    "chip": "Got Questions?",
+    "title": "Frequently Asked <question>Questions</question>",
+    "description": "Find answers to common questions about TLC insurance, coverage, and our services.",
+    "contact": {
+      "title": "Still Have Questions?",
+      "description": "Our team is here to help. Give us a call or send us a message.",
+      "send": "Send a Message"
+    },
+    "tabs": {
+      "all": "All",
+      "insurance": "Insurance Basics",
+      "coverage": "Coverage",
+      "pricing": "Pricing",
+      "process": "Process",
+      "broker_change": "Broker Change",
+      "claims": "Claims",
+      "dmv_tlc": "DMV & TLC"
+    },
+    "questions_answers": {
+      "0": {
+        "question": "What is TLC insurance and why do I need it?",
+        "answer": "TLC insurance is commercial auto insurance required by the NYC Taxi & Limousine Commission for all for-hire vehicles. It provides higher liability limits than personal auto insurance to protect you, your passengers, and other drivers. Without valid TLC insurance, you cannot legally operate as a for-hire driver in NYC."
+      },
+      "1": {
+        "question": "What types of vehicles do you insure?",
+        "answer": "We insure all TLC-licensed vehicles including Uber and Lyft cars, yellow and green taxis, black cars, livery vehicles, and fleet vehicles. Whether you operate independently or manage multiple cars, we have tailored coverage options."
+      },
+      "2": {
+        "question": "What's the difference between liability and full coverage?",
+        "answer": "Liability coverage protects others if you are at fault in an accident, while full coverage includes liability plus protection for your own vehicle through comprehensive and collision coverage. Most TLC drivers choose full coverage for maximum protection."
+      },
+      "3": {
+        "question": "What are the minimum insurance requirements for TLC drivers?",
+        "answer": "TLC drivers in NYC must meet strict liability requirements, typically including $100,000 per person, $300,000 per accident, and $50,000 for property damage. Additional coverage may be required depending on your vehicle type and base affiliation."
+      },
+      "4": {
+        "question": "How much does TLC insurance cost?",
+        "answer": "The cost varies depending on your driving history, vehicle type, coverage level, and experience. On average, TLC insurance is more expensive than personal auto insurance, but we help you find the most competitive rates available."
+      },
+      "5": {
+        "question": "Do you offer payment plans?",
+        "answer": "Yes, we offer flexible payment plans to make your insurance more affordable. Options may include monthly payments or low down payment plans depending on the carrier."
+      },
+      "6": {
+        "question": "How long does it take to get insured?",
+        "answer": "In many cases, we can get you insured the same day. Our fast process ensures you can get on the road quickly without unnecessary delays."
+      },
+      "7": {
+        "question": "What documents do I need to get a quote?",
+        "answer": "Typically, you will need your driver’s license, vehicle registration, TLC license, and driving history. Additional documents may be required depending on your situation."
+      },
+      "8": {
+        "question": "How do I switch my insurance broker?",
+        "answer": "Switching brokers is simple. We handle most of the process for you, including communicating with your current provider to ensure a smooth transition without gaps in coverage."
+      },
+      "9": {
+        "question": "Will switching brokers save me money?",
+        "answer": "In many cases, yes. We compare multiple insurance carriers to find better rates and coverage options, helping you save money while maintaining or improving your protection."
+      },
+      "10": {
+        "question": "What should I do if I'm in an accident?",
+        "answer": "First, ensure everyone is safe and call emergency services if needed. Then document the scene, exchange information, and contact us immediately. We will guide you through the claims process step by step."
+      },
+      "11": {
+        "question": "Do you help with TLC license renewals?",
+        "answer": "Yes, we assist with TLC license renewals and ensure all insurance requirements are met so you can continue operating without interruptions."
+      }
+    }
+  },
+  "Marketplace": {
+    "title": "TLC Marketplace",
+    "description": "Buy, sell, and connect with the NYC TLC driver community",
+    "notice": {
+      "title": "Important Notice - Marketplace Disclaimer",
+      "description": "<start>Samkara Brokerage is not involved in any marketplace transactions.</start> This TLC Marketplace is provided as a free community service platform where drivers and vehicle owners can post advertisements and connect with each other. Samkara Brokerage does not verify listings, facilitate transactions, or mediate disputes between buyers and sellers. We are not responsible for the accuracy, legality, or quality of any listings, products, services, or information posted on this marketplace. All transactions and communications are conducted directly between users at their own risk. Users are solely responsible for verifying the legitimacy of listings, conducting due diligence, and ensuring compliance with all applicable laws and regulations. By using this marketplace, you acknowledge and agree that Samkara Brokerage bears no liability for any losses, damages, disputes, or issues arising from marketplace transactions or interactions between users."
+    },
+    "not_found": "No listings found. Be the first to post!",
+    "post": "Post Ad"
   },
   "Metadata": {
     "title": "NYC TLC Insurance Brokerage | Affordable Coverage for Rideshare & Taxi Drivers",

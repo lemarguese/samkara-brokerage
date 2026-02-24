@@ -9,8 +9,10 @@ import { BaseSyntheticEvent, memo, useCallback, useMemo, useState } from "react"
 import { IFleetForm } from "@/types/form";
 import { fleetSelectorOptionsLabels } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
+import { useTranslations } from "next-intl";
 
 function FleetTab () {
+  const t = useTranslations('Insurance.forms.fleet');
   const [loading, setLoading] = useState(false);
 
   const [fleetForm, setFleetForm] = useState<IFleetForm>({
@@ -95,16 +97,19 @@ function FleetTab () {
   return <div className='flex flex-col gap-4 justify-between'>
     <div className="space-y-5">
       <div className="grid sm:grid-cols-2 gap-5">
-        <Input label='Company Name' onChange={changeInput('companyName')} key='fleet-tab-company-name-input' required
+        <Input label={t('company_name')} onChange={changeInput('companyName')} key='fleet-tab-company-name-input'
+               required
                placeholder='ABC Transportation LLC' error='Please fill out the Company name'
                valid={fleetFormValid.companyName}/>
-        <Input label='Contact Name' onChange={changeInput('contactName')} key='fleet-tab-contact-name-input' required
+        <Input label={t('contact_name')} onChange={changeInput('contactName')} key='fleet-tab-contact-name-input'
+               required
                placeholder='John Doe' error='Please fill out the Contact name' valid={fleetFormValid.contactName}/>
       </div>
       <div className="grid sm:grid-cols-2 gap-5">
-        <Input label='Email Address' onChange={changeInput('email')} key='fleet-tab-email-address-input' required
+        <Input label={t('email')} onChange={changeInput('email')} key='fleet-tab-email-address-input' required
                placeholder='ABC Transportation LLC' error='Please fill out the Email' valid={fleetFormValid.email}/>
-        <Input label='Phone Number' onChange={changeInput('phoneNumber')} key='fleet-tab-phone-number-input' required
+        <Input label={t('phone_number')} onChange={changeInput('phoneNumber')} key='fleet-tab-phone-number-input'
+               required
                placeholder='212-555-0000' error='Please fill out the Phone number' valid={fleetFormValid.phoneNumber}/>
       </div>
       <div className="flex items-center gap-4 border-t border-gray-200 pt-5">
@@ -114,7 +119,7 @@ function FleetTab () {
           updateVehicle={changeVehicles}
           vehicles={fleetForm.vehicles} valid={fleetFormValid.vehicles}/>
       </div>
-      <Textarea valid label='Additional Details' onChange={changeInput('additionalDetails')}
+      <Textarea valid label={t('additional_details')} onChange={changeInput('additionalDetails')}
                 placeholder='Current insurance provider, coverage needs, or any special requirements...'
                 key='fleet-additional-details-textarea'/>
     </div>
@@ -123,7 +128,7 @@ function FleetTab () {
       onClick={sendFleetQuote}
       className='w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-uber-900 text-taxi-500 hover:bg-uber-800 shadow-lg shadow-uber-900/30 border border-taxi-500'>
       {loading ? <Spinner data-icon="inline-start"/> : <UsersIcon className='w-5 h-5'/>}
-      Get Fleet Quote
+      {t('submit')}
     </Button>
   </div>
 }

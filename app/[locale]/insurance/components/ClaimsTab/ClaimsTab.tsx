@@ -9,8 +9,10 @@ import { BaseSyntheticEvent, FormEvent, memo, useCallback, useMemo, useState } f
 import { IClaimForm } from "@/types/form";
 import { REGEXES } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
+import { useTranslations } from "next-intl";
 
 function ClaimsTab () {
+  const t = useTranslations('Insurance.forms.claims');
   const [loading, setLoading] = useState(false);
   const [claimForm, setClaimForm] = useState<IClaimForm>({
     fullName: '',
@@ -118,27 +120,27 @@ function ClaimsTab () {
     </div>
     <div className="flex flex-col gap-4">
       <div className='flex items-center gap-4'>
-        <Input label='Full Name' valid={claimFormValid.fullName} value={claimForm.fullName}
+        <Input label={t('full_name')} valid={claimFormValid.fullName} value={claimForm.fullName}
                onChange={changeInput('fullName')} placeholder='John Doe'
                key='claims-full-name-input'/>
-        <Input label='Phone Number' valid={claimFormValid.phoneNumber} value={claimForm.phoneNumber}
+        <Input label={t('phone_number')} valid={claimFormValid.phoneNumber} value={claimForm.phoneNumber}
                onChange={changeInput('phoneNumber')}
                placeholder='(212) 555-0000' key='claims-phone-number-input'/>
       </div>
       <div className='flex items-center gap-4'>
-        <Input label='Email Address' valid={claimFormValid.email} value={claimForm.email}
+        <Input label={t('email')} valid={claimFormValid.email} value={claimForm.email}
                onChange={changeInput('email')}
                placeholder='john@example.com' key='claims-email-address-input'/>
-        <Input label='Policy Number' valid={claimFormValid.policyNumber} value={claimForm.policyNumber}
+        <Input label={t('policy_number')} valid={claimFormValid.policyNumber} value={claimForm.policyNumber}
                onChange={changeInput('policyNumber')}
                placeholder='POL-12345678' key='claims-policy-number-input'/>
       </div>
       <div className='flex items-center gap-4'>
         <DatePicker valid={claimFormValid.incidentDate} value={claimForm.incidentDate} onChange={changeDate}
-                    label='Incident Date'
+                    label={t('incident_date')}
                     key='claims-incident-date-input'/>
         <Selector value={claimForm.incidentType} onValueChange={changeSelector} valid={claimFormValid.incidentType}
-                  label='Incident type'
+                  label={t('incident_type')}
                   options={[
                     { key: 'collision-accident', name: 'Collision / Accident', value: 'collision-accident' },
                     { key: 'property-damage', name: 'Property Damage', value: 'property-damage' },
@@ -149,7 +151,7 @@ function ClaimsTab () {
                     { key: 'other', name: 'Other', value: 'other' }
                   ]} error='Please select the incident type'/>
       </div>
-      <Textarea label='Description of Incident' valid={claimFormValid.incidentDescription}
+      <Textarea label={t('incident_description')} valid={claimFormValid.incidentDescription}
                 value={claimForm.incidentDescription}
                 onChange={changeInput('incidentDescription')} key='claims-description-incident-textarea'
                 placeholder='Please describe what happened, including location, time, and any other relevant details...'/>
@@ -157,16 +159,18 @@ function ClaimsTab () {
     <div className="border-t border-gray-200 pt-5">
       <h4 className="text-sm font-bold text-gray-900 mb-4 flex items-center gap-2">
         <UploadIcon className='w-4 h-4 text-orange-500'/>
-        Upload Supporting Documents
+        {t('documents.title')}
       </h4>
       <div className="grid sm:grid-cols-2 gap-4">
-        <Input onChange={changeFile('otherDocument')} label='Other Documents'
+        <Input onChange={changeFile('otherDocument')} label={t('documents.other')}
                className='flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed border-gray-300 rounded-xl hover:border-orange-500 hover:bg-gray-50 transition-colors cursor-pointer'
                key='claims-other-documents-input' type='file'/>
-        <Input valid={claimFormValid.pictureOrVideo} onChange={changeFile('pictureOrVideo')} label='Pictures or Video'
+        <Input valid={claimFormValid.pictureOrVideo} onChange={changeFile('pictureOrVideo')}
+               label={t('documents.pictures_or_video')}
                className='flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed border-gray-300 rounded-xl hover:border-orange-500 hover:bg-gray-50 transition-colors cursor-pointer'
                key='claims-pictures-or-video-input' type='file'/>
-        <Input valid={claimFormValid.policeReport} onChange={changeFile('policeReport')} label='Police Report'
+        <Input valid={claimFormValid.policeReport} onChange={changeFile('policeReport')}
+               label={t('documents.police_report')}
                className='flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed border-gray-300 rounded-xl hover:border-orange-500 hover:bg-gray-50 transition-colors cursor-pointer'
                key='claims-police-report-input' type='file'/>
       </div>
@@ -175,7 +179,7 @@ function ClaimsTab () {
             disabled={loading || !claimButtonDisabled}
             className="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-orange-500 text-white hover:bg-orange-600 shadow-lg shadow-orange-500/30">
       {loading ? <Spinner data-icon="inline-start"/> : <TriangleAlertIcon className='w-5 h-5'/>}
-      Submit Claim Request
+      {t('submit')}
     </button>
   </form>
 }

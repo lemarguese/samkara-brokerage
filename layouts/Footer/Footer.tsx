@@ -1,4 +1,5 @@
 import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
+import { Link } from "@/locale/navigation";
 
 export default function Footer () {
   return <footer className="bg-uber-900 text-gray-300">
@@ -33,12 +34,24 @@ export default function Footer () {
         </div>
         <div><h3 className="text-white font-bold mb-6">Quick Links</h3>
           <ul className="space-y-3">
-            <li><a href="/insurance" className="hover:text-taxi-500 transition-colors">Insurance</a></li>
-            <li><a href="/dmv-tlc" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</a></li>
-            <li><a href="/marketplace" className="hover:text-taxi-500 transition-colors">TLC Marketplace</a></li>
-            <li><a href="/faq" className="hover:text-taxi-500 transition-colors">FAQ</a></li>
-            <li><a href="/#testimonials" className="hover:text-taxi-500 transition-colors">Testimonials</a></li>
-            <li><a href="/#contact" className="hover:text-taxi-500 transition-colors">Contact</a></li>
+            <li>
+              <Link href="/insurance" className="hover:text-taxi-500 transition-colors">Insurance</Link>
+            </li>
+            <li>
+              <Link href="/dmv-tlc" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</Link>
+            </li>
+            <li>
+              <Link href="/marketplace" className="hover:text-taxi-500 transition-colors">TLC Marketplace</Link>
+            </li>
+            <li>
+              <Link href="/faq" className="hover:text-taxi-500 transition-colors">FAQ</Link>
+            </li>
+            <li>
+              <Link href="/#testimonials" className="hover:text-taxi-500 transition-colors">Testimonials</Link>
+            </li>
+            <li>
+              <Link href="/#contact" className="hover:text-taxi-500 transition-colors">Contact</Link>
+            </li>
           </ul>
         </div>
         <div><h3 className="text-white font-bold mb-6">Vehicle Types</h3>
@@ -52,11 +65,12 @@ export default function Footer () {
         </div>
         <div><h3 className="text-white font-bold mb-6">Our Services</h3>
           <ul className="space-y-3">
-            <li><a href="/#contact" className="hover:text-taxi-500 transition-colors">Insurance Quotes</a></li>
-            <li><a href="/#contact" className="hover:text-taxi-500 transition-colors">Broker Change</a></li>
-            <li><a href="/#contact" className="hover:text-taxi-500 transition-colors">Fleet Insurance</a></li>
-            <li><a href="/#contact" className="hover:text-taxi-500 transition-colors">Claims Support</a></li>
-            <li><a href="/#contact" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</a></li>
+            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">Insurance Quotes</Link></li>
+            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">Broker Change</Link></li>
+            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">Fleet Insurance</Link></li>
+            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">Claims Support</Link></li>
+            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</Link>
+            </li>
           </ul>
           <div className="mt-6 pt-6 border-t border-gray-800"><p className="text-sm text-gray-500 mb-2">Contact Us</p>
             <a href="tel:+12123145555" className="text-taxi-500 font-bold hover:text-taxi-400">(212) 314-5555</a>
@@ -68,8 +82,12 @@ export default function Footer () {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500"><p>© 2026
           SAMKARA BROKERAGE INC. All rights reserved.</p>
-          <div className="flex gap-6"><a href="/privacy" className="hover:text-taxi-500 transition-colors">Privacy
-            Policy</a><a href="/terms" className="hover:text-taxi-500 transition-colors">Terms of Service</a></div>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="hover:text-taxi-500 transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-taxi-500 transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </div>

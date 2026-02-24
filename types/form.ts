@@ -54,3 +54,13 @@ export interface IFullCoverageForm {
   billOfSale?: File;
   additionalDetails?: string;
 }
+
+export interface IServiceForm {
+  fullName: string
+  phoneNumber: string
+  email: string
+  serviceType: string
+  tlcLicenseNumber: string
+  dmvLicenseNumber: string
+  additionalDetails?: string
+}

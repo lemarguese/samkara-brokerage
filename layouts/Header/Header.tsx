@@ -48,16 +48,16 @@ export default function Header () {
               </PopoverTrigger>
               <PopoverContent className='w-40 px-0 py-1' align="start">
                 <div className='flex flex-col gap-1'>
-                  <Button onClick={changeLocale('en')}
-                          className='hover:bg-taxi-500/10 text-tPCASSaxi-600 bg-white rounded-none transition-colors text-sm'>English</Button>
-                  <Button onClick={changeLocale('es')}
-                    className='hover:bg-taxi-500/10 text-taxi-600 bg-white rounded-none transition-colors text-sm'>Español</Button>
-                  <Button onClick={changeLocale('ch')}
-                    className='hover:bg-taxi-500/10 text-taxi-600 bg-white rounded-none transition-colors text-sm'>中文</Button>
-                  <Button onClick={changeLocale('ru')}
-                    className='hover:bg-taxi-500/10 text-taxi-600 bg-white rounded-none transition-colors text-sm'>Русский</Button>
-                  <Button onClick={changeLocale('en')}
-                    className='hover:bg-taxi-500/10 text-taxi-600 bg-white rounded-none transition-colors text-sm'>O'zbek</Button>
+                  <Link href='/' locale='en'
+                        className='hover:bg-taxi-500/10 text-tPCASSaxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>English</Link>
+                  <Link href='/' locale='es'
+                        className='hover:bg-taxi-500/10 text-taxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>Español</Link>
+                  <Link href='/' locale='ch'
+                        className='hover:bg-taxi-500/10 text-taxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>中文</Link>
+                  <Link href='/' locale='ru'
+                        className='hover:bg-taxi-500/10 text-taxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>Русский</Link>
+                  <Link href='/' locale='uz'
+                        className='hover:bg-taxi-500/10 text-taxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>O'zbek</Link>
                 </div>
                 {/*<button className="w-full text-left px-4 py-2 hover:bg-gray-50 transition-colors text-sm text-gray-700">O'zbek*/}
                 {/*<PopoverHeader>*/}

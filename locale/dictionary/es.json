@@ -1,23 +1,300 @@
 {
   "HomePage": {
     "Top": {
-      "title": "Drive With Confidence, Save With Us",
-      "description": "El corredor de seguros #1 de NYC para conductores de rideshare y TLC. Ya sea que conduzcas para Uber, Lyft o operes un taxi, te ofrecemos la mejor cobertura con las mejores tarifas de la ciudad.",
+      "title": "Maneja con <confidence>Confianza</confidence><br></br><save>Ahorra</save> con Nosotros",
+      "description": "El broker de seguros #1 en NYC para conductores de rideshare y TLC. Ya sea que trabajes con Uber, Lyft o manejes un taxi, te conseguimos la mejor cobertura al mejor precio en la ciudad.",
       "advantages": {
-        "first": "Lowest rates for rideshare drivers",
-        "second": "Same-day TLC coverage available",
-        "third": "Uber, Lyft, taxi & black car specialists"
+        "first": "Las tarifas más bajas para conductores de rideshare",
+        "second": "Cobertura TLC el mismo día",
+        "third": "Especialistas en Uber, Lyft, taxis y autos negros"
       },
-      "get_started_today": "Get Started Today",
-      "call_now": "Call Now",
-      "all_platforms": "All Platforms",
-      "tlc_approved": "TLC Approved",
-      "years": "Years",
-      "drivers": "Drivers"
+      "get_started_today": "Empieza Hoy",
+      "call_now": "Llámanos Ahora",
+      "all_platforms": "Todas las Plataformas",
+      "tlc_approved": "Aprobado por TLC",
+      "years": "Años",
+      "drivers": "Conductores"
+    },
+    "Service_Area": {
+      "chip": "Sirviendo a Todos los Boroughs de NYC",
+      "title": "Seguro para <every>Cada</every> Conductor TLC",
+      "description": "Desde aplicaciones como Uber y Lyft hasta taxis tradicionales, ayudamos a los conductores de NYC a conseguir la cobertura que necesitan sin pagar de más.",
+      "list": {
+        "0": {
+          "title": "Cobertura para Uber y Lyft",
+          "description": "Cobertura completa para conductores de plataformas. Sabemos exactamente lo que necesitas para cumplir con los requisitos y seguir trabajando sin problemas."
+        },
+        "1": {
+          "title": "Taxi Amarillo y Verde",
+          "description": "Seguro tradicional para taxis de NYC con precios competitivos. Cobertura para medallón y SHL disponible."
+        },
+        "2": {
+          "title": "Black Car y Livery",
+          "description": "Seguro especializado para autos negros, transporte corporativo y vehículos de lujo."
+        },
+        "3": {
+          "title": "Seguro para Flotas",
+          "description": "Soluciones para compañías con múltiples vehículos. Descuentos por volumen y manejo centralizado."
+        },
+        "4": {
+          "title": "Cumplimiento TLC",
+          "description": "Nos aseguramos de que tu póliza cumpla con todos los requisitos del TLC para que puedas seguir en la calle sin preocupaciones."
+        }
+      }
+    },
+    "Trust": {
+      "title": "Expertos en Seguro TLC en Quienes <trust>Confían los Conductores</trust>",
+      "description": "Por más de 30 años hemos ayudado a miles de conductores en NYC a obtener la cobertura correcta. No somos solo brokers, estamos contigo en cada paso.",
+      "list": {
+        "0": {
+          "title": "Mejores Precios Garantizados",
+          "description": "Trabajamos con varias aseguradoras para encontrarte la mejor tarifa. Si encuentras algo mejor, lo igualamos."
+        },
+        "1": {
+          "title": "Proceso Rápido y Sin Complicaciones",
+          "description": "Te ayudamos a estar asegurado rápidamente para que no pierdas tiempo ni dinero."
+        },
+        "2": {
+          "title": "Más de 30 Años de Experiencia",
+          "description": "Conocemos las reglas del TLC y las necesidades reales de los conductores en NYC."
+        },
+        "3": {
+          "title": "Defendemos al Conductor",
+          "description": "Te apoyamos en reclamaciones y siempre protegemos tus intereses."
+        },
+        "4": {
+          "title": "Atención en tu Idioma",
+          "description": "Hablamos inglés, español, mandarín, ruso y uzbeko para servir mejor a nuestra comunidad."
+        }
+      },
+      "quote": {
+        "text": "\"Ya seas conductor de Uber, dueño de un taxi amarillo o tengas una flota de autos negros, aquí estamos para respaldarte.\"",
+        "position": "Fundador"
+      }
+    },
+    "Testimonials": {
+      "title": "Lo Que Dicen Nuestros <driver>Conductores</driver>",
+      "description": "No solo lo decimos nosotros, miles de conductores en NYC confían en nosotros.",
+      "statistics": {
+        "google_rating": "Calificación en Google",
+        "reviews": "Reseñas de 5 Estrellas",
+        "renewal_rate": "Tasa de Renovación"
+      }
+    },
+    "Contact": {
+      "title": "Ponte en <touch>Contacto</touch>",
+      "description": "¿Tienes preguntas? Nuestro equipo está listo para ayudarte. Llámanos o envíanos un mensaje.",
+      "list": {
+        "phone": "Teléfono",
+        "email": "Correo Electrónico",
+        "office": "Oficina",
+        "hours": "Horario"
+      },
+      "question": "¿Necesitas Ayuda?",
+      "question_description": "Para cotizaciones, cambio de broker, apoyo con reclamaciones o servicios de DMV y TLC."
     }
   },
+  "Insurance": {
+    "title": "¿Cómo Podemos <help>Ayudarte</help> Hoy?",
+    "description": "Selecciona el servicio que necesitas y completa el formulario. Nuestro equipo se comunicará contigo lo antes posible.",
+    "contact": {
+      "title": "Información de Contacto",
+      "list": {
+        "phone": "Teléfono",
+        "email": "Correo Electrónico",
+        "office": "Oficina",
+        "hours": "Horario"
+      }
+    },
+    "vehicle_cover": "Tipos de Vehículos que Aseguramos",
+    "forms": {
+      "quote": {
+        "title": "Obtener Cotización",
+        "full_name": "Nombre Completo",
+        "phone_number": "Número de Teléfono",
+        "email": "Correo Electrónico",
+        "policy_type": "Tipo de Póliza",
+        "documents": {
+          "driver_license": "Licencia de Conducir",
+          "tlc_license": "Licencia TLC",
+          "current_fh1": "FH1 Actual",
+          "vehicle_registration": "Registro del Vehículo",
+          "bill_of_sale": "Título, Factura de Venta o Recibo de Impuesto Pagado",
+          "proof_of_address": "Comprobante de Dirección"
+        },
+        "additional_details": "Detalles Adicionales",
+        "submit": "Enviar Solicitud de Cotización"
+      },
+      "cob": {
+        "title": "Cambio de Broker",
+        "full_name": "Nombre Completo",
+        "phone_number": "Número de Teléfono",
+        "email": "Correo Electrónico",
+        "policy": {
+          "title": "Información de tu Póliza Actual",
+          "policy_number": "Número de Póliza",
+          "policy_expiration": "Fecha de Vencimiento"
+        },
+        "documents": {
+          "title": "Sube los Documentos Requeridos",
+          "driver_license": "Licencia de Conducir",
+          "current_registration": "Registro Actual",
+          "current_fh1": "FH1 Actual (Tarjeta de Seguro)"
+        },
+        "terms": "Autorizo a SAMKARA BROKERAGE a actuar como mi broker exclusivo para la póliza mencionada. Confirmo que soy el titular autorizado y que toda la información proporcionada es verdadera y correcta. Esta firma electrónica es legalmente válida.",
+        "submit": "Enviar Solicitud de Cambio"
+      },
+      "fleet": {
+        "title": "Flota",
+        "company_name": "Nombre de la Compañía",
+        "contact_name": "Nombre del Contacto",
+        "email": "Correo Electrónico",
+        "phone_number": "Número de Teléfono",
+        "fleet_vehicles": "Vehículos de la Flota",
+        "additional_details": "Detalles Adicionales",
+        "submit": "Solicitar Cotización de Flota"
+      },
+      "claims": {
+        "title": "Reclamaciones",
+        "full_name": "Nombre Completo",
+        "phone_number": "Número de Teléfono",
+        "email": "Correo Electrónico",
+        "policy_number": "Número de Póliza",
+        "incident_date": "Fecha del Incidente",
+        "incident_type": "Tipo de Incidente",
+        "incident_description": "Descripción del Incidente",
+        "documents": {
+          "title": "Sube Documentos de Soporte",
+          "pictures_or_video": "Fotos o Video",
+          "police_report": "Reporte Policial",
+          "other": "Otros Documentos"
+        },
+        "submit": "Enviar Reclamación"
+      },
+      "full_coverage": {
+        "title": "Cobertura Completa",
+        "full_name": "Nombre Completo",
+        "phone_number": "Número de Teléfono",
+        "email": "Correo Electrónico",
+        "policy": {
+          "title": "Información de tu Cobertura Actual",
+          "liability_policy_number": "Número de Póliza de Responsabilidad",
+          "coverage_amount": "Monto de Cobertura Necesario"
+        },
+        "documents": {
+          "title": "Sube los Documentos Requeridos",
+          "bill_of_sale": "Factura de Venta"
+        },
+        "additional_details": "Detalles Adicionales",
+        "submit": "Solicitar Cotización de Cobertura Completa"
+      }
+    }
+  },
+  "DMV_TLC": {
+    "notice": {
+      "title": "Aviso Importante",
+      "description": "Somos una oficina privada con licencia, pero no somos una agencia oficial del Departamento de Vehículos Motorizados (DMV)."
+    },
+    "chip": "Todo en un Solo Lugar",
+    "title": "Servicios de DMV y TLC <services>Servicios</services>",
+    "description": "Todo lo que necesitas para DMV y TLC en un solo lugar. Nosotros nos encargamos del papeleo para que tú puedas enfocarte en manejar.",
+    "services": {
+      "title": "Nuestros Servicios"
+    },
+    "form": {
+      "title": "Solicitar Servicio",
+      "full_name": "Nombre Completo",
+      "phone_number": "Número de Teléfono",
+      "email": "Correo Electrónico",
+      "service_type": "Servicio Necesario",
+      "tlc_license_number": "Número de Licencia TLC (si aplica)",
+      "dmv_license_number": "Número de Licencia DMV (si aplica)",
+      "additional_details": "Detalles Adicionales",
+      "submit": "Enviar Solicitud"
+    }
+  },
+  "FAQ": {
+    "chip": "¿Tienes preguntas?",
+    "title": "Preguntas <question>Frecuentes</question>",
+    "description": "Encuentra respuestas a las preguntas más comunes sobre seguro TLC, cobertura y nuestros servicios.",
+    "contact": {
+      "title": "¿Todavía Tienes Preguntas?",
+      "description": "Nuestro equipo está listo para ayudarte. Llámanos o envíanos un mensaje.",
+      "send": "Enviar Mensaje"
+    },
+    "tabs": {
+      "all": "Todas",
+      "insurance": "Seguro Básico",
+      "coverage": "Cobertura",
+      "pricing": "Precios",
+      "process": "Proceso",
+      "broker_change": "Cambio de Broker",
+      "claims": "Reclamaciones",
+      "dmv_tlc": "DMV y TLC"
+    },
+    "questions_answers": {
+      "0": {
+        "question": "¿Qué es el seguro TLC y por qué lo necesito?",
+        "answer": "El seguro TLC es un seguro comercial requerido por la Comisión de Taxis y Limusinas de NYC para todos los vehículos de alquiler. Ofrece límites de responsabilidad más altos que un seguro personal para protegerte a ti, a tus pasajeros y a otros conductores. Sin un seguro TLC válido, no puedes operar legalmente como conductor en NYC."
+      },
+      "1": {
+        "question": "¿Qué tipos de vehículos aseguran?",
+        "answer": "Aseguramos todos los vehículos con licencia TLC, incluyendo autos de Uber y Lyft, taxis amarillos y verdes, autos negros, vehículos livery y flotas. Ya sea que trabajes solo o manejes varios vehículos, tenemos opciones adaptadas a tus necesidades."
+      },
+      "2": {
+        "question": "¿Cuál es la diferencia entre responsabilidad civil y cobertura completa?",
+        "answer": "La responsabilidad civil cubre los daños a terceros si tú eres responsable de un accidente. La cobertura completa incluye responsabilidad civil más protección para tu propio vehículo mediante cobertura contra colisión y daños comprensivos. La mayoría de los conductores TLC eligen cobertura completa para mayor tranquilidad."
+      },
+      "3": {
+        "question": "¿Cuáles son los requisitos mínimos de seguro para conductores TLC?",
+        "answer": "Los conductores TLC en NYC deben cumplir con requisitos estrictos de responsabilidad, generalmente incluyendo $100,000 por persona, $300,000 por accidente y $50,000 por daños a propiedad. Dependiendo de tu tipo de vehículo y base, puede requerirse cobertura adicional."
+      },
+      "4": {
+        "question": "¿Cuánto cuesta el seguro TLC?",
+        "answer": "El costo depende de tu historial de manejo, tipo de vehículo, nivel de cobertura y experiencia. En promedio, el seguro TLC es más costoso que un seguro personal, pero nosotros te ayudamos a encontrar las mejores tarifas disponibles."
+      },
+      "5": {
+        "question": "¿Ofrecen planes de pago?",
+        "answer": "Sí. Ofrecemos planes de pago flexibles para que tu seguro sea más accesible. Puedes pagar mensualmente o con un depósito inicial bajo, dependiendo de la aseguradora."
+      },
+      "6": {
+        "question": "¿Cuánto tiempo toma obtener el seguro?",
+        "answer": "En muchos casos podemos asegurarte el mismo día. Nuestro proceso rápido te permite volver a la carretera sin demoras innecesarias."
+      },
+      "7": {
+        "question": "¿Qué documentos necesito para una cotización?",
+        "answer": "Generalmente necesitarás tu licencia de conducir, registro del vehículo, licencia TLC e historial de manejo. Dependiendo de tu situación, podrían solicitarse documentos adicionales."
+      },
+      "8": {
+        "question": "¿Cómo cambio mi broker de seguro?",
+        "answer": "Cambiar de broker es sencillo. Nosotros nos encargamos de la mayor parte del proceso y coordinamos con tu proveedor actual para asegurar una transición sin interrupciones en tu cobertura."
+      },
+      "9": {
+        "question": "¿Cambiar de broker me puede ahorrar dinero?",
+        "answer": "En muchos casos sí. Comparamos múltiples aseguradoras para encontrar mejores precios y mejores opciones de cobertura, ayudándote a ahorrar sin perder protección."
+      },
+      "10": {
+        "question": "¿Qué debo hacer si tengo un accidente?",
+        "answer": "Primero asegúrate de que todos estén bien y llama a los servicios de emergencia si es necesario. Luego documenta la escena, intercambia información y contáctanos inmediatamente. Te guiaremos paso a paso en el proceso de reclamación."
+      },
+      "11": {
+        "question": "¿Ayudan con renovaciones de licencia TLC?",
+        "answer": "Sí, ayudamos con renovaciones de licencia TLC y verificamos que todos los requisitos de seguro estén en orden para que puedas seguir trabajando sin interrupciones."
+      }
+    }
+  },
+  "Marketplace": {
+    "title": "Marketplace TLC",
+    "description": "Compra, vende y conéctate con la comunidad de conductores TLC en NYC",
+    "notice": {
+      "title": "Aviso Importante - Descargo de Responsabilidad del Marketplace",
+      "description": "<start>Samkara Brokerage no participa en ninguna transacción del marketplace.</start> Este Marketplace TLC se ofrece como una plataforma comunitaria gratuita donde conductores y propietarios de vehículos pueden publicar anuncios y conectarse entre sí. Samkara Brokerage no verifica publicaciones, no facilita transacciones ni media disputas entre compradores y vendedores. No somos responsables por la exactitud, legalidad o calidad de ningún anuncio, producto, servicio o información publicada en esta plataforma. Todas las transacciones y comunicaciones se realizan directamente entre los usuarios bajo su propio riesgo. Los usuarios son totalmente responsables de verificar la legitimidad de los anuncios, realizar la debida diligencia y asegurarse de cumplir con todas las leyes y regulaciones aplicables. Al utilizar este marketplace, usted reconoce y acepta que Samkara Brokerage no asume ninguna responsabilidad por pérdidas, daños, disputas o cualquier problema que surja de transacciones o interacciones entre usuarios."
+    },
+    "not_found": "No se encontraron publicaciones. ¡Sé el primero en publicar!",
+    "post": "Publicar anuncio"
+  },
   "Metadata": {
-    "title": "Correduría de Seguros TLC en NYC | Cobertura Asequible para Conductores de Rideshare y Taxi",
-    "description": "Obtén las mejores tarifas de seguro TLC en la Ciudad de Nueva York. Nos especializamos en cobertura para conductores de Uber, Lyft, taxi y autos negros. Cotizaciones rápidas, pagos flexibles y servicio experto."
+    "title": "Seguro TLC en NYC | Cobertura asequible para conductores de rideshare y taxi",
+    "description": "Obtén las mejores tarifas de seguro TLC en Nueva York. Especialistas en Uber, Lyft, taxis y black car. Cotizaciones rápidas, pagos flexibles y servicio experto."
   }
 }

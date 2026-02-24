@@ -1,0 +1,300 @@
+{
+  "HomePage": {
+    "Top": {
+      "title": "Ishonch bilan haydang <confidence>ishonch bilan</confidence><br></br><save>tejang</save> biz bilan",
+      "description": "NYC’dagi rideshare va TLC haydovchilari uchun №1 sug‘urta brokeri. Uber, Lyft yoki taksi haydasangiz ham — biz sizga shahardagi eng yaxshi tariflarni topib beramiz.",
+      "advantages": {
+        "first": "Rideshare haydovchilari uchun eng past narxlar",
+        "second": "TLC sug‘urtasi shu kunning o‘zida tayyor",
+        "third": "Uber, Lyft, taksi va black car bo‘yicha mutaxassislar"
+      },
+      "get_started_today": "Hozir boshlang",
+      "call_now": "Hozir qo‘ng‘iroq qiling",
+      "all_platforms": "Barcha platformalar",
+      "tlc_approved": "TLC tasdiqlangan",
+      "years": "yil",
+      "drivers": "haydovchilar"
+    },
+    "Service_Area": {
+      "chip": "NYC’ning barcha hududlariga xizmat ko‘rsatamiz",
+      "title": "Har bir <every>TLC haydovchisi</every> uchun sug‘urta",
+      "description": "Rideshare ilovalaridan tortib oddiy taksilargacha — biz NYC haydovchilari uchun kerakli sug‘urtani arzon narxlarda taqdim etamiz.",
+      "list": {
+        "0": {
+          "title": "Uber & Lyft sug‘urtasi",
+          "description": "Barcha rideshare platformalari uchun to‘liq sug‘urta. Ilova orqali ishlashning barcha talablarini bilamiz."
+        },
+        "1": {
+          "title": "Sariq va yashil taksi",
+          "description": "NYC taksilari uchun qulay narxlarda sug‘urta. Medallion va SHL qamrovi mavjud."
+        },
+        "2": {
+          "title": "Black Car va livery",
+          "description": "Black car xizmatlari, korporativ transport va premium avtomobillar uchun maxsus sug‘urta."
+        },
+        "3": {
+          "title": "Flot (avtopark) sug‘urtasi",
+          "description": "Bir nechta avtomobilga ega kompaniyalar uchun yechimlar. Hajmga qarab chegirmalar va markazlashtirilgan boshqaruv."
+        },
+        "4": {
+          "title": "TLC talablariga moslik",
+          "description": "Sug‘urtangiz NYC TLC talablariga to‘liq mos bo‘lishini ta’minlaymiz. Qonuniy ishlang va muammosiz davom eting."
+        }
+      }
+    },
+    "Trust": {
+      "title": "TLC sug‘urta mutaxassislari — <trust>haydovchilar ishonadi</trust>",
+      "description": "30 yildan ortiq vaqt davomida minglab NYC haydovchilariga kerakli sug‘urtani olishda yordam berdik. Biz oddiy broker emas — sizning hamkoringizmiz.",
+      "list": {
+        "0": {
+          "title": "Eng yaxshi narx kafolati",
+          "description": "Bir nechta sug‘urta kompaniyalari bilan ishlaymiz va siz uchun eng arzon variantni topamiz. Agar arzonroq topsangiz — moslashtiramiz."
+        },
+        "1": {
+          "title": "Tez va oson jarayon",
+          "description": "Soddalashtirilgan jarayon sizni tezda ishga qaytaradi, ortiqcha qiyinchiliksiz."
+        },
+        "2": {
+          "title": "30+ yil tajriba",
+          "description": "30 yildan ortiq vaqt davomida TLC haydovchilari bilan ishlaymiz va ehtiyojlaringizni yaxshi bilamiz."
+        },
+        "3": {
+          "title": "Haydovchi birinchi o‘rinda",
+          "description": "Da’vo (claim) jarayonida sizni himoya qilamiz va har doim manfaatlaringizni ustun qo‘yamiz."
+        },
+        "4": {
+          "title": "Ko‘p tilli jamoa",
+          "description": "Biz ingliz, ispan, xitoy, rus va o‘zbek tillarida xizmat ko‘rsatamiz."
+        }
+      },
+      "quote": {
+        "text": "“Uber haydovchisi bo‘lasizmi, taksi egasimi yoki flot boshqarasizmi — biz siz bilanmiz.”",
+        "position": "Asoschi"
+      }
+    },
+    "Testimonials": {
+      "title": "Biz haqimizda <driver>haydovchilar</driver> nima deydi",
+      "description": "Faqat bizga ishonmang — biz bilan ishlayotgan minglab haydovchilarning fikrini eshiting.",
+      "statistics": {
+        "google_rating": "Google reytingi",
+        "reviews": "5 yulduzli sharhlar",
+        "renewal_rate": "Yangilanish darajasi"
+      }
+    },
+    "Contact": {
+      "title": "Biz bilan <touch>bog‘laning</touch>",
+      "description": "Savollaringiz bormi? Jamoamiz sizga yordam berishga tayyor.",
+      "list": {
+        "phone": "Telefon",
+        "email": "Email",
+        "office": "Ofis",
+        "hours": "Ish vaqti"
+      },
+      "question": "Yordam kerakmi?",
+      "question_description": "Sug‘urta narxlari, broker almashtirish, claim yordam yoki DMV & TLC xizmatlari bo‘yicha"
+    }
+  },
+  "Insurance": {
+    "title": "Bugun sizga qanday <help>yordam bera olamiz</help>?",
+    "description": "Quyidagi xizmatlardan birini tanlang va formani to‘ldiring. Jamoamiz siz bilan tez orada bog‘lanadi.",
+    "contact": {
+      "title": "Aloqa ma'lumotlari",
+      "list": {
+        "phone": "Telefon",
+        "email": "Email",
+        "office": "Ofis",
+        "hours": "Ish vaqti"
+      }
+    },
+    "vehicle_cover": "Qamrab olinadigan transport turlari",
+    "forms": {
+      "quote": {
+        "title": "Narx olish",
+        "full_name": "To‘liq ism",
+        "phone_number": "Telefon raqami",
+        "email": "Email manzili",
+        "policy_type": "Sug‘urta turi",
+        "documents": {
+          "driver_license": "Haydovchilik guvohnomasi",
+          "tlc_license": "TLC litsenziyasi",
+          "current_fh1": "Amaldagi FH1",
+          "vehicle_registration": "Avtomobil ro‘yxatdan o‘tganligi",
+          "bill_of_sale": "Title, sotib olish hujjati yoki soliq to‘langanligi kvitansiyasi",
+          "proof_of_address": "Manzil tasdig‘i"
+        },
+        "additional_details": "Qo‘shimcha ma'lumotlar",
+        "submit": "So‘rov yuborish"
+      },
+      "cob": {
+        "title": "Brokerni almashtirish",
+        "full_name": "To‘liq ism",
+        "phone_number": "Telefon raqami",
+        "email": "Email manzili",
+        "policy": {
+          "title": "Joriy sug‘urta ma'lumotlari",
+          "policy_number": "Polis raqami",
+          "policy_expiration": "Polis muddati"
+        },
+        "documents": {
+          "title": "Kerakli hujjatlarni yuklang",
+          "driver_license": "Haydovchilik guvohnomasi",
+          "current_registration": "Amaldagi ro‘yxat",
+          "current_fh1": "Amaldagi FH1 (Insurance ID Card)"
+        },
+        "terms": "Men SAMKARA BROKERAGE kompaniyasiga yuqoridagi polis bo‘yicha yagona broker sifatida ishlashga ruxsat beraman. Men polis egasiman va barcha ma'lumotlar to‘g‘ri va aniq. Ushbu elektron imzo yuridik kuchga ega.",
+        "submit": "So‘rov yuborish"
+      },
+      "fleet": {
+        "title": "Flot (avtopark)",
+        "company_name": "Kompaniya nomi",
+        "contact_name": "Mas'ul shaxs",
+        "email": "Email manzili",
+        "phone_number": "Telefon raqami",
+        "fleet_vehicles": "Avtoparkdagi transportlar",
+        "additional_details": "Qo‘shimcha ma'lumotlar",
+        "submit": "Flot uchun narx olish"
+      },
+      "claims": {
+        "title": "Da'vo (Claim)",
+        "full_name": "To‘liq ism",
+        "phone_number": "Telefon raqami",
+        "email": "Email manzili",
+        "policy_number": "Polis raqami",
+        "incident_date": "Hodisa sanasi",
+        "incident_type": "Hodisa turi",
+        "incident_description": "Hodisa tavsifi",
+        "documents": {
+          "title": "Tasdiqlovchi hujjatlarni yuklang",
+          "pictures_or_video": "Rasm yoki video",
+          "police_report": "Politsiya hisobot",
+          "other": "Boshqa hujjatlar"
+        },
+        "submit": "Da'vo yuborish"
+      },
+      "full_coverage": {
+        "title": "To‘liq sug‘urta",
+        "full_name": "To‘liq ism",
+        "phone_number": "Telefon raqami",
+        "email": "Email manzili",
+        "policy": {
+          "title": "Joriy sug‘urta ma'lumotlari",
+          "liability_policy_number": "Liability polis raqami",
+          "coverage_amount": "Kerakli qamrov miqdori"
+        },
+        "documents": {
+          "title": "Kerakli hujjatlarni yuklang",
+          "bill_of_sale": "Sotib olish hujjati (Bill of Sale)"
+        },
+        "additional_details": "Qo‘shimcha ma'lumotlar",
+        "submit": "To‘liq sug‘urta uchun narx olish"
+      }
+    }
+  },
+  "DMV_TLC": {
+    "notice": {
+      "title": "Muhim ogohlantirish",
+      "description": "Bu litsenziyaga ega xususiy xizmat markazi bo‘lib, Rasmiy DMV (Department of Motor Vehicles) agentligi hisoblanmaydi."
+    },
+    "chip": "Bitta joyda barcha xizmatlar",
+    "title": "DMV & TLC <services>Xizmatlari</services>",
+    "description": "DMV va TLC bilan bog‘liq barcha ishlaringiz uchun bitta joy. Hujjatlarni biz hal qilamiz — siz esa haydashga e'tibor qaratasiz.",
+    "services": {
+      "title": "Bizning xizmatlarimiz"
+    },
+    "form": {
+      "title": "Xizmatga so‘rov yuborish",
+      "full_name": "To‘liq ism",
+      "phone_number": "Telefon raqami",
+      "email": "Email manzili",
+      "service_type": "Kerakli xizmat",
+      "tlc_license_number": "TLC litsenziya raqami (agar mavjud bo‘lsa)",
+      "dmv_license_number": "DMV litsenziya raqami (agar mavjud bo‘lsa)",
+      "additional_details": "Qo‘shimcha ma'lumotlar",
+      "submit": "So‘rov yuborish"
+    }
+  },
+  "FAQ": {
+    "chip": "Savollaringiz bormi?",
+    "title": "Ko‘p beriladigan <question>savollar</question>",
+    "description": "TLC sug‘urtasi, qamrov va xizmatlarimiz haqida eng ko‘p beriladigan savollarga javoblarni shu yerda toping.",
+    "contact": {
+      "title": "Yana savollaringiz bormi?",
+      "description": "Jamoamiz sizga yordam berishga tayyor. Qo‘ng‘iroq qiling yoki bizga yozing.",
+      "send": "Xabar yuborish"
+    },
+    "tabs": {
+      "all": "Barchasi",
+      "insurance": "Sug‘urta asoslari",
+      "coverage": "Qamrov",
+      "pricing": "Narxlar",
+      "process": "Jarayon",
+      "broker_change": "Brokerni almashtirish",
+      "claims": "Da'volar",
+      "dmv_tlc": "DMV & TLC"
+    },
+    "questions_answers": {
+      "0": {
+        "question": "TLC sug‘urtasi nima va nega kerak?",
+        "answer": "TLC sug‘urtasi — bu NYC Taxi & Limousine Commission tomonidan talab qilinadigan tijorat avto sug‘urtasi bo‘lib, barcha for-hire transport vositalari uchun majburiydir. U oddiy shaxsiy sug‘urtaga qaraganda yuqoriroq javobgarlik limitlarini ta’minlaydi va sizni, yo‘lovchilaringizni hamda boshqa haydovchilarni himoya qiladi. Amal qiluvchi TLC sug‘urtasisiz siz NYC’da qonuniy ravishda ishlay olmaysiz."
+      },
+      "1": {
+        "question": "Qanday transport vositalarini sug‘urtalaysiz?",
+        "answer": "Biz barcha TLC litsenziyasiga ega transport vositalarini sug‘urtalaymiz, jumladan Uber va Lyft avtomobillari, sariq va yashil taksilar, black car, livery transportlar hamda flot (bir nechta mashina) egalari. Siz yakka ishlaysizmi yoki kompaniyangiz bormi — mos variantlarimiz bor."
+      },
+      "2": {
+        "question": "Liability va full coverage o‘rtasida nima farq bor?",
+        "answer": "Liability sug‘urtasi siz aybdor bo‘lgan holatda boshqa tomonlarni himoya qiladi. Full coverage esa liability bilan birga sizning avtomobilingizni ham collision va comprehensive orqali himoya qiladi. Ko‘pchilik TLC haydovchilari maksimal himoya uchun full coverage tanlaydi."
+      },
+      "3": {
+        "question": "TLC haydovchilari uchun minimal talablar qanday?",
+        "answer": "NYC’da TLC haydovchilari qat’iy sug‘urta talablariga javob berishi kerak. Odatda bu har bir odam uchun $100,000, hodisa uchun $300,000 va mulk zarariga $50,000 ni o‘z ichiga oladi. Avtomobil turi va ishlash shakliga qarab qo‘shimcha talablar ham bo‘lishi mumkin."
+      },
+      "4": {
+        "question": "TLC sug‘urtasi qancha turadi?",
+        "answer": "Narx sizning haydash tarixingiz, avtomobil turi, tanlangan qamrov va tajribangizga bog‘liq. Odatda TLC sug‘urtasi oddiy sug‘urtadan qimmatroq bo‘ladi, lekin biz sizga eng yaxshi va arzon variantlarni topib beramiz."
+      },
+      "5": {
+        "question": "To‘lovni bo‘lib to‘lash imkoniyati bormi?",
+        "answer": "Ha, biz qulay to‘lov rejalari taklif qilamiz. Bu oyma-oy to‘lov yoki past boshlang‘ich to‘lov variantlarini o‘z ichiga olishi mumkin."
+      },
+      "6": {
+        "question": "Sug‘urtani olish qancha vaqt oladi?",
+        "answer": "Ko‘p hollarda sizni o‘sha kunning o‘zida sug‘urtalashimiz mumkin. Jarayonimiz tez va sizni imkon qadar tezroq yo‘lga qaytaradi."
+      },
+      "7": {
+        "question": "Narx olish uchun qanday hujjatlar kerak?",
+        "answer": "Odatda sizdan haydovchilik guvohnomasi, avtomobil registratsiyasi, TLC litsenziyasi va haydash tarixi talab qilinadi. Vaziyatga qarab qo‘shimcha hujjatlar ham so‘ralishi mumkin."
+      },
+      "8": {
+        "question": "Sug‘urta brokerini qanday almashtiraman?",
+        "answer": "Brokerni almashtirish juda oson. Biz barcha jarayonni siz uchun bajarib beramiz, shu jumladan hozirgi sug‘urtangiz bilan bog‘lanib, uzilishsiz o‘tishni ta’minlaymiz."
+      },
+      "9": {
+        "question": "Brokerni almashtirsam pul tejaymanmi?",
+        "answer": "Ko‘p hollarda — ha. Biz bir nechta sug‘urta kompaniyalarini solishtirib, sizga yaxshiroq narx va qamrov topib beramiz."
+      },
+      "10": {
+        "question": "Agar avariya bo‘lsa nima qilishim kerak?",
+        "answer": "Avvalo hamma xavfsiz ekanligiga ishonch hosil qiling va zarur bo‘lsa tez yordam chaqiring. Keyin hodisani hujjatlashtiring, ma'lumot almashing va darhol biz bilan bog‘laning. Biz sizga claim jarayonida yordam beramiz."
+      },
+      "11": {
+        "question": "TLC litsenziyasini yangilashda yordam berasizmi?",
+        "answer": "Ha, biz TLC litsenziyasini yangilashda yordam beramiz va barcha sug‘urta talablariga javob berishingizni ta’minlaymiz."
+      }
+    }
+  },
+  "Marketplace": {
+    "title": "TLC Marketplace",
+    "description": "NYC TLC haydovchilari hamjamiyati bilan sotib oling, soting va bog‘laning",
+    "notice": {
+      "title": "Muhim ogohlantirish — Marketplace bo‘yicha javobgarlikdan voz kechish",
+      "description": "<start>Samkara Brokerage ushbu marketplace’dagi hech qanday bitimlarda ishtirok etmaydi.</start> Ushbu TLC Marketplace haydovchilar va avtomobil egalari uchun bepul platforma bo‘lib, ular e’lon joylashtirishi va o‘zaro bog‘lanishi mumkin. Samkara Brokerage e’lonlarni tekshirmaydi, bitimlarni amalga oshirmaydi va xaridorlar hamda sotuvchilar o‘rtasidagi nizolarda vositachi bo‘lmaydi. Biz platformadagi e’lonlar, mahsulotlar, xizmatlar yoki joylashtirilgan ma’lumotlarning aniqligi, qonuniyligi yoki sifati uchun javobgar emasmiz. Barcha bitimlar va aloqa foydalanuvchilar o‘rtasida bevosita va ularning o‘z tavakkalchiligida amalga oshiriladi. Foydalanuvchilar e’lonlarning haqiqiyligini tekshirish, zarur tekshiruvlarni o‘tkazish va amaldagi qonun hamda qoidalarga rioya qilish uchun to‘liq javobgardir. Ushbu marketplace’dan foydalangan holda, siz Samkara Brokerage foydalanuvchilar o‘rtasidagi bitimlar yoki o‘zaro aloqalar natijasida yuzaga keladigan har qanday zarar, yo‘qotish yoki nizolar uchun javobgar emasligini tan olasiz va bunga rozilik bildirasiz."
+    },
+    "not_found": "E’lonlar topilmadi. Birinchi bo‘lib joylashtiring!",
+    "post": "E’lon joylashtirish"
+  },
+  "Metadata": {
+    "title": "NYC TLC sug‘urtasi | Uber, Lyft va taksi haydovchilari uchun qulay narxlar",
+    "description": "Nyu-Yorkda TLC sug‘urtasi uchun eng yaxshi narxlarni oling. Biz Uber, Lyft, taksi va black car haydovchilari uchun sug‘urtaga ixtisoslashganmiz. Tezkor hisob-kitob, moslashuvchan to‘lovlar va professional xizmat."
+  }
+}

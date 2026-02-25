@@ -60,7 +60,7 @@ export interface IServiceForm {
   phoneNumber: string
   email: string
   serviceType: string
-  tlcLicenseNumber: string
-  dmvLicenseNumber: string
+  tlcLicenseNumber?: string
+  dmvLicenseNumber?: string
   additionalDetails?: string
 }

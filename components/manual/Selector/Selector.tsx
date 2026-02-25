@@ -15,7 +15,7 @@ export default function Selector ({ label, options, error, required = false, val
   return <Field className='flex-1 gap-2'>
     <FieldLabel>{label} {required ? <span className='text-red-500'>*</span> : null}</FieldLabel>
     <Select {...props}>
-      <SelectTrigger aria-invalid={valid}>
+      <SelectTrigger aria-invalid={!valid}>
         <SelectValue placeholder='Select policy type'/>
       </SelectTrigger>
       <SelectContent>

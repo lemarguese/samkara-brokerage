@@ -39,7 +39,7 @@
       {vehicles.map((v, index) => <div key={`fleet-vehicles-selector-${v.value}`} className='flex justify-between'>
         <Select value={v.value}
                 onValueChange={(value) => updateVehicle({ value: value, quantity: v.quantity }, index)}>
-          <SelectTrigger aria-invalid={valid}>
+          <SelectTrigger aria-invalid={!valid}>
             <SelectValue placeholder='Select policy type'/>
           </SelectTrigger>
           <SelectContent>

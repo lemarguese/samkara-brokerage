@@ -66,8 +66,6 @@ export default function ServicesPage () {
     fullName: serviceForm.fullName.trim() !== '',
     phoneNumber: REGEXES.US_PHONE.test(serviceForm.phoneNumber.trim()),
     email: REGEXES.EMAIL.test(serviceForm.email.trim()),
-    dmvLicenseNumber: serviceForm.dmvLicenseNumber.trim() !== '',
-    tlcLicenseNumber: serviceForm.tlcLicenseNumber.trim() !== '',
     serviceType: !!serviceForm.serviceType,
   }
 
@@ -223,15 +221,15 @@ export default function ServicesPage () {
                           error='Please choose the service'/>
               </div>
               <div className="grid sm:grid-cols-2 gap-5">
-                <Input valid={serviceFormValid.tlcLicenseNumber} label={t('form.tlc_license_number')}
+                <Input label={t('form.tlc_license_number')}
                        value={serviceForm.tlcLicenseNumber} placeholder="123456"
                        onChange={changeInput('tlcLicenseNumber')}/>
-                <Input valid={serviceFormValid.dmvLicenseNumber} label={t('form.dmv_license_number')}
+                <Input label={t('form.dmv_license_number')}
                        value={serviceForm.dmvLicenseNumber}
                        placeholder="123-456-789"
                        onChange={changeInput('dmvLicenseNumber')}/>
               </div>
-              <Textarea value={serviceForm.additionalDetails} label={t('form.additional_details')}
+              <Textarea valid value={serviceForm.additionalDetails} label={t('form.additional_details')}
                         onChange={changeInput('additionalDetails')}/>
               <Button onClick={sendServiceRequest} disabled={!serviceSubmitButtonDisabled || loading}
                       className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-4 rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">

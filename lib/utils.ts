@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
+import { IVehicleType } from "@/types/form.ts";
 
 export function cn (...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -10,7 +11,7 @@ export const REGEXES = {
   EMAIL: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 }
 
-export const fleetSelectorOptionsLabels = {
+export const fleetSelectorOptionsLabels: { [k in IVehicleType]: string } = {
   'black-car': 'Black Car',
   'car-service': 'Car Service',
   'livery': 'Livery',

@@ -64,3 +64,5 @@ export interface IServiceForm {
   dmvLicenseNumber?: string
   additionalDetails?: string
 }
+
+export type IVehicleType = 'black-car' | 'livery' | 'car-service' | 'yellow-cab' | 'ambulette';

@@ -6,7 +6,7 @@ import Textarea from "@/components/manual/Textarea/Textarea";
 import { Button } from "@/components/ui/button";
 import FleetVehiclesSelector from "./FleetVehiclesSelector/FleetVehiclesSelector";
 import { BaseSyntheticEvent, memo, useCallback, useMemo, useState } from "react";
-import { IFleetForm } from "@/types/form";
+import { IFleetForm, IVehicleType } from "@/types/form";
 import { fleetSelectorOptionsLabels } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
 import { useTranslations } from "next-intl";
@@ -26,7 +26,7 @@ function FleetTab () {
     additionalDetails: ''
   });
 
-  const changeVehicles = useCallback((value: { value: string, quantity: number }, index: number) => {
+  const changeVehicles = useCallback((value: { value?: string, quantity: number }, index: number) => {
     setFleetForm(prev => ({
       ...prev,
       vehicles: prev.vehicles.map((v, i) => i === index ? value : v)
@@ -40,7 +40,7 @@ function FleetTab () {
     }));
   }, []);
 
-  const deleteVehicle = useCallback((value: { value: string, quantity: number }, index: number) => {
+  const deleteVehicle = useCallback((value: { value?: string, quantity: number }, index: number) => {
     setFleetForm(prev => ({
       ...prev,
       vehicles: prev.vehicles.filter((v, i) => i !== index)
@@ -73,7 +73,10 @@ function FleetTab () {
       method: 'POST',
       body: JSON.stringify({
         ...fleetForm,
-        vehicles: fleetForm.vehicles.map(v => ({ value: fleetSelectorOptionsLabels[v.value], quantity: v.quantity }))
+        vehicles: fleetForm.vehicles.map(v => ({
+          value: fleetSelectorOptionsLabels[v.value ? v.value as IVehicleType : 'black-car' as IVehicleType],
+          quantity: v.quantity
+        }))
       }),
       headers: {
         'X-Tenant-ID': 'samkara'

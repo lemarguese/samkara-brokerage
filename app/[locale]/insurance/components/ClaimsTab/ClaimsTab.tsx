@@ -138,7 +138,7 @@ function ClaimsTab () {
       <div className='flex items-center gap-4'>
         <DatePicker valid={claimFormValid.incidentDate} value={claimForm.incidentDate} onChange={changeDate}
                     label={t('incident_date')}
-                    key='claims-incident-date-input'/>
+                    id='claims-incident-date-input'/>
         <Selector value={claimForm.incidentType} onValueChange={changeSelector} valid={claimFormValid.incidentType}
                   label={t('incident_type')}
                   options={[

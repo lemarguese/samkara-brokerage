@@ -9,8 +9,6 @@ import { BaseSyntheticEvent, FormEvent, memo, useCallback, useMemo, useState } f
 import { IQuoteForm } from "@/types/form";
 import { REGEXES } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
-import createTranslator from "use-intl/dist/types/core/createTranslator";
-import { Messages } from "use-intl/dist/types/core/AppConfig";
 import { useTranslations } from "next-intl";
 
 function QuoteTab () {
@@ -169,7 +167,6 @@ function QuoteTab () {
         label={t('additional_details')}
         value={quoteForm.additionalDetails}
         onChange={changeTextInputs('additionalDetails')}
-        rows="3"
         className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-taxi-500 focus:border-taxi-500 outline-none transition-colors resize-none"
         placeholder="Please shortly describe do you have additional drivers to add or any other questions"/>
       <Input key='quote-tab-electronic-signature-input' label='Electronic Signature' placeholder='(212) 555-0000'

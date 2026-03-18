@@ -9,10 +9,10 @@
 
   interface FleetVehiclesSelectorProps {
     valid?: boolean;
-    vehicles: { value: string | undefined, quantity: number }[];
+    vehicles: { value?: string, quantity: number }[];
     addVehicle: () => void;
-    deleteVehicle: (value: { value: string, quantity: number }, index: number) => void;
-    updateVehicle: (value: { value: string, quantity: number }, index: number) => void;
+    deleteVehicle: (value: { value?: string, quantity: number }, index: number) => void;
+    updateVehicle: (value: { value?: string, quantity: number }, index: number) => void;
   }
 
   export default function FleetVehiclesSelector ({
@@ -58,7 +58,7 @@
             <MinusIcon className='w-4 h-4'/>
           </Button>
           <Input value={v.quantity} className='w-[42px] text-center'
-                 onChange={(event) => updateVehicle({ value: v.value, quantity: event.target.value }, index)}/>
+                 onChange={(event) => updateVehicle({ value: v.value, quantity: +event.target.value }, index)}/>
           <Button variant='ghost' onClick={() => updateVehicle({ value: v.value, quantity: v.quantity + 1 }, index)}>
             <PlusIcon className='w-4 h-4'/>
           </Button>

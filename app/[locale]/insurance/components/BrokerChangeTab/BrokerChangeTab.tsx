@@ -125,7 +125,7 @@ function BrokerChangeTab () {
                onChange={changeTextInputs('policyNumber')} label={t('policy.policy_number')}
                placeholder='(212) 555-0000'
                required/>
-        <DatePicker valid={brokerChangeFormValid.policyExpirationDate} key='broker-change-policy-expiration-input'
+        <DatePicker valid={brokerChangeFormValid.policyExpirationDate} id='broker-change-policy-expiration-input'
                     value={brokerChangeForm.policyExpirationDate}
                     onChange={changeDate} label={t('policy.policy_expiration')}/>
       </div>

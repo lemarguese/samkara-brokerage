@@ -56,7 +56,7 @@ export default async function RootLayout ({
   );
 }
 
-export async function generateMetadata ({ params }) {
+export async function generateMetadata ({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 

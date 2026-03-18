@@ -10,11 +10,9 @@ import {
 } from "lucide-react";
 import RequestTabs from "@/app/[locale]/insurance/components/RequestTabs/RequestTabs";
 import { Link } from "@/locale/navigation";
-import createTranslator from "use-intl/dist/types/core/createTranslator";
-import { Messages } from "use-intl/dist/types/core/AppConfig";
-import { useTranslations } from "next-intl";
+import { useTranslations, createTranslator } from "next-intl";
 
-const contacts = (t: ReturnType<typeof createTranslator<Messages, any>>) => [
+const contacts = (t: ReturnType<typeof createTranslator<any, any>>) => [
   {
     icon: {
       value: <PhoneIcon className='w-5 h-5 text-uber-900'/>,

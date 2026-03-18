@@ -14,9 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useMemo, useState } from "react";
-import createTranslator from "use-intl/dist/types/core/createTranslator";
-import { Messages } from "use-intl/dist/types/core/AppConfig";
-import { useTranslations } from "next-intl";
+import { useTranslations, createTranslator } from "next-intl";
 
 const meta = [
   { area: 'insurance', key: 'tlc_insurance_definition' },
@@ -33,13 +31,13 @@ const meta = [
   { area: 'dmv_tlc', key: 'tlc_license_renewal_help' }
 ];
 
-const faqs = (t: ReturnType<typeof createTranslator<Messages, any>>) => meta.map((item, i) => ({
+const faqs = (t: ReturnType<typeof createTranslator<any, any>>) => meta.map((item, i) => ({
   ...item,
   question: t(`questions_answers.${i}.question`),
   answer: t(`questions_answers.${i}.answer`)
 }));
 
-const filters = (t: ReturnType<typeof createTranslator<Messages, any>>) => [
+const filters = (t: ReturnType<typeof createTranslator<any, any>>) => [
   {
     icon: undefined,
     key: 'all',

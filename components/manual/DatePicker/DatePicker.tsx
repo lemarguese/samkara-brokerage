@@ -15,7 +15,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { CalendarIcon } from "lucide-react"
-import { InputHTMLAttributes } from "react";
+import { BaseSyntheticEvent, InputHTMLAttributes } from "react";
 
 function formatDate (date: Date | undefined) {
   if (!date) {
@@ -40,6 +40,7 @@ interface DatePickerProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   valid?: boolean;
   error?: string;
+  onChange?: (e: string | BaseSyntheticEvent) => void;
 }
 
 export function DatePicker ({ label, valid, error, ...props }: DatePickerProps) {
@@ -49,15 +50,15 @@ export function DatePicker ({ label, valid, error, ...props }: DatePickerProps) 
 
   return (
     <Field className="flex-1 mx-auto w-48 gap-2">
-      <FieldLabel htmlFor={props.key}>{label}</FieldLabel>
+      <FieldLabel htmlFor={props.id}>{label}</FieldLabel>
       <InputGroup>
         <InputGroupInput
-          id={props.key}
+          id={props.id}
           placeholder="June 01, 2025"
           {...props}
           onChange={(e) => {
             const date = new Date(e.target.value)
-            props.onChange!(e.target.value)
+            props.onChange!(e)
             if (isValidDate(date)) {
               setDate(date)
               setMonth(date)

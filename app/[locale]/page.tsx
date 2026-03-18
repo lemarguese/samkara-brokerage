@@ -10,12 +10,10 @@ import {
   PhoneIcon, QuoteIcon,
   SmartphoneIcon, StarIcon, TruckIcon, UsersIcon, ZapIcon
 } from 'lucide-react';
-import { useTranslations } from "next-intl";
-import createTranslator from "use-intl/dist/types/core/createTranslator";
-import { Messages } from "use-intl/dist/types/core/AppConfig";
+import { useTranslations, createTranslator } from "next-intl";
 import { Link } from "@/locale/navigation";
 
-const services = (t: ReturnType<typeof createTranslator<Messages, any>>) => [
+const services = (t: ReturnType<typeof createTranslator<any, any>>) => [
   {
     icon: {
       background: 'taxi-500',
@@ -83,7 +81,7 @@ const services = (t: ReturnType<typeof createTranslator<Messages, any>>) => [
   }
 ];
 
-const advantages = (t: ReturnType<typeof createTranslator<Messages, any>>) => [
+const advantages = (t: ReturnType<typeof createTranslator<any, any>>) => [
   {
     icon: <DollarSignIcon/>,
     title: t('Trust.list.0.title'),
@@ -111,7 +109,7 @@ const advantages = (t: ReturnType<typeof createTranslator<Messages, any>>) => [
   }
 ];
 
-const contacts = (t: ReturnType<typeof createTranslator<Messages, any>>) => [
+const contacts = (t: ReturnType<typeof createTranslator<any, any>>) => [
   {
     icon: {
       value: <PhoneIcon className='text-white'/>,

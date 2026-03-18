@@ -62,7 +62,7 @@ function BrokerChangeTab () {
       formData.append(key, value)
     }
 
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/email/cob-request`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_PROD}/email/cob-request`, {
       method: 'POST',
       body: formData,
       headers: {

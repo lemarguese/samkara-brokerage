@@ -71,7 +71,7 @@ function ClaimsTab () {
       formData.append(key, value)
     }
 
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/email/claim-request`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_PROD}/email/claim-request`, {
       method: 'POST',
       body: formData,
       headers: {

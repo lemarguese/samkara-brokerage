@@ -65,7 +65,7 @@ function QuoteTab () {
       formData.append(key, value)
     }
 
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/email/quote-request`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_PROD}/email/quote-request`, {
       method: 'POST',
       body: formData,
       headers: {

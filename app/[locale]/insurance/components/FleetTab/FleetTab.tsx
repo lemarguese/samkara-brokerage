@@ -69,7 +69,7 @@ function FleetTab () {
   const sendFleetQuote = async () => {
     setLoading(true);
 
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/email/fleet-request`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_PROD}/email/fleet-request`, {
       method: 'POST',
       body: {
         ...fleetForm,

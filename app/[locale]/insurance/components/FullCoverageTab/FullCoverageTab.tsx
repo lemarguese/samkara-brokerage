@@ -52,7 +52,7 @@ export default function FullCoverageTab () {
       formData.append(key, value)
     }
 
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/email/full-coverage-request`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_PROD}/email/full-coverage-request`, {
       method: 'POST',
       body: formData,
       headers: {

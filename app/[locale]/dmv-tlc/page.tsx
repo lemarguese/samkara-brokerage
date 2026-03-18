@@ -42,7 +42,7 @@ export default function ServicesPage () {
   async function sendServiceRequest () {
     setLoading(true);
 
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/email/new-service-request`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_PROD}/email/new-service-request`, {
       method: 'POST',
       body: serviceForm,
       headers: {

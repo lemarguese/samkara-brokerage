@@ -66,3 +66,4 @@ export interface IServiceForm {
 }
 
 export type IVehicleType = 'black-car' | 'livery' | 'car-service' | 'yellow-cab' | 'ambulette';
+export type TFormStatus = 'idle' | 'pending' | 'success' | 'error';

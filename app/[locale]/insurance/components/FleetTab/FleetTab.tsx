@@ -81,7 +81,8 @@ function FleetTab () {
           }))
         }),
         headers: {
-          'X-Tenant-ID': 'samkara'
+          'X-Tenant-ID': 'samkara',
+          'Content-Type': 'application/json'
         }
       });
     } catch (e) {

@@ -46,7 +46,8 @@ export default function ServicesPage () {
       method: 'POST',
       body: JSON.stringify(serviceForm),
       headers: {
-        'X-Tenant-ID': 'samkara'
+        'X-Tenant-ID': 'samkara',
+        'Content-Type': 'application/json'
       }
     });
 

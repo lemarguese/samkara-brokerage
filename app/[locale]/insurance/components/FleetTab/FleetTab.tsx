@@ -71,10 +71,10 @@ function FleetTab () {
 
     await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_PROD}/email/fleet-request`, {
       method: 'POST',
-      body: {
+      body: JSON.stringify({
         ...fleetForm,
         vehicles: fleetForm.vehicles.map(v => ({ value: fleetSelectorOptionsLabels[v.value], quantity: v.quantity }))
-      },
+      }),
       headers: {
         'X-Tenant-ID': 'samkara'
       }

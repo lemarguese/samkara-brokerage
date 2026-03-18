@@ -44,7 +44,7 @@ export default function ServicesPage () {
 
     await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_PROD}/email/new-service-request`, {
       method: 'POST',
-      body: serviceForm,
+      body: JSON.stringify(serviceForm),
       headers: {
         'X-Tenant-ID': 'samkara'
       }

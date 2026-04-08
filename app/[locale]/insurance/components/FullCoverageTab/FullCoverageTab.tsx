@@ -160,6 +160,6 @@ export default function FullCoverageTab () {
   }, [status, fullCoverageSubmitButtonDisabled, fullCoverageForm, fullCoverageFormValid])
 
   return <form onSubmit={sendFullCoverageRequest} className="space-y-5">
-
+    {element}
   </form>
 }

@@ -106,9 +106,51 @@ export default function TermsPage () {
           <li>Electronic signatures</li>
         </ul>
         <p className="text-gray-700">Electronic signatures shall have the same legal effect as handwritten
-          signatures.</p></div>
+          signatures.</p>
+      </div>
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">8. SMS COMMUNICATIONS</h2>
+
+        <p className="text-gray-700 mb-4">
+          SAMKARA BROKERAGE INC. sends automated SMS reminders to NYC TLC drivers notifying them of
+          upcoming license and TLC registration expirations.
+        </p>
+
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">How to Opt In</h3>
+        <p className="text-gray-700 mb-4">
+          Drivers receive an initial SMS invitation from SAMKARA BROKERAGE INC. By replying <strong>LICENSE</strong> to
+          that message, you consent to receive expiration reminder notifications from SAMKARA BROKERAGE INC.
+        </p>
+
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">Message Frequency</h3>
+        <p className="text-gray-700 mb-4">
+          Message frequency varies based on your upcoming license and TLC expiration dates.
+          Msg &amp; data rates may apply depending on your mobile carrier plan.
+        </p>
+
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">How to Opt Out</h3>
+        <p className="text-gray-700 mb-4">
+          Reply <strong>STOP</strong> to any message to unsubscribe. You will receive one
+          confirmation message and no further messages will be sent. Reply <strong>START</strong> at
+          any time to resubscribe.
+        </p>
+
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">How to Get Help</h3>
+        <p className="text-gray-700 mb-4">
+          Reply <strong>HELP</strong> to any message or contact us at{' '}
+          <a href="mailto:support@tlcify.com" className="text-blue-600 hover:underline">
+            info@samkarabrokerage.com
+          </a>
+        </p>
+
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">Privacy</h3>
+        <p className="text-gray-700">
+          Your phone number and consent status are stored securely and will never be sold
+          or shared with third parties.
+        </p>
+      </div>
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-8"><h2
-        className="text-2xl font-bold text-gray-900 mb-6">8. LIMITATION OF LIABILITY</h2><p
+        className="text-2xl font-bold text-gray-900 mb-6">9. LIMITATION OF LIABILITY</h2><p
         className="text-gray-700 mb-2">To the fullest extent permitted by law, SAMKARA BROKERAGE INC shall not be liable
         for:</p>
         <ul className="list-disc ml-6 text-gray-700 space-y-1 mb-4">
@@ -122,7 +164,7 @@ export default function TermsPage () {
         <p className="text-gray-900 font-semibold">Our total liability shall not exceed the amount paid directly to us
           for services rendered.</p></div>
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-8"><h2
-        className="text-2xl font-bold text-gray-900 mb-6">9. INDEMNIFICATION</h2><p className="text-gray-700 mb-2">You
+        className="text-2xl font-bold text-gray-900 mb-6">10. INDEMNIFICATION</h2><p className="text-gray-700 mb-2">You
         agree to indemnify and hold harmless SAMKARA BROKERAGE INC and its owners, employees, and affiliates from claims
         arising out of:</p>
         <ul className="list-disc ml-6 text-gray-700 space-y-1">
@@ -133,23 +175,23 @@ export default function TermsPage () {
         </ul>
       </div>
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-8"><h2
-        className="text-2xl font-bold text-gray-900 mb-6">10. INTELLECTUAL PROPERTY</h2><p className="text-gray-700">All
+        className="text-2xl font-bold text-gray-900 mb-6">11. INTELLECTUAL PROPERTY</h2><p className="text-gray-700">All
         website content, branding, logos, and materials are the property of SAMKARA BROKERAGE INC and may not be copied
         or reproduced without permission.</p></div>
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-8"><h2
-        className="text-2xl font-bold text-gray-900 mb-6">11. TERMINATION OF ACCESS</h2><p className="text-gray-700">We
+        className="text-2xl font-bold text-gray-900 mb-6">12. TERMINATION OF ACCESS</h2><p className="text-gray-700">We
         reserve the right to suspend or terminate access to the website or marketplace at any time, without notice, for
         violations of these Terms.</p></div>
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-8"><h2
-        className="text-2xl font-bold text-gray-900 mb-6">12. GOVERNING LAW</h2><p className="text-gray-700 mb-2">These
+        className="text-2xl font-bold text-gray-900 mb-6">13. GOVERNING LAW</h2><p className="text-gray-700 mb-2">These
         Terms shall be governed by the laws of the State of New York.</p><p className="text-gray-700">Any disputes shall
         be resolved exclusively in the courts located in Queens County, New York.</p></div>
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-8"><h2
-        className="text-2xl font-bold text-gray-900 mb-6">13. MODIFICATIONS</h2><p className="text-gray-700">We reserve
+        className="text-2xl font-bold text-gray-900 mb-6">14. MODIFICATIONS</h2><p className="text-gray-700">We reserve
         the right to update these Terms at any time. Continued use of the website constitutes acceptance of the revised
         Terms.</p></div>
       <div className="bg-gradient-to-br from-uber-900 to-gray-800 rounded-2xl p-8 text-white"><h2
-        className="text-2xl font-bold mb-6">14. CONTACT INFORMATION</h2>
+        className="text-2xl font-bold mb-6">15. CONTACT INFORMATION</h2>
         <div className="space-y-2 text-gray-200"><p className="font-bold text-taxi-500 text-lg">SAMKARA BROKERAGE
           INC</p><p>4710 32nd Place</p><p>Long Island City, NY 11101</p><p className="mt-4">Phone: <a
           href="tel:+12123145555" className="text-taxi-500 font-semibold hover:underline">(212) 314-5555</a></p>

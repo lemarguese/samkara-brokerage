@@ -10,6 +10,7 @@ import { REGEXES } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
 import { useTranslations } from "next-intl";
 import FormStatus from "@/app/[locale]/insurance/components/FormStatus/FormStatus.tsx";
+import { Checkbox } from "@/components/ui/checkbox.tsx";
 
 function BrokerChangeTab () {
   const t = useTranslations('Insurance.forms.cob');
@@ -20,8 +21,16 @@ function BrokerChangeTab () {
     phoneNumber: '',
     email: '',
     policyExpirationDate: '',
-    policyNumber: ''
+    policyNumber: '',
+    smsEnabled: false
   });
+
+  const changeCheckbox = (value: boolean) => {
+    setBrokerChangeForm(prev => ({
+      ...prev,
+      smsEnabled: value
+    }))
+  }
 
   const changeTextInputs = useCallback((key: keyof Pick<IBrokerChangeForm, 'fullName' | 'phoneNumber' | 'email' | 'policyNumber'>) => {
     return (value: BaseSyntheticEvent) => {
@@ -80,7 +89,8 @@ function BrokerChangeTab () {
       phoneNumber: '',
       email: '',
       policyExpirationDate: '',
-      policyNumber: ''
+      policyNumber: '',
+      smsEnabled: false
     });
 
     setStatus('success');
@@ -167,6 +177,16 @@ function BrokerChangeTab () {
                  className='w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-taxi-500 focus:border-taxi-500 outline-none transition-colors font-serif text-lg italic'
                  placeholder='John Doe'
                  key='broker-change-electronical-signature-input'/>
+        </div>
+        <div className="flex items-start gap-3">
+          <Checkbox id="sms-consent" checked={brokerChangeForm.smsEnabled} onCheckedChange={changeCheckbox} required
+                    className="mt-1 shrink-0"/>
+          <span className="text-sm text-muted-foreground leading-snug font-normal cursor-pointer">
+            I agree to receive automated SMS text messages from Samkara Brokerage Inc. regarding
+            my TLC license and registration expiration reminders. Message frequency varies.
+            Msg & data rates may apply. Reply STOP to unsubscribe. View our{" "}
+            <a href="/en/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
+          </span>
         </div>
         <Button
           disabled={!brokerChangeSubmitButtonDisabled || status === 'pending'}

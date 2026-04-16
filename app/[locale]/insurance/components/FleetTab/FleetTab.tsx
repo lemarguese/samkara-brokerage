@@ -11,6 +11,7 @@ import { fleetSelectorOptionsLabels } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
 import { useTranslations } from "next-intl";
 import FormStatus from "@/app/[locale]/insurance/components/FormStatus/FormStatus.tsx";
+import { Checkbox } from "@/components/ui/checkbox.tsx";
 
 function FleetTab () {
   const t = useTranslations('Insurance.forms.fleet');
@@ -24,8 +25,16 @@ function FleetTab () {
     vehicles: [
       { value: undefined, quantity: 0 }
     ],
-    additionalDetails: ''
+    additionalDetails: '',
+    smsEnabled: false
   });
+
+  const changeCheckbox = (value: boolean) => {
+    setFleetForm(prev => ({
+      ...prev,
+      smsEnabled: value
+    }))
+  }
 
   const changeVehicles = useCallback((value: { value?: string, quantity: number }, index: number) => {
     setFleetForm(prev => ({
@@ -97,7 +106,8 @@ function FleetTab () {
       vehicles: [
         { value: undefined, quantity: 0 }
       ],
-      additionalDetails: ''
+      additionalDetails: '',
+      smsEnabled: false
     });
 
     setStatus('success')
@@ -121,7 +131,8 @@ function FleetTab () {
                    placeholder='ABC Transportation LLC' error='Please fill out the Email' valid={fleetFormValid.email}/>
             <Input label={t('phone_number')} onChange={changeInput('phoneNumber')} key='fleet-tab-phone-number-input'
                    required
-                   placeholder='212-555-0000' error='Please fill out the Phone number' valid={fleetFormValid.phoneNumber}/>
+                   placeholder='212-555-0000' error='Please fill out the Phone number'
+                   valid={fleetFormValid.phoneNumber}/>
           </div>
           <div className="flex items-center gap-4 border-t border-gray-200 pt-5">
             <FleetVehiclesSelector
@@ -133,6 +144,16 @@ function FleetTab () {
           <Textarea valid label={t('additional_details')} onChange={changeInput('additionalDetails')}
                     placeholder='Current insurance provider, coverage needs, or any special requirements...'
                     key='fleet-additional-details-textarea'/>
+        </div>
+        <div className="flex items-start gap-3">
+          <Checkbox id="sms-consent" checked={fleetForm.smsEnabled} onCheckedChange={changeCheckbox} required
+                    className="mt-1 shrink-0"/>
+          <span className="text-sm text-muted-foreground leading-snug font-normal cursor-pointer">
+            I agree to receive automated SMS text messages from Samkara Brokerage Inc. regarding
+            my TLC license and registration expiration reminders. Message frequency varies.
+            Msg & data rates may apply. Reply STOP to unsubscribe. View our{" "}
+            <a href="/en/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
+          </span>
         </div>
         <Button
           disabled={status === 'pending' || !fleetSubmitButtonDisabled}

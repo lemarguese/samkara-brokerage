@@ -10,6 +10,7 @@ import { REGEXES } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
 import { useTranslations } from "next-intl";
 import FormStatus from "@/app/[locale]/insurance/components/FormStatus/FormStatus.tsx";
+import { Checkbox } from "@/components/ui/checkbox.tsx";
 
 export default function FullCoverageTab () {
   const t = useTranslations('Insurance.forms.full_coverage');
@@ -21,8 +22,10 @@ export default function FullCoverageTab () {
     phoneNumber: '',
     liabilityPolicyNumber: '',
     coverageAmountNeeded: '',
+    smsEnabled: false
   });
 
+  console.log(fullCoverageForm)
   const changeInput = (key: keyof Omit<IFullCoverageForm, 'billOfSale'>) => {
     return (value: BaseSyntheticEvent) => {
       setFullCoverageForm(prev => ({
@@ -31,6 +34,13 @@ export default function FullCoverageTab () {
       }))
     }
   };
+
+  const changeCheckbox = (value: boolean) => {
+    setFullCoverageForm(prev => ({
+      ...prev,
+      smsEnabled: value
+    }))
+  }
 
   const changeFile = (value: BaseSyntheticEvent) => {
     const [file] = value.target.files;
@@ -72,6 +82,7 @@ export default function FullCoverageTab () {
       phoneNumber: '',
       liabilityPolicyNumber: '',
       coverageAmountNeeded: '',
+      smsEnabled: false,
     });
 
     setStatus('success')
@@ -101,7 +112,8 @@ export default function FullCoverageTab () {
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-5">
-          <Input value={fullCoverageForm.fullName} valid={fullCoverageFormValid.fullName} onChange={changeInput('fullName')}
+          <Input value={fullCoverageForm.fullName} valid={fullCoverageFormValid.fullName}
+                 onChange={changeInput('fullName')}
                  label={t('full_name')}
                  placeholder='John Doe' key='claims-full-name-input'/>
           <Input value={fullCoverageForm.phoneNumber}
@@ -137,7 +149,8 @@ export default function FullCoverageTab () {
             <UploadIcon className='w-4 h-4 text-green-600'/>
             {t('documents.title')}
           </h4>
-          <Input valid={fullCoverageFormValid.billOfSale} onChange={changeFile} label={t('documents.bill_of_sale')} type='file'
+          <Input valid={fullCoverageFormValid.billOfSale} onChange={changeFile} label={t('documents.bill_of_sale')}
+                 type='file'
                  key='full-coverage-bill-of-sale-input'
                  className='flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed border-gray-300 rounded-xl hover:border-green-500 hover:bg-gray-50 transition-colors cursor-pointer'/>
         </div>
@@ -145,6 +158,15 @@ export default function FullCoverageTab () {
                   label={t('additional_details')}
                   key='full-coverage-additional-details-textarea'
                   placeholder='Any specific coverage requirements or questions...'/>
+        <div className="flex items-start gap-3">
+          <Checkbox id="sms-consent" checked={fullCoverageForm.smsEnabled} onCheckedChange={changeCheckbox} required className="mt-1 shrink-0"/>
+          <span className="text-sm text-muted-foreground leading-snug font-normal cursor-pointer">
+            I agree to receive automated SMS text messages from Samkara Brokerage Inc. regarding
+            my TLC license and registration expiration reminders. Message frequency varies.
+            Msg & data rates may apply. Reply STOP to unsubscribe. View our{" "}
+            <a href="/en/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
+          </span>
+        </div>
         <Button
           disabled={!fullCoverageSubmitButtonDisabled || status === 'pending'}
           className='w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-600/30'>

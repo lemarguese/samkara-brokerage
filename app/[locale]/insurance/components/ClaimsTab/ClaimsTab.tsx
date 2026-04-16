@@ -12,6 +12,7 @@ import { Spinner } from "@/components/ui/spinner";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button.tsx";
 import FormStatus from "@/app/[locale]/insurance/components/FormStatus/FormStatus.tsx";
+import { Checkbox } from "@/components/ui/checkbox.tsx";
 
 function ClaimsTab () {
   const t = useTranslations('Insurance.forms.claims');
@@ -24,8 +25,16 @@ function ClaimsTab () {
     incidentDescription: '',
     incidentType: '',
     phoneNumber: '',
-    policyNumber: ''
+    policyNumber: '',
+    smsEnabled: false
   });
+
+  const changeCheckbox = (value: boolean) => {
+    setClaimForm(prev => ({
+      ...prev,
+      smsEnabled: value
+    }))
+  }
 
   const changeInput = useCallback((key: keyof Omit<IClaimForm, 'policeReport' | 'pictureOrVideo' | 'otherDocument' | 'incidentDate' | 'incidentType'>) => {
     return (val: BaseSyntheticEvent) => {
@@ -93,7 +102,8 @@ function ClaimsTab () {
       incidentDescription: '',
       incidentType: '',
       phoneNumber: '',
-      policyNumber: ''
+      policyNumber: '',
+      smsEnabled: false
     });
 
     setStatus('success');
@@ -183,6 +193,15 @@ function ClaimsTab () {
                    className='flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed border-gray-300 rounded-xl hover:border-orange-500 hover:bg-gray-50 transition-colors cursor-pointer'
                    key='claims-police-report-input' type='file'/>
           </div>
+        </div>
+        <div className="flex items-start gap-3">
+          <Checkbox id="sms-consent" checked={claimForm.smsEnabled} onCheckedChange={changeCheckbox} required className="mt-1 shrink-0" />
+          <span className="text-sm text-muted-foreground leading-snug font-normal cursor-pointer">
+            I agree to receive automated SMS text messages from Samkara Brokerage Inc. regarding
+            my TLC license and registration expiration reminders. Message frequency varies.
+            Msg & data rates may apply. Reply STOP to unsubscribe. View our{" "}
+            <a href="/en/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
+          </span>
         </div>
         <Button type="submit"
                 disabled={status === 'pending' || !claimButtonDisabled}

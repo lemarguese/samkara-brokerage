@@ -11,6 +11,7 @@ import { REGEXES } from "@/lib/utils";
 import { Spinner } from "@/components/ui/spinner";
 import { useTranslations } from "next-intl";
 import FormStatus from "@/app/[locale]/insurance/components/FormStatus/FormStatus.tsx";
+import { Checkbox } from "@/components/ui/checkbox.tsx";
 
 function QuoteTab () {
   const t = useTranslations('Insurance.forms.quote');
@@ -23,6 +24,7 @@ function QuoteTab () {
     email: '',
     policyType: '',
     additionalDetails: '',
+    smsEnabled: false
   });
 
   const changeTextInputs = useCallback((key: keyof Pick<IQuoteForm, 'fullName' | 'phoneNumber' | 'email' | 'additionalDetails'>) => {
@@ -50,6 +52,13 @@ function QuoteTab () {
       }))
     }
   }, []);
+
+  const changeCheckbox = (value: boolean) => {
+    setQuoteForm(prev => ({
+      ...prev,
+      smsEnabled: value
+    }))
+  }
 
   async function sendQuoteRequest (e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -83,6 +92,7 @@ function QuoteTab () {
       email: '',
       policyType: '',
       additionalDetails: '',
+      smsEnabled: false
     });
 
     setStatus('success');
@@ -179,6 +189,16 @@ function QuoteTab () {
             placeholder="Please shortly describe do you have additional drivers to add or any other questions"/>
           <Input key='quote-tab-electronic-signature-input' label='Electronic Signature' placeholder='(212) 555-0000'
                  required/>
+        </div>
+        <div className="flex items-start gap-3">
+          <Checkbox id="sms-consent" checked={quoteForm.smsEnabled} onCheckedChange={changeCheckbox} required
+                    className="mt-1 shrink-0"/>
+          <span className="text-sm text-muted-foreground leading-snug font-normal cursor-pointer">
+            I agree to receive automated SMS text messages from Samkara Brokerage Inc. regarding
+            my TLC license and registration expiration reminders. Message frequency varies.
+            Msg & data rates may apply. Reply STOP to unsubscribe. View our{" "}
+            <a href="/en/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
+          </span>
         </div>
         <Button type="submit" disabled={!quoteSubmitButtonDisabled || status === 'pending'}
                 className="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-taxi-500 text-uber-900 hover:bg-taxi-400 shadow-lg shadow-taxi-500/30">

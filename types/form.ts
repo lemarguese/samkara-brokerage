@@ -3,6 +3,7 @@ export interface IQuoteForm {
   phoneNumber: string;
   email: string;
   policyType: string;
+  smsEnabled: boolean;
   driverLicense?: File;
   tlcLicense?: File;
   fh1?: File;
@@ -18,6 +19,7 @@ export interface IBrokerChangeForm {
   phoneNumber: string;
   policyNumber: string;
   policyExpirationDate: string;
+  smsEnabled: boolean;
   driverLicense?: File;
   registration?: File;
   fh1?: File;
@@ -28,6 +30,7 @@ export interface IFleetForm {
   contactName: string,
   email: string,
   phoneNumber: string,
+  smsEnabled: boolean;
   vehicles: { value?: string, quantity: number }[],
   additionalDetails: string
 }
@@ -40,6 +43,7 @@ export interface IClaimForm {
   incidentDate: string;
   incidentType: string;
   incidentDescription: string;
+  smsEnabled: boolean;
   pictureOrVideo?: File;
   otherDocument?: File;
   policeReport?: File;
@@ -51,6 +55,7 @@ export interface IFullCoverageForm {
   email: string;
   liabilityPolicyNumber: string;
   coverageAmountNeeded: string;
+  smsEnabled: boolean;
   billOfSale?: File;
   additionalDetails?: string;
 }

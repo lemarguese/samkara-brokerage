@@ -4,6 +4,7 @@ import { GlobeIcon, LogInIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Link, usePathname, useRouter } from "@/locale/navigation";
+import Image from "next/image";
 
 export default function Header () {
   const pathname = usePathname();
@@ -19,7 +20,8 @@ export default function Header () {
         <Link href="/"
               className="flex items-center gap-3">
           <div
-            className="w-11 h-11 bg-taxi-500 rounded-xl flex items-center justify-center shadow-lg shadow-taxi-500/30">
+            className="w-11 h-11 p-2 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-taxi-500/30">
+            <Image src='/logo.png' alt='logo' width={96} height={96} />
           </div>
           <div className="flex flex-col"><span
             className="text-lg font-bold text-white leading-tight uppercase">SAMKARA</span><span

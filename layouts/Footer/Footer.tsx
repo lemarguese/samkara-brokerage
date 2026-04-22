@@ -1,12 +1,15 @@
 import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 import { Link } from "@/locale/navigation";
+import Image from "next/image";
 
 export default function Footer () {
   return <footer className="bg-uber-900 text-gray-300">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
         <div className="lg:col-span-2"><a href="#" className="flex items-center gap-3 mb-6">
-          <div className="w-11 h-11 bg-taxi-500 rounded-xl flex items-center justify-center">
+          <div
+            className="w-11 h-11 p-2 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-taxi-500/30">
+            <Image src='/logo.png' alt='logo' width={96} height={96}/>
           </div>
           <div className="flex flex-col"><span className="text-lg font-bold text-white leading-tight uppercase">SAMKARA BROKERAGE</span><span
             className="text-xs font-semibold text-taxi-500 uppercase tracking-wider">TLC &amp; DMV Experts</span>
@@ -18,10 +21,10 @@ export default function Footer () {
             className="bg-uber-800 text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1"> Uber</span><span
             className="bg-lyft-500 text-white px-2 py-1 rounded text-xs font-bold">Lyft</span><span
             className="bg-taxi-500 text-uber-900 px-2 py-1 rounded text-xs font-bold">Taxi</span></div>
-          <div className="flex gap-3"><a href="#"
+          <div className="flex gap-3"><a href="https://www.facebook.com/profile.php?id=61588032943664"
                                          className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-taxi-500 hover:text-uber-900 transition-colors">
             <FacebookIcon/>
-          </a><a href="#"
+          </a><a href="https://www.instagram.com/samkarabrokerage"
                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-taxi-500 hover:text-uber-900 transition-colors">
             <InstagramIcon/>
           </a><a href="#"
@@ -65,11 +68,11 @@ export default function Footer () {
         </div>
         <div><h3 className="text-white font-bold mb-6">Our Services</h3>
           <ul className="space-y-3">
-            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">Insurance Quotes</Link></li>
-            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">Broker Change</Link></li>
-            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">Fleet Insurance</Link></li>
-            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">Claims Support</Link></li>
-            <li><Link href="/#contact" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</Link>
+            <li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">Insurance Quotes</Link></li>
+            <li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">Broker Change</Link></li>
+            <li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">Fleet Insurance</Link></li>
+            <li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">Claims Support</Link></li>
+            <li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</Link>
             </li>
           </ul>
           <div className="mt-6 pt-6 border-t border-gray-800"><p className="text-sm text-gray-500 mb-2">Contact Us</p>

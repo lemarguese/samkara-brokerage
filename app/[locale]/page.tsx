@@ -145,7 +145,7 @@ function AnimatedCounter ({ value, suffix = '' }: { value: number; suffix?: stri
         if (!start) start = timestamp;
         const progress = Math.min((timestamp - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.floor(eased * value) + suffix;
+        el.textContent = (eased * value).toFixed(1) + suffix;
         if (progress < 1) requestAnimationFrame(step);
       };
       requestAnimationFrame(step);
@@ -525,14 +525,14 @@ export default function Home () {
             <h3 className="text-2xl font-black text-white mb-2">{t('Contact.question')}</h3>
             <p className="text-zinc-400 mb-8 font-light text-sm">{t('Contact.question_description')}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/insurance"
+              <Link href="/insurance"
                  className="inline-flex items-center gap-2 bg-yellow-400 text-black px-7 py-3.5 rounded-xl font-bold hover:bg-yellow-300 transition-colors shadow-[0_4px_20px_rgba(246,201,14,0.3)]">
                 Get Started
-              </a>
-              <a href="tel:+12123145555"
+              </Link>
+              <Link href="tel:+12123145555"
                  className="inline-flex items-center gap-2 bg-white/8 text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-white/15 transition-colors border border-white/12">
                 <PhoneIcon className="w-4 h-4"/> (212) 314-5555
-              </a>
+              </Link>
             </div>
           </div>
         </div>

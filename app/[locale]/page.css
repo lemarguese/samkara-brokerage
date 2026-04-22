@@ -1,31 +1,55 @@
 /* ── Keyframes (from <style> tag) ── */
 @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 @keyframes driftA {
-    to { transform: translate(40px, 20px); }
+    to {
+        transform: translate(40px, 20px);
+    }
 }
+
 @keyframes driftB {
-    to { transform: translate(-30px, -20px); }
+    to {
+        transform: translate(-30px, -20px);
+    }
 }
+
 @keyframes roadScroll {
-    to { transform: translateX(-100px); }
+    to {
+        transform: translateX(-100px);
+    }
 }
+
 @keyframes tickerScroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
+
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.4; }
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
 }
 
 /* ── Hero grid background (backgroundImage + backgroundSize + maskImage) ── */
 .hero-grid-bg {
-    background-image:
-            linear-gradient(rgba(246,201,14,0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(246,201,14,0.04) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(246, 201, 14, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(246, 201, 14, 0.04) 1px, transparent 1px);
     background-size: 60px 60px;
     -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
     mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
@@ -33,11 +57,12 @@
 
 /* ── Hero glow orbs (radial-gradient + animation) ── */
 .hero-glow-a {
-    background: radial-gradient(circle, rgba(246,201,14,0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(246, 201, 14, 0.12) 0%, transparent 70%);
     animation: driftA 8s ease-in-out infinite alternate;
 }
+
 .hero-glow-b {
-    background: radial-gradient(circle, rgba(255,0,191,0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 0, 191, 0.06) 0%, transparent 70%);
     animation: driftB 10s ease-in-out infinite alternate;
 }
 
@@ -48,15 +73,32 @@
 
 /* ── Ticker track ── */
 .ticker-track {
-    animation: tickerScroll 18s linear infinite;
+    display: flex;
+    width: max-content;
+    animation: tickerScroll 500s linear infinite;
 }
 
 /* ── Hero pills staggered fade-up ── */
-.hero-pill { animation: fadeUp 0.4s ease forwards; opacity: 0; }
-.hero-pill-0 { animation-delay: 0ms;   }
-.hero-pill-1 { animation-delay: 60ms;  }
-.hero-pill-2 { animation-delay: 120ms; }
-.hero-pill-3 { animation-delay: 180ms; }
+.hero-pill {
+    animation: fadeUp 0.4s ease forwards;
+    opacity: 0;
+}
+
+.hero-pill-0 {
+    animation-delay: 0ms;
+}
+
+.hero-pill-1 {
+    animation-delay: 60ms;
+}
+
+.hero-pill-2 {
+    animation-delay: 120ms;
+}
+
+.hero-pill-3 {
+    animation-delay: 180ms;
+}
 
 /* ── Hero h1 ── */
 .hero-h1-anim {

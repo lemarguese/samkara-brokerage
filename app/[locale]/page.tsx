@@ -526,11 +526,11 @@ export default function Home () {
             <p className="text-zinc-400 mb-8 font-light text-sm">{t('Contact.question_description')}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/insurance"
-                 className="inline-flex items-center gap-2 bg-yellow-400 text-black px-7 py-3.5 rounded-xl font-bold hover:bg-yellow-300 transition-colors shadow-[0_4px_20px_rgba(246,201,14,0.3)]">
+                    className="inline-flex items-center gap-2 bg-yellow-400 text-black px-7 py-3.5 rounded-xl font-bold hover:bg-yellow-300 transition-colors shadow-[0_4px_20px_rgba(246,201,14,0.3)]">
                 Get Started
               </Link>
               <Link href="tel:+12123145555"
-                 className="inline-flex items-center gap-2 bg-white/8 text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-white/15 transition-colors border border-white/12">
+                    className="inline-flex items-center gap-2 bg-white/8 text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-white/15 transition-colors border border-white/12">
                 <PhoneIcon className="w-4 h-4"/> (212) 314-5555
               </Link>
             </div>

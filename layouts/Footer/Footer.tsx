@@ -21,16 +21,16 @@ export default function Footer () {
             className="bg-uber-800 text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1"> Uber</span><span
             className="bg-lyft-500 text-white px-2 py-1 rounded text-xs font-bold">Lyft</span><span
             className="bg-taxi-500 text-uber-900 px-2 py-1 rounded text-xs font-bold">Taxi</span></div>
-          <div className="flex gap-3"><a href="https://www.facebook.com/profile.php?id=61588032943664"
+          <div className="flex gap-3"><a href="https://www.facebook.com/profile.php?id=61588032943664" target='_blank'
                                          className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-taxi-500 hover:text-uber-900 transition-colors">
             <FacebookIcon/>
-          </a><a href="https://www.instagram.com/samkarabrokerage"
+          </a><a href="https://www.instagram.com/samkarabrokerage" target='_blank'
                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-taxi-500 hover:text-uber-900 transition-colors">
             <InstagramIcon/>
-          </a><a href="#"
+          </a><a href="#" target='_blank'
                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-taxi-500 hover:text-uber-900 transition-colors">
             <TwitterIcon/>
-          </a><a href="#"
+          </a><a href="#" target='_blank'
                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-taxi-500 hover:text-uber-900 transition-colors">
             <LinkedinIcon/>
           </a></div>

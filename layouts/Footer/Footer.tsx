@@ -40,9 +40,9 @@ export default function Footer () {
             <li>
               <Link href="/insurance" className="hover:text-taxi-500 transition-colors">Insurance</Link>
             </li>
-            <li>
-              <Link href="/dmv-tlc" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</Link>
-            </li>
+            {/*<li>*/}
+            {/*  <Link href="/dmv-tlc" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</Link>*/}
+            {/*</li>*/}
             <li>
               <Link href="/marketplace" className="hover:text-taxi-500 transition-colors">TLC Marketplace</Link>
             </li>
@@ -72,8 +72,8 @@ export default function Footer () {
             <li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">Broker Change</Link></li>
             <li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">Fleet Insurance</Link></li>
             <li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">Claims Support</Link></li>
-            <li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</Link>
-            </li>
+            {/*<li><Link href="/insurance" className="hover:text-taxi-500 transition-colors">DMV &amp; TLC Services</Link>*/}
+            {/*</li>*/}
           </ul>
           <div className="mt-6 pt-6 border-t border-gray-800"><p className="text-sm text-gray-500 mb-2">Contact Us</p>
             <a href="tel:+12123145555" className="text-taxi-500 font-bold hover:text-taxi-400">(212) 314-5555</a>

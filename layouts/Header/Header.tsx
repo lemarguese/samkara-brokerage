@@ -10,10 +10,6 @@ export default function Header () {
   const pathname = usePathname();
   const router = useRouter();
 
-  const changeLocale = (locale: string) => () => {
-    router.replace(pathname, { locale });
-  }
-
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-uber-900/95 backdrop-blur-sm shadow-lg">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between h-16 md:h-20">
@@ -32,8 +28,8 @@ export default function Header () {
                 className="text-gray-300 hover:text-taxi-400 font-medium transition-colors text-sm">Insurance</Link>
           <Link href="/marketplace"
                 className="text-gray-300 hover:text-taxi-400 font-medium transition-colors text-sm">Market</Link>
-          <Link href="/dmv-tlc"
-                className="text-gray-300 hover:text-taxi-400 font-medium transition-colors text-sm">DMV/TLC</Link>
+          {/*<Link href="/dmv-tlc"*/}
+          {/*      className="text-gray-300 hover:text-taxi-400 font-medium transition-colors text-sm">DMV/TLC</Link>*/}
           <Link href="/faq"
                 className="text-gray-300 hover:text-taxi-400 font-medium transition-colors text-sm">FAQ</Link>
           <Link href="/#testimonials"

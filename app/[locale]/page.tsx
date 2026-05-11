@@ -191,7 +191,7 @@ export default function Home () {
           <div className="ticker-track flex whitespace-nowrap">
             {[...Array(100)].map((_, pass) =>
               ['Rideshare Coverage', 'Same-Day TLC', 'Fleet Insurance',
-                'Black Car & Livery', 'DMV Services', 'Best Rates Guaranteed',
+                'Black Car & Livery', 'Best Rates Guaranteed',
                 'Multilingual Staff', '30+ Years Experience'].map((item, i) => (
                 <span
                   key={`${pass}-${i}`}

@@ -15,12 +15,18 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
-import { Globe, Phone, Menu, Car } from "lucide-react";
+import { Globe, Phone, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "@/locale/navigation.ts";
 
 import Image from "next/image";
 import { useLocale } from "use-intl";
+
+import RussiaFlag from '../../public/flags/ru.svg';
+import SpanishFlag from '../../public/flags/es.svg';
+import UnitedStatesFlag from '../../public/flags/us.svg';
+import ChinaFlag from '../../public/flags/ch.svg';
+import UzbekFlag from '../../public/flags/uz.svg';
 
 const navLinks = [
   { to: "/insurance", hash: undefined, label: "Insurance" },
@@ -31,9 +37,11 @@ const navLinks = [
 ];
 
 const locales = [
-  { code: "en", label: "English" },
-  { code: "es", label: "Español" },
-  { code: "ru", label: "Русский" },
+  { code: "en", label: "English", flag: UnitedStatesFlag },
+  { code: "es", label: "Español", flag: SpanishFlag },
+  { code: "ru", label: "Русский", flag: RussiaFlag },
+  { code: "ch", label: "中文", flag: ChinaFlag },
+  { code: "uz", label: "O‘zbek", flag: UzbekFlag },
 ];
 
 function Header () {
@@ -93,8 +101,13 @@ function Header () {
                   size="sm"
                   className="text-gray-300 hover:text-taxi-400 hover:bg-white/5 font-medium transition-colors text-sm"
                 >
-                  <Globe className="w-4 h-4 mr-1.5"/>
-                  {locales.find((l) => l.code === locale)?.label}
+                  {(() => {
+                    const lang = locales.find(l => l.code === locale);
+                    if (lang) return <div className='flex items-center gap-2'>
+                      <Image src={lang.flag} width={24} height={18} alt={`language-flag-${lang.code}`}/>
+                      {lang.label}
+                    </div>
+                  })()}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-44 bg-uber-800 border-uber-700" align="end">
@@ -105,12 +118,15 @@ function Header () {
                       href='/'
                       locale={lang.code}
                       className={cn(
-                        "w-full text-left px-3 py-2 rounded-md text-sm transition-colors cursor-pointer",
+                        "w-full flex gap-2 items-center text-left px-3 py-2 rounded-md text-sm transition-colors cursor-pointer",
                         locale === lang.code
                           ? "bg-taxi-500 text-uber-900 font-semibold"
                           : "text-gray-300 hover:bg-white/10 hover:text-white"
                       )}
                     >
+                      <span>
+                        <Image src={lang.flag} alt={`language-flag-${lang.code}`} width={20} height={16}/>
+                      </span>
                       {lang.label}
                     </Link>
                   ))}
@@ -218,7 +234,9 @@ function Header () {
                               : "text-gray-300 hover:bg-white/10 hover:text-white"
                           )}
                         >
-                          <Globe className="w-4 h-4"/>
+                          <span>
+                        <Image src={lang.flag} alt={`language-flag-${lang.code}`} width={20} height={16}/>
+                      </span>
                           {lang.label}
                         </Link>
                       ))}
@@ -226,18 +244,18 @@ function Header () {
                   </div>
                 </div>
 
-              {/*  /!* Bottom CTA *!/*/}
-              {/*  <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-uber-800 bg-uber-900">*/}
-              {/*    <SheetClose asChild>*/}
-              {/*      <a*/}
-              {/*        href="tel:+12123145555"*/}
-              {/*        className="flex w-full items-center justify-center gap-2 bg-taxi-500 text-uber-900 px-4 py-3 rounded-xl font-bold hover:bg-taxi-400 transition-colors shadow-lg shadow-taxi-500/30 text-base"*/}
-              {/*      >*/}
-              {/*        <Phone className="w-5 h-5"/>*/}
-              {/*        (212) 314-5555*/}
-              {/*      </a>*/}
-              {/*    </SheetClose>*/}
-              {/*  </div>*/}
+                {/*  /!* Bottom CTA *!/*/}
+                {/*  <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-uber-800 bg-uber-900">*/}
+                {/*    <SheetClose asChild>*/}
+                {/*      <a*/}
+                {/*        href="tel:+12123145555"*/}
+                {/*        className="flex w-full items-center justify-center gap-2 bg-taxi-500 text-uber-900 px-4 py-3 rounded-xl font-bold hover:bg-taxi-400 transition-colors shadow-lg shadow-taxi-500/30 text-base"*/}
+                {/*      >*/}
+                {/*        <Phone className="w-5 h-5"/>*/}
+                {/*        (212) 314-5555*/}
+                {/*      </a>*/}
+                {/*    </SheetClose>*/}
+                {/*  </div>*/}
               </SheetContent>
             </Sheet>
           </div>

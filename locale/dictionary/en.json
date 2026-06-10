@@ -46,6 +46,7 @@
       "chip": "Online courses",
       "title": "Complete your TLC <highlight>courses online</highlight>",
       "description": "State-approved defensive driving and TLC-required courses, all available from your phone or computer. Complete at your own pace, get your certificate same day.",
+      "warning": "To access the Spanish course, switch the language and enroll.",
       "stats": {
         "online": {
           "title": "Online",

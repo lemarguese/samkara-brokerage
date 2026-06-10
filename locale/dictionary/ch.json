@@ -46,6 +46,7 @@
       "chip": "在线课程",
       "title": "在线完成您的 <highlight>TLC 课程</highlight>",
       "description": "州政府批准的防御性驾驶课程和 TLC 必修课程，均可通过手机或电脑完成。按照自己的节奏学习，当天即可获得证书。",
+      "warning": "要访问西班牙语课程，请切换语言并报名。",
       "stats": {
         "online": {
           "title": "在线学习",

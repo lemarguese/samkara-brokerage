@@ -11,7 +11,7 @@ import {
   MapPinIcon,
   PhoneIcon, ShieldCheckIcon,
   SmartphoneIcon, StarIcon, TruckIcon, UsersIcon, ZapIcon,
-  GraduationCapIcon
+  GraduationCapIcon, ShieldIcon, InfoIcon
 } from 'lucide-react';
 import { useTranslations, createTranslator } from "next-intl";
 import { Link } from "@/locale/navigation";
@@ -453,9 +453,9 @@ export default function Home ({
       {/* ═══ ONLINE COURSES ═══ */}
       <section id="courses" className="py-20 md:py-28 bg-zinc-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="flex flex-col gap-4 items-center text-center mb-16">
             <div
-              className="inline-flex items-center gap-2 bg-yellow-400/15 text-yellow-700 px-4 py-2 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">
+              className="inline-flex items-center gap-2 bg-yellow-400/15 text-yellow-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
               <SmartphoneIcon className="w-3.5 h-3.5"/>
               {t('Courses.chip')}
             </div>
@@ -463,6 +463,12 @@ export default function Home ({
               {t.rich('Courses.title', { highlight: (c) => <span className="text-yellow-600">{c}</span> })}
             </h2>
             <p className="text-base text-zinc-500 max-w-2xl mx-auto font-light">{t('Courses.description')}</p>
+            {locale !== 'es' ? <div className="w-fit bg-blue-50 border border-blue-200 rounded-xl p-3 mb-2">
+              <p className="text-sm text-blue-800 flex items-start gap-2">
+                <InfoIcon className="w-5 h-5 flex-shrink-0"/>
+                <span>{t('Courses.warning')}</span>
+              </p>
+            </div> : null}
           </div>
 
           {/* Stats */}

@@ -46,6 +46,7 @@
       "chip": "Onlayn kurslar",
       "title": "TLC <highlight>kurslaringizni onlayn tamomlang</highlight>",
       "description": "Davlat tomonidan tasdiqlangan himoyaviy haydash va TLC talablari bo‘yicha kurslar telefon yoki kompyuteringiz orqali mavjud. O‘zingizga qulay vaqtda o‘qing va sertifikatingizni shu kunning o‘zida oling.",
+      "warning": "Ispan tili kursiga kirish uchun tilni o‘zgartiring va ro‘yxatdan o‘ting.",
       "stats": {
         "online": {
           "title": "Onlayn",

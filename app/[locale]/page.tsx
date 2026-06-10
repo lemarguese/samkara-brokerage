@@ -466,7 +466,7 @@ export default function Home ({
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
             {[
               { num: t('Courses.stats.online.title'), label: t('Courses.stats.online.description') },
               { num: t('Courses.stats.approved.title'), label: t('Courses.stats.approved.description') },

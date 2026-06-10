@@ -42,6 +42,64 @@
         }
       }
     },
+    "Courses": {
+      "chip": "Cursos en línea",
+      "title": "Completa tus <highlight>cursos TLC en línea</highlight>",
+      "description": "Cursos de manejo defensivo aprobados por el estado y cursos requeridos por TLC, todos disponibles desde tu teléfono o computadora. Avanza a tu propio ritmo y recibe tu certificado el mismo día.",
+      "stats": {
+        "online": {
+          "title": "En línea",
+          "description": "Aprende desde cualquier lugar"
+        },
+        "approved": {
+          "title": "Aprobado por DMV y TLC",
+          "description": "Cursos oficiales"
+        },
+        "certificate": {
+          "title": "El mismo día",
+          "description": "Certificados digitales"
+        }
+      },
+      "ddc": {
+        "new_york": {
+          "title": "Curso de Manejo Defensivo (NY)",
+          "description": "Curso de Manejo Defensivo de 6 horas aprobado por el DMV de Nueva York. Reduce hasta 4 puntos de tu historial de manejo y obtén un 10% de descuento en tu seguro durante tres años.",
+          "badge": "Más popular",
+          "modules": {
+            "0": "Fundamentos del manejo defensivo y prevención de accidentes",
+            "1": "Concientización sobre distracciones, fatiga y conducción bajo los efectos del alcohol",
+            "2": "Cómo manejar la agresividad y la ira al volante",
+            "3": "Repaso del curso, examen final y emisión del certificado"
+          },
+          "priceSub": "Certificado disponible en 24 horas"
+        },
+        "new_jersey": {
+          "title": "Curso de Manejo Defensivo (NJ)",
+          "description": "Curso de manejo defensivo de Nueva Jersey diseñado para mejorar los hábitos de conducción segura y ayudar a los conductores elegibles a obtener descuentos en el seguro y beneficios de reducción de puntos.",
+          "badge": "Descuento en el seguro",
+          "modules": {
+            "0": "Técnicas de conducción segura e identificación de riesgos",
+            "1": "Prevención de distracciones, fatiga y conducción bajo los efectos del alcohol",
+            "2": "Manejo del estrés, la ira al volante y respuestas defensivas",
+            "3": "Evaluación final y emisión del certificado"
+          },
+          "priceSub": "Procesamiento rápido del certificado"
+        }
+      },
+      "pre_licensing": {
+        "title": "Curso Prelicencia de Nueva York (5 Horas)",
+        "description": "Curso obligatorio de 5 horas requerido por el DMV de Nueva York para nuevos conductores. Completa la clase para recibir tu certificado MV-278 y poder programar tu examen práctico.",
+        "badge": "Requerido para el examen de manejo",
+        "modules": {
+          "0": "Reglas de tránsito y leyes de conducción",
+          "1": "Manejo defensivo y concientización sobre riesgos",
+          "2": "Cómo compartir la vía con peatones y ciclistas",
+          "3": "Prevención del consumo de alcohol, drogas y conducción bajo sus efectos",
+          "4": "Repaso del curso y emisión del certificado MV-278"
+        },
+        "priceSub": "Certificado MV-278"
+      }
+    },
     "Trust": {
       "title": "Expertos en Seguro TLC en Quienes <trust>Confían los Conductores</trust>",
       "description": "Por más de 30 años hemos ayudado a miles de conductores en NYC a obtener la cobertura correcta. No somos solo brokers, estamos contigo en cada paso.",

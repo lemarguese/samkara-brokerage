@@ -42,6 +42,64 @@
         }
       }
     },
+    "Courses": {
+      "chip": "Online courses",
+      "title": "Complete your TLC <highlight>courses online</highlight>",
+      "description": "State-approved defensive driving and TLC-required courses, all available from your phone or computer. Complete at your own pace, get your certificate same day.",
+      "stats": {
+        "online": {
+          "title": "Online",
+          "description": "Learn from anywhere"
+        },
+        "approved": {
+          "title": "DMV & TLC Approved",
+          "description": "Official courses"
+        },
+        "certificate": {
+          "title": "Same Day",
+          "description": "Digital Certificates"
+        }
+      },
+      "ddc": {
+        "new_york": {
+          "title": "Defensive Driving Course (NY)",
+          "description": "New York DMV-approved 6-hour Defensive Driving Course. Reduce up to 4 points from your driving record and qualify for a 10% insurance discount for three years.",
+          "badge": "Most Popular",
+          "modules": {
+            "0": "Defensive driving fundamentals & collision prevention",
+            "1": "Distracted, impaired & fatigued driving awareness",
+            "2": "Managing road rage and aggressive driving situations",
+            "3": "Course review, final assessment & certificate completion"
+          },
+          "priceSub": "Certificate available within 24 hours"
+        },
+        "new_jersey": {
+          "title": "Defensive Driving Course (NJ)",
+          "description": "New Jersey defensive driving course designed to improve safe driving habits and help eligible drivers qualify for insurance discounts and point reduction benefits.",
+          "badge": "Insurance Discount",
+          "modules": {
+            "0": "Safe driving techniques & hazard recognition",
+            "1": "Distracted, drowsy & impaired driving prevention",
+            "2": "Stress management, road rage & defensive responses",
+            "3": "Final assessment & certificate issuance"
+          },
+          "priceSub": "Fast certificate processing"
+        }
+      },
+      "pre_licensing": {
+        "title": "NY Pre-Licensing Course (5-Hour Class)",
+        "description": "New York DMV-required 5-hour course for new drivers. Complete the class to receive your MV-278 certificate and become eligible to schedule your road test.",
+        "badge": "Required for Road Test",
+        "modules": {
+          "0": "Rules of the road & traffic laws",
+          "1": "Defensive driving and risk awareness",
+          "2": "Sharing the road with pedestrians and cyclists",
+          "3": "Alcohol, drugs & impaired driving prevention",
+          "4": "Course review & MV-278 certificate issuance"
+        },
+        "priceSub": "MV-278 certificate"
+      }
+    },
     "Trust": {
       "title": "The TLC Insurance Experts <trust>Drivers Trust</trust>",
       "description": "For over 30 years, we've helped thousands of NYC rideshare and taxi drivers get the coverage they need. We're not just insurance brokers—we're partners in your success.",

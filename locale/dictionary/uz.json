@@ -42,6 +42,64 @@
         }
       }
     },
+    "Courses": {
+      "chip": "Onlayn kurslar",
+      "title": "TLC <highlight>kurslaringizni onlayn tamomlang</highlight>",
+      "description": "Davlat tomonidan tasdiqlangan himoyaviy haydash va TLC talablari bo‘yicha kurslar telefon yoki kompyuteringiz orqali mavjud. O‘zingizga qulay vaqtda o‘qing va sertifikatingizni shu kunning o‘zida oling.",
+      "stats": {
+        "online": {
+          "title": "Onlayn",
+          "description": "Istalgan joydan o‘qing"
+        },
+        "approved": {
+          "title": "DMV va TLC tasdiqlagan",
+          "description": "Rasmiy kurslar"
+        },
+        "certificate": {
+          "title": "Shu kunning o‘zida",
+          "description": "Raqamli sertifikatlar"
+        }
+      },
+      "ddc": {
+        "new_york": {
+          "title": "Himoyaviy Haydash Kursi (NY)",
+          "description": "Nyu-York DMV tomonidan tasdiqlangan 6 soatlik himoyaviy haydash kursi. Haydovchilik tarixingizdan 4 tagacha ballni kamaytirish va uch yil davomida sug‘urta chegirmasidan foydalanish imkonini beradi.",
+          "badge": "Eng mashhur",
+          "modules": {
+            "0": "Himoyaviy haydash asoslari va avariyalarning oldini olish",
+            "1": "Chalg‘ituvchi omillar, charchoq va mast holda haydash xavfi",
+            "2": "Yo‘ldagi agressiya va jahldor haydovchilar bilan muomala",
+            "3": "Kursni yakunlash, test va sertifikat olish"
+          },
+          "priceSub": "Sertifikat 24 soat ichida taqdim etiladi"
+        },
+        "new_jersey": {
+          "title": "Himoyaviy Haydash Kursi (NJ)",
+          "description": "Nyu-Jersi himoyaviy haydash kursi xavfsiz haydash ko‘nikmalarini rivojlantirishga yordam beradi hamda mos haydovchilarga sug‘urta chegirmalari va ballarni kamaytirish imkonini beradi.",
+          "badge": "Sug‘urta chegirmasi",
+          "modules": {
+            "0": "Xavfsiz haydash usullari va xavflarni aniqlash",
+            "1": "Chalg‘ituvchi omillar, charchoq va mast holda haydashning oldini olish",
+            "2": "Stressni boshqarish va yo‘ldagi agressiyaga qarshi himoyaviy yondashuv",
+            "3": "Yakuniy test va sertifikat berilishi"
+          },
+          "priceSub": "Sertifikat tezkor rasmiylashtiriladi"
+        }
+      },
+      "pre_licensing": {
+        "title": "Nyu-York 5 Soatlik Haydovchilik Kursi",
+        "description": "Yangi haydovchilar uchun DMV talab qiladigan 5 soatlik kurs. Kursni tugatgach, MV-278 sertifikatini olib, amaliy imtihon sanasini belgilashingiz mumkin.",
+        "badge": "Haydovchilik imtihoni uchun majburiy",
+        "modules": {
+          "0": "Yo‘l qoidalari va harakat qonunlari",
+          "1": "Himoyaviy haydash va xavfni anglash",
+          "2": "Piyodalar va velosipedchilar bilan yo‘lni bo‘lishish",
+          "3": "Alkogol, giyohvand moddalar va mast holda haydashning oldini olish",
+          "4": "Kursni yakunlash va MV-278 sertifikatini olish"
+        },
+        "priceSub": "MV-278 sertifikati"
+      }
+    },
     "Trust": {
       "title": "TLC sug‘urta mutaxassislari — <trust>haydovchilar ishonadi</trust>",
       "description": "30 yildan ortiq vaqt davomida minglab NYC haydovchilariga kerakli sug‘urtani olishda yordam berdik. Biz oddiy broker emas — sizning hamkoringizmiz.",

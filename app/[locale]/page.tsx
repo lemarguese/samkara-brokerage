@@ -9,12 +9,17 @@ import {
   CircleHelpIcon, ClockIcon,
   DollarSignIcon, FileTextIcon, HeartIcon, LanguagesIcon, MailIcon,
   MapPinIcon,
-  PhoneIcon,
-  SmartphoneIcon, StarIcon, TruckIcon, UsersIcon, ZapIcon
+  PhoneIcon, ShieldCheckIcon,
+  SmartphoneIcon, StarIcon, TruckIcon, UsersIcon, ZapIcon,
+  GraduationCapIcon
 } from 'lucide-react';
 import { useTranslations, createTranslator } from "next-intl";
 import { Link } from "@/locale/navigation";
-import { useEffect, useRef } from "react";
+import { Usable, use, useEffect, useRef } from "react";
+import Image from "next/image";
+
+import SpanishFlag from '../../public/flags/es.svg';
+import UnitedStatesFlag from '../../public/flags/us.svg';
 
 const services = (t: ReturnType<typeof createTranslator<any, any>>) => [
   {
@@ -156,9 +161,107 @@ function AnimatedCounter ({ value, suffix = '' }: { value: number; suffix?: stri
   return <span ref={ref}>0{suffix}</span>;
 }
 
-export default function Home () {
-  const t = useTranslations('HomePage');
+interface Course {
+  banner: { background: string; iconBackground: string; iconColor: string; icon: React.ReactNode; title: string; };
+  badge: { label: string; style: string; };
+  description: string;
+  modules: string[];
+  price: string;
+  priceSub: string;
+  actionUrl: (locale: string) => string;
+}
 
+const courses = (t: ReturnType<typeof createTranslator<any, any>>): Course[] => [
+  {
+    banner: {
+      background: 'bg-yellow-600',
+      iconBackground: 'bg-zinc-900',
+      iconColor: 'text-yellow-600',
+      icon: <ShieldCheckIcon className="w-5 h-5 text-yellow-400"/>,
+      title: t('Courses.ddc.new_york.title'),
+    },
+    badge: { label: t('Courses.ddc.new_york.badge'), style: 'bg-pink-50 text-pink-700 border border-pink-200' },
+    description: t('Courses.ddc.new_york.description'),
+    modules: [
+      t('Courses.ddc.new_york.modules.0'),
+      t('Courses.ddc.new_york.modules.1'),
+      t('Courses.ddc.new_york.modules.2'),
+      t('Courses.ddc.new_york.modules.3'),
+    ],
+    price: '$49',
+    priceSub: t('Courses.ddc.new_york.priceSub'),
+    actionUrl: (locale: string) => {
+      const options: Record<string, string> = {
+        en: "https://checkout.americansafetyinstitute.com/cart/53718710649150:1",
+        es: "https://checkout.americansafetyinstitute.com/cart/53718745153854:1"
+      }
+
+      return options[locale];
+    }
+  },
+  {
+    banner: {
+      background: 'bg-blue-950',
+      iconBackground: 'bg-blue-400/15',
+      iconColor: 'text-blue-400',
+      icon: <CarIcon className="w-5 h-5 text-blue-400"/>,
+      title: t('Courses.ddc.new_jersey.title'),
+    },
+    badge: { label: t('Courses.ddc.new_jersey.badge'), style: 'bg-yellow-50 text-yellow-700 border border-yellow-200' },
+    description: t('Courses.ddc.new_jersey.description'),
+    modules: [
+      t('Courses.ddc.new_jersey.modules.0'),
+      t('Courses.ddc.new_jersey.modules.1'),
+      t('Courses.ddc.new_jersey.modules.2'),
+      t('Courses.ddc.new_jersey.modules.3'),
+    ],
+    price: '$49',
+    priceSub: t('Courses.ddc.new_jersey.priceSub'),
+    actionUrl: (locale: string) => {
+      const options: Record<string, string> = {
+        en: "https://checkout.americansafetyinstitute.com/cart/53718748889406:1",
+        es: "https://checkout.americansafetyinstitute.com/cart/53718754296126:1"
+      }
+
+      return options[locale];
+    }
+  },
+  {
+    banner: {
+      background: 'bg-green-950',
+      iconBackground: 'bg-green-400/15',
+      iconColor: 'text-green-400',
+      icon: <GraduationCapIcon className="w-5 h-5 text-green-400"/>,
+      title: t('Courses.pre_licensing.title'),
+    },
+    badge: { label: t('Courses.pre_licensing.badge'), style: 'bg-green-50 text-green-700 border border-green-200' },
+    description: t('Courses.pre_licensing.description'),
+    modules: [
+      t('Courses.pre_licensing.modules.0'),
+      t('Courses.pre_licensing.modules.1'),
+      t('Courses.pre_licensing.modules.2'),
+      t('Courses.pre_licensing.modules.3'),
+    ],
+    price: '$79',
+    priceSub: t('Courses.pre_licensing.priceSub'),
+    actionUrl: (locale: string) => {
+      const options: Record<string, string> = {
+        en: "https://checkout.americansafetyinstitute.com/cart/53718759080254:1",
+        es: "https://checkout.americansafetyinstitute.com/cart/53718764781886:1"
+      }
+
+      return options[locale];
+    }
+  },
+];
+
+export default function Home ({
+                                params
+                              }: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = use(params);
+  const t = useTranslations('HomePage');
   return (
     <div className="font-[Outfit,sans-serif]">
 
@@ -178,7 +281,7 @@ export default function Home () {
           <div className="absolute bottom-4 left-0 right-0 flex overflow-hidden">
             {Array.from({ length: 100 }).map((_, i) => (
               <div
-                key={i}
+                key={`road-item-${i}`}
                 className="hero-road-dash flex-shrink-0 h-1 w-14 mr-10 bg-yellow-400/15 rounded-full"
                 style={{ animationDelay: `${i * -0.15}s` }}
               />
@@ -239,7 +342,7 @@ export default function Home () {
 
               <ul className="hero-checks-anim space-y-3 mb-8">
                 {[t('Top.advantages.first'), t('Top.advantages.second'), t('Top.advantages.third')].map((adv, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white">
+                  <li key={`advantages-hero-checks-${i}`} className="flex items-center gap-3 text-white">
                     <span
                       className="w-5 h-5 rounded-full bg-yellow-400/15 border border-yellow-400 flex items-center justify-center flex-shrink-0">
                       <CircleCheckBigIcon className="w-3 h-3 text-yellow-400"/>
@@ -347,6 +450,45 @@ export default function Home () {
         </div>
       </section>
 
+      {/* ═══ ONLINE COURSES ═══ */}
+      <section id="courses" className="py-20 md:py-28 bg-zinc-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div
+              className="inline-flex items-center gap-2 bg-yellow-400/15 text-yellow-700 px-4 py-2 rounded-full text-xs font-bold mb-4 uppercase tracking-wider">
+              <SmartphoneIcon className="w-3.5 h-3.5"/>
+              {t('Courses.chip')}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-zinc-900 mb-4 tracking-tight">
+              {t.rich('Courses.title', { highlight: (c) => <span className="text-yellow-600">{c}</span> })}
+            </h2>
+            <p className="text-base text-zinc-500 max-w-2xl mx-auto font-light">{t('Courses.description')}</p>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 mb-12">
+            {[
+              { num: t('Courses.stats.online.title'), label: t('Courses.stats.online.description') },
+              { num: t('Courses.stats.approved.title'), label: t('Courses.stats.approved.description') },
+              { num: t('Courses.stats.certificate.title'), label: t('Courses.stats.certificate.description') },
+            ].map((s, i) => (
+              <div key={`courses-stats-item-${i}`}
+                   className="bg-white rounded-2xl border border-zinc-100 p-6 text-center">
+                <div className="text-3xl font-black text-yellow-500">{s.num}</div>
+                <div className="text-xs text-zinc-500 mt-1 uppercase tracking-wider">{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {courses(t).map((course, i) => (
+              <CourseCard key={`course-card-item-${i}`} course={course} locale={locale}/>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ WHY US ═══ */}
       <section id="why-us" className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -386,7 +528,7 @@ export default function Home () {
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               {advantages(t).map((adv, i) => (
-                <div key={i}
+                <div key={`why-us-advantages-item-${i}`}
                      className={`flex gap-4 p-5 rounded-2xl border border-zinc-100 hover:border-yellow-400/30 hover:bg-yellow-50/50 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer ${i === 4 ? 'sm:col-span-2' : ''}`}>
                   <div
                     className="w-11 h-11 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-[0_4px_16px_rgba(246,201,14,0.25)]">
@@ -432,7 +574,7 @@ export default function Home () {
           </div>
           <div className="grid md:grid-cols-3 gap-5 mb-12">
             {testimonials.map((testi, i) => (
-              <div key={i}
+              <div key={`testimonials-item-${i}`}
                    className={`bg-white/[0.03] border border-white/7 rounded-2xl p-7 relative overflow-hidden group ${testi.cardHoverBorder} hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
                 <div
                   className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${testi.topLine} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}/>
@@ -478,7 +620,8 @@ export default function Home () {
               { num: 500, suffix: '+', label: t('Testimonials.statistics.reviews'), color: 'text-pink-400' },
               { num: 98, suffix: '%', label: t('Testimonials.statistics.renewal_rate'), color: 'text-yellow-400' },
             ].map((s, i) => (
-              <div key={i} className={`text-center px-10 ${i > 0 ? 'border-l border-white/7' : ''}`}>
+              <div key={`testimonials-statistics-item-${i}`}
+                   className={`text-center px-10 ${i > 0 ? 'border-l border-white/7' : ''}`}>
                 <div className={`text-4xl font-black ${s.color}`}>
                   <AnimatedCounter value={s.num} suffix={s.suffix}/>
                 </div>
@@ -500,7 +643,7 @@ export default function Home () {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {contacts(t).map((contact, i) => (
-              <div key={i}
+              <div key={`contacts-item-${i}`}
                    className="bg-white rounded-2xl border border-zinc-200 p-6 text-center hover:-translate-y-1 hover:shadow-lg hover:border-yellow-400/30 transition-all duration-200 cursor-pointer">
                 <div
                   className={`w-12 h-12 ${contact.icon.background} rounded-xl flex items-center justify-center mx-auto mb-4`}>
@@ -540,3 +683,58 @@ export default function Home () {
     </div>
   );
 }
+
+const CourseCard = ({ course, locale }: { course: Course, locale: string }) => (
+  <div
+    className="bg-white rounded-2xl overflow-hidden border border-zinc-100 hover:border-yellow-400/50 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+    <div className={`${course.banner.background} h-20 flex items-center px-6 gap-4`}>
+      <div
+        className={`${course.banner.iconBackground} w-11 h-11 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+        {course.banner.icon}
+      </div>
+      <h3 className="text-sm font-bold text-white leading-tight">{course.banner.title}</h3>
+    </div>
+
+    <div className="p-6">
+      <div className="flex items-center gap-2 justify-between mb-3">
+        <span className={`${course.badge.style} text-xs font-bold px-3 py-1 rounded-full`}>
+          {course.badge.label}
+        </span>
+        <span className='flex flex-row gap-2 items-center'>
+          <Image src={UnitedStatesFlag} width={30} height={24} className='rounded-[4px]'
+                 alt='english-united-states-flag'/>
+          <Image src={SpanishFlag} width={30} height={24} className='rounded-[4px]' alt='english-spanish-flag'/>
+        </span>
+      </div>
+
+      <p className="text-sm text-zinc-500 font-light leading-relaxed mb-4">
+        {course.description}
+      </p>
+
+      <ul className="space-y-2 mb-5">
+        {course.modules.map((mod, i) => (
+          <li key={`course-card-modules-item-${i}`} className="flex items-center gap-2.5 text-xs text-zinc-600">
+            <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 flex-shrink-0"/>
+            {mod}
+          </li>
+        ))}
+      </ul>
+
+      <div className="flex items-center justify-between pt-4 border-t border-zinc-100">
+        <div>
+          <div className="text-xl font-black text-zinc-900">{course.price}</div>
+          <div className="text-xs text-zinc-400">{course.priceSub}</div>
+        </div>
+        <button
+          className="bg-yellow-400 hover:bg-yellow-300 text-black text-xs font-bold px-4 py-2.5 rounded-xl transition-colors"
+          onClick={() => {
+            const urlByLocale = course.actionUrl(locale);
+
+            window.open(urlByLocale, '_blank');
+          }}>
+          Enroll now
+        </button>
+      </div>
+    </div>
+  </div>
+);

@@ -5,10 +5,19 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Link, usePathname, useRouter } from "@/locale/navigation";
 import Image from "next/image";
+import { use } from "react";
+import { useLocale } from "use-intl";
+
+const locales = [
+  { code: 'en', label: 'English' },
+  { code: 'es', label: 'Español' },
+  { code: 'ch', label: '中文' },
+  { code: 'ru', label: 'Русский' },
+  { code: 'uz', label: "O'zbek" }
+];
 
 export default function Header () {
-  const pathname = usePathname();
-  const router = useRouter();
+  const locale = useLocale();
 
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-uber-900/95 backdrop-blur-sm shadow-lg">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +26,7 @@ export default function Header () {
               className="flex items-center gap-3">
           <div
             className="w-11 h-11 p-2 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-taxi-500/30">
-            <Image src='/logo.png' alt='logo' width={96} height={96} />
+            <Image src='/logo.png' alt='logo' width={96} height={96}/>
           </div>
           <div className="flex flex-col"><span
             className="text-lg font-bold text-white leading-tight uppercase">SAMKARA</span><span
@@ -44,18 +53,20 @@ export default function Header () {
                   <GlobeIcon className='w-4 h-4'/>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className='w-40 px-0 py-1' align="start">
-                <div className='flex flex-col gap-1'>
-                  <Link href='/' locale='en'
-                        className='hover:bg-taxi-500/10 text-tPCASSaxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>English</Link>
-                  <Link href='/' locale='es'
-                        className='hover:bg-taxi-500/10 text-taxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>Español</Link>
-                  <Link href='/' locale='ch'
-                        className='hover:bg-taxi-500/10 text-taxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>中文</Link>
-                  <Link href='/' locale='ru'
-                        className='hover:bg-taxi-500/10 text-taxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>Русский</Link>
-                  <Link href='/' locale='uz'
-                        className='hover:bg-taxi-500/10 text-taxi-600 bg-white text-center p-2 rounded-none transition-colors text-sm'>O'zbek</Link>
+              <PopoverContent className='w-40' align="start">
+                <div className="flex flex-col gap-1">
+                  {locales.map((lang) => (
+                    <Link
+                      key={`header-popover-locale-item-${lang.code}`}
+                      href="/"
+                      locale={lang.code}
+                      className={`hover:bg-taxi-500/30 ${
+                        locale === lang.code ? 'bg-yellow-500 text-black-600' : 'bg-white text-taxi-600'
+                      } text-center p-2 rounded-none transition-colors text-sm`}
+                    >
+                      {lang.label}
+                    </Link>
+                  ))}
                 </div>
                 {/*<button className="w-full text-left px-4 py-2 hover:bg-gray-50 transition-colors text-sm text-gray-700">O'zbek*/}
                 {/*<PopoverHeader>*/}

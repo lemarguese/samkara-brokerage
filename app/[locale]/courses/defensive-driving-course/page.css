@@ -1,8 +1,7 @@
 .ddc-page {
     padding: 16px;
 
-    max-height: 100%;
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -171,7 +170,7 @@
 
 @media (max-width: 640px) {
     .ddc-page {
-        height: unset;
+        min-height: unset;
         padding: 24px;
     }
 

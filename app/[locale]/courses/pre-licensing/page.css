@@ -1,0 +1,163 @@
+.plc-page {
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #0a1628;
+    color: #f5f5f5;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.plc-hero {
+    max-width: 640px;
+    margin: 128px auto 3rem;
+    text-align: center;
+}
+
+.plc-hero__tag {
+    display: inline-block;
+    color: #f5a623;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+.plc-hero h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.plc-hero p {
+    color: #a3b1c2;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+}
+
+.plc-hero__price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.plc-hero__amount {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.plc-hero__note {
+    color: #7d8da3;
+    font-size: 0.8rem;
+}
+
+.plc-cta {
+    background: #f5a623;
+    color: #0a1628;
+    border: none;
+    border-radius: 10px;
+    padding: 0.85rem 2.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.plc-cta:hover {
+    background: #ffb84d;
+}
+
+.plc-details {
+    max-width: 640px;
+    margin: 0 auto 3rem;
+    border-top: 1px solid #1f3354;
+    padding-top: 2rem;
+}
+
+.plc-details h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.plc-details ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.plc-details li {
+    color: #d6dee8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.plc-details li::before {
+    content: '✓';
+    color: #f5a623;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.plc-info {
+    max-width: 640px;
+    margin: 0 auto;
+    border-top: 1px solid #1f3354;
+    padding-top: 2rem;
+}
+
+.plc-info h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.plc-info__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.plc-info__item {
+    border: 1px solid #1f3354;
+    border-radius: 14px;
+    padding: 1.25rem;
+}
+
+.plc-info__item h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.plc-info__item p {
+    color: #a3b1c2;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+    .plc-page {
+        padding: 24px;
+    }
+
+    .plc-info__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plc-hero h1 {
+        font-size: 1.75rem;
+    }
+}

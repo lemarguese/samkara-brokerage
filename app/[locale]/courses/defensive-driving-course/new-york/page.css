@@ -1,0 +1,124 @@
+.ddc-ny-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-height: 100%;
+    height: 100vh;
+
+    background: #0a1628;
+    color: #f5f5f5;
+    font-family: 'Inter', system-ui, sans-serif;
+    padding: 4rem 1.5rem;
+}
+
+.ddc-ny-hero {
+    max-width: 640px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.ddc-ny-hero__tag {
+    display: inline-block;
+    color: #f5a623;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+.ddc-ny-hero h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.ddc-ny-hero p {
+    color: #a3b1c2;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+}
+
+.ddc-ny-hero__price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.ddc-ny-hero__amount {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.ddc-ny-hero__note {
+    color: #7d8da3;
+    font-size: 0.8rem;
+}
+
+.ddc-ny-cta {
+    background: #f5a623;
+    color: #0a1628;
+    border: none;
+    border-radius: 10px;
+    padding: 0.85rem 2.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ddc-ny-cta:hover {
+    background: #ffb84d;
+}
+
+.ddc-ny-details {
+    max-width: 640px;
+    margin: 0 auto;
+    border-top: 1px solid #1f3354;
+    padding-top: 2rem;
+}
+
+.ddc-ny-details h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.ddc-ny-details ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.ddc-ny-details li {
+    color: #d6dee8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.ddc-ny-details li::before {
+    content: '✓';
+    color: #f5a623;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .ddc-ny-page {
+        padding: 2rem 1rem;
+    }
+
+    .ddc-ny-hero h1 {
+        font-size: 1.75rem;
+    }
+}

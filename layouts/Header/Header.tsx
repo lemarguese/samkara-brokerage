@@ -30,6 +30,7 @@ import UzbekFlag from '../../public/flags/uz.svg';
 
 const navLinks = [
   { to: "/insurance", hash: undefined, label: "Insurance" },
+  { to: "/courses", hash: undefined, label: "Online Courses" },
   { to: "/marketplace", hash: undefined, label: "Market" },
   { to: "/faq", hash: undefined, label: "FAQ" },
   { to: "/", hash: "#testimonials", label: "Testimonials" },

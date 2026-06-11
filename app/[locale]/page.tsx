@@ -11,11 +11,11 @@ import {
   MapPinIcon,
   PhoneIcon, ShieldCheckIcon,
   SmartphoneIcon, StarIcon, TruckIcon, UsersIcon, ZapIcon,
-  GraduationCapIcon, ShieldIcon, InfoIcon
+  GraduationCapIcon, InfoIcon
 } from 'lucide-react';
 import { useTranslations, createTranslator } from "next-intl";
 import { Link } from "@/locale/navigation";
-import { Usable, use, useEffect, useRef } from "react";
+import { use, useEffect, useRef } from "react";
 import Image from "next/image";
 
 import SpanishFlag from '../../public/flags/es.svg';
@@ -171,6 +171,15 @@ interface Course {
   actionUrl: (locale: string) => string;
 }
 
+export const courseUrls: Record<string, string> = {
+  'new-york-ddc-en': 'https://checkout.americansafetyinstitute.com/cart/53718710649150:1',
+  'new-york-ddc-es': 'https://checkout.americansafetyinstitute.com/cart/53718745153854:1',
+  'new-jersey-ddc-en': 'https://checkout.americansafetyinstitute.com/cart/53718748889406:1',
+  'new-jersey-ddc-es': 'https://checkout.americansafetyinstitute.com/cart/53718754296126:1',
+  'pre-licensing-en': 'https://checkout.americansafetyinstitute.com/cart/53718759080254:1',
+  'pre-licensing-es': 'https://checkout.americansafetyinstitute.com/cart/53718764781886:1',
+}
+
 const courses = (t: ReturnType<typeof createTranslator<any, any>>): Course[] => [
   {
     banner: {
@@ -192,8 +201,8 @@ const courses = (t: ReturnType<typeof createTranslator<any, any>>): Course[] => 
     priceSub: t('Courses.ddc.new_york.priceSub'),
     actionUrl: (locale: string) => {
       const options: Record<string, string> = {
-        en: "https://checkout.americansafetyinstitute.com/cart/53718710649150:1",
-        es: "https://checkout.americansafetyinstitute.com/cart/53718745153854:1"
+        en: courseUrls['new-york-ddc-en'],
+        es: courseUrls['new-york-ddc-es']
       }
 
       return options[locale];
@@ -219,8 +228,8 @@ const courses = (t: ReturnType<typeof createTranslator<any, any>>): Course[] => 
     priceSub: t('Courses.ddc.new_jersey.priceSub'),
     actionUrl: (locale: string) => {
       const options: Record<string, string> = {
-        en: "https://checkout.americansafetyinstitute.com/cart/53718748889406:1",
-        es: "https://checkout.americansafetyinstitute.com/cart/53718754296126:1"
+        en: courseUrls['new-jersey-ddc-en'],
+        es: courseUrls['new-jersey-ddc-es']
       }
 
       return options[locale];
@@ -246,8 +255,8 @@ const courses = (t: ReturnType<typeof createTranslator<any, any>>): Course[] => 
     priceSub: t('Courses.pre_licensing.priceSub'),
     actionUrl: (locale: string) => {
       const options: Record<string, string> = {
-        en: "https://checkout.americansafetyinstitute.com/cart/53718759080254:1",
-        es: "https://checkout.americansafetyinstitute.com/cart/53718764781886:1"
+        en: courseUrls['pre-licensing-en'],
+        es: courseUrls['pre-licensing-es']
       }
 
       return options[locale];

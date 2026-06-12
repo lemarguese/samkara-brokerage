@@ -136,14 +136,14 @@ const testimonials = [
   },
 ];
 
-function AnimatedCounter ({ value, suffix = '' }: { value: number; suffix?: string }) {
+function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      observer.disconnect();
+
+    const animate = () => {
       let start = 0;
       const duration = 1400;
       const step = (timestamp: number) => {
@@ -154,11 +154,34 @@ function AnimatedCounter ({ value, suffix = '' }: { value: number; suffix?: stri
         if (progress < 1) requestAnimationFrame(step);
       };
       requestAnimationFrame(step);
-    }, { threshold: 0.3 });
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        animate();
+      },
+      { threshold: 0.3 }
+    );
+
     observer.observe(el);
+
+    // Fallback: if element is already in view at mount (e.g. above the fold,
+    // or IntersectionObserver fires late on fast-loading pages), animate immediately
+    const rect = el.getBoundingClientRect();
+    const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+    if (isInViewport) {
+      observer.disconnect();
+      animate();
+    }
+
     return () => observer.disconnect();
   }, [value, suffix]);
-  return <span ref={ref}>0{suffix}</span>;
+
+  // SSR/initial render shows final value instead of 0, so crawlers and
+  // no-JS users see real content instead of "0"
+  return <span ref={ref}>{value}{suffix}</span>;
 }
 
 interface Course {

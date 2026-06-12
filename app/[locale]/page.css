@@ -71,13 +71,6 @@
     animation: roadScroll 2s linear infinite;
 }
 
-/* ── Ticker track ── */
-.ticker-track {
-    display: flex;
-    width: max-content;
-    animation: tickerScroll 500s linear infinite;
-}
-
 /* ── Hero pills staggered fade-up ── */
 .hero-pill {
     animation: fadeUp 0.4s ease forwards;
@@ -133,4 +126,12 @@
 /* ── Ticker item font ── */
 .ticker-item {
     font-family: 'Syne', sans-serif;
+}
+
+.marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-left: 16px;
 }

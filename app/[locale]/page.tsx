@@ -18,6 +18,8 @@ import { Link } from "@/locale/navigation";
 import { use, useEffect, useRef } from "react";
 import Image from "next/image";
 
+import Marquee from "react-fast-marquee";
+
 import SpanishFlag from '../../public/flags/es.svg';
 import UnitedStatesFlag from '../../public/flags/us.svg';
 
@@ -136,7 +138,7 @@ const testimonials = [
   },
 ];
 
-function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
+function AnimatedCounter ({ value, suffix = '' }: { value: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -287,6 +289,16 @@ const courses = (t: ReturnType<typeof createTranslator<any, any>>): Course[] => 
   },
 ];
 
+const items = [
+  'Rideshare Coverage',
+  'Same-Day TLC',
+  'Fleet Insurance',
+  'Black Car & Livery',
+  'Best Rates Guaranteed',
+  'Multilingual Staff',
+  '30+ Years Experience',
+];
+
 export default function Home ({
                                 params
                               }: {
@@ -323,21 +335,16 @@ export default function Home ({
 
         {/* Ticker */}
         <div className="bg-amber-400 py-3.5 overflow-hidden border-y border-black/10">
-          <div className="ticker-track flex whitespace-nowrap">
-            {[...Array(100)].map((_, pass) =>
-              ['Rideshare Coverage', 'Same-Day TLC', 'Fleet Insurance',
-                'Black Car & Livery', 'Best Rates Guaranteed',
-                'Multilingual Staff', '30+ Years Experience'].map((item, i) => (
-                <span
-                  key={`${pass}-${i}`}
-                  className="ticker-item inline-flex items-center gap-4 px-9 font-bold text-xs tracking-widest uppercase text-black shrink-0"
-                >
-                  {item}
+          <Marquee autoFill speed={150}>
+            <div className='marquee-group'>
+              {items.map((item) => (
+                <span key={item} className="ticker-item inline-flex items-center gap-4 px-9 font-bold text-xs tracking-widest uppercase text-black shrink-0">
+                    {item}
                   <span className="w-1.5 h-1.5 rounded-full bg-black/25"/>
                 </span>
-              ))
-            )}
-          </div>
+              ))}
+            </div>
+          </Marquee>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 relative z-10">

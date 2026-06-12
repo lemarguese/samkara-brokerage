@@ -7440,6 +7440,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-fast-marquee@npm:^1.6.5":
+  version: 1.6.5
+  resolution: "react-fast-marquee@npm:1.6.5"
+  peerDependencies:
+    react: ">= 16.8.0 || ^18.0.0"
+    react-dom: ">= 16.8.0 || ^18.0.0"
+  checksum: 10c0/ea2378c4cd1eb323d004e8c2ff6222a7a4def311e00f0bd0c99adebc906aa56a078c2101b3c6697109b15dcf177bfa31edd95b9f7a114887072e3103fe234ecd
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -7755,6 +7765,7 @@ __metadata:
     react: "npm:19.2.3"
     react-day-picker: "npm:^9.13.2"
     react-dom: "npm:19.2.3"
+    react-fast-marquee: "npm:^1.6.5"
     shadcn: "npm:^3.8.5"
     tailwind-merge: "npm:^3.4.1"
     tailwindcss: "npm:^4"

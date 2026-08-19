@@ -73,13 +73,13 @@ function Header () {
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) =>
               link.hash ? (
-                <a
+                <Link
                   key={link.label}
-                  href={link.hash}
+                  href={`${link.to}${link.hash}`}
                   className="text-gray-300 hover:text-taxi-400 font-medium transition-colors text-sm"
                 >
                   {link.label}
-                </a>
+                </Link>
               ) : (
                 <Link
                   href={link.to}
@@ -194,12 +194,12 @@ function Header () {
                     {navLinks.map((link) =>
                       link.hash ? (
                         <SheetClose asChild key={link.label}>
-                          <a
-                            href={link.hash}
+                          <Link
+                            href={`${link.to}${link.hash}`}
                             className="flex items-center px-4 py-3 rounded-lg text-gray-300 hover:text-taxi-400 hover:bg-white/5 font-medium transition-colors text-base"
                           >
                             {link.label}
-                          </a>
+                          </Link>
                         </SheetClose>
                       ) : (
                         <SheetClose asChild key={link.label}>

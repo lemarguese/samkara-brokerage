@@ -222,7 +222,7 @@ const courses = (t: ReturnType<typeof createTranslator<any, any>>): Course[] => 
       t('Courses.ddc.new_york.modules.2'),
       t('Courses.ddc.new_york.modules.3'),
     ],
-    price: '$49',
+    price: '$35',
     priceSub: t('Courses.ddc.new_york.priceSub'),
     actionUrl: (locale: string) => {
       const options: Record<string, string> = {
@@ -249,7 +249,7 @@ const courses = (t: ReturnType<typeof createTranslator<any, any>>): Course[] => 
       t('Courses.ddc.new_jersey.modules.2'),
       t('Courses.ddc.new_jersey.modules.3'),
     ],
-    price: '$49',
+    price: '$35',
     priceSub: t('Courses.ddc.new_jersey.priceSub'),
     actionUrl: (locale: string) => {
       const options: Record<string, string> = {

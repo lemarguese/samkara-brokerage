@@ -22,7 +22,7 @@ export default function DefensiveDrivingCourseNewJerseyPage() {
           discount for three years.
         </p>
         <div className="ddc-nj-hero__price">
-          <span className="ddc-nj-hero__amount">$49</span>
+          <span className="ddc-nj-hero__amount">$35</span>
           <span className="ddc-nj-hero__note">Certificate available within 24 hours</span>
         </div>
         <div className='flex flex-col items-center gap-2'>

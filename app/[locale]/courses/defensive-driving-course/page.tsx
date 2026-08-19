@@ -46,14 +46,14 @@ export default function DefensiveDrivingCoursePage () {
             <div className={`ddc-state ${stateClicked ? ' active' : ''}`}>
               <h3>New York</h3>
               <p>Reduce up to 4 points & save 10% on insurance for 3 years.</p>
-              <span className="ddc-state__price">$49</span>
+              <span className="ddc-state__price">$35</span>
             </div>
           </Link>
           <Link href='defensive-driving-course/new-jersey'>
             <div className={`ddc-state ${stateClicked ? ' active' : ''}`}>
               <h3>New Jersey</h3>
               <p>Qualify for insurance discounts and point reduction benefits.</p>
-              <span className="ddc-state__price">$49</span>
+              <span className="ddc-state__price">$35</span>
             </div>
           </Link>
         </div>

@@ -45,7 +45,7 @@ export default function Home ({
   });
 
   useEffect(() => {
-    fetch("/reviews.json")
+    fetch("/reviews/reviews.json")
       .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
       .then(setData)
       .catch((err) => console.error("Reviews failed to load:", err));

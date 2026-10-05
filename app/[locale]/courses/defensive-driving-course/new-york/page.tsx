@@ -2,8 +2,8 @@
 
 import './page.css'
 import { Link } from "@/locale/navigation.ts";
-import { courseUrls } from "@/app/[locale]/page.tsx";
 import { Button } from "@/components/ui/button.tsx";
+import { courseUrls } from "@/lib/home.tsx";
 
 export default function DefensiveDrivingCourseNewYorkPage() {
 

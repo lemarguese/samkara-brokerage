@@ -138,6 +138,9 @@
         "google_rating": "Google Rating",
         "reviews": "5-Star Reviews",
         "renewal_rate": "Renewal Rate"
+      },
+      "cta": {
+        "see_all_reviews": "See all reviews on Google"
       }
     },
     "Contact": {

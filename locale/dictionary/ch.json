@@ -138,6 +138,9 @@
         "google_rating": "谷歌评分",
         "reviews": "五星评价",
         "renewal_rate": "续保率"
+      },
+      "cta": {
+        "see_all_reviews": "在 Google 上查看所有评价"
       }
     },
     "Contact": {

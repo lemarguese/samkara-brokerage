@@ -137,6 +137,9 @@
         "google_rating": "Calificación en Google",
         "reviews": "Reseñas de 5 Estrellas",
         "renewal_rate": "Tasa de Renovación"
+      },
+      "cta": {
+        "see_all_reviews": "Ver todas las reseñas en Google"
       }
     },
     "Contact": {

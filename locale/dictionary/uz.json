@@ -138,6 +138,9 @@
         "google_rating": "Google reytingi",
         "reviews": "5 yulduzli sharhlar",
         "renewal_rate": "Yangilanish darajasi"
+      },
+      "cta": {
+        "see_all_reviews": "Google'dagi barcha sharhlarni ko‘rish"
       }
     },
     "Contact": {

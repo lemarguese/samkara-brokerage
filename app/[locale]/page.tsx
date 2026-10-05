@@ -3,301 +3,32 @@
 import './page.css';
 
 import {
-  ArrowRightIcon, AwardIcon,
+  ArrowRightIcon,
   CarIcon,
   CircleCheckBigIcon,
-  CircleHelpIcon, ClockIcon,
-  DollarSignIcon, FileTextIcon, HeartIcon, LanguagesIcon, MailIcon,
+  CircleHelpIcon,
   MapPinIcon,
-  PhoneIcon, ShieldCheckIcon,
-  SmartphoneIcon, StarIcon, TruckIcon, UsersIcon, ZapIcon,
-  GraduationCapIcon, InfoIcon
+  PhoneIcon,
+  SmartphoneIcon, StarIcon,
+  InfoIcon
 } from 'lucide-react';
-import { useTranslations, createTranslator } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link } from "@/locale/navigation";
-import { use, useEffect, useRef } from "react";
+import { use, useEffect, useState } from "react";
 import Image from "next/image";
 
 import Marquee from "react-fast-marquee";
 
 import SpanishFlag from '../../public/flags/es.svg';
 import UnitedStatesFlag from '../../public/flags/us.svg';
-
-const services = (t: ReturnType<typeof createTranslator<any, any>>) => [
-  {
-    icon: { background: 'bg-yellow-400/10', text: 'text-yellow-400', value: <SmartphoneIcon className="w-6 h-6"/> },
-    title: t('Service_Area.list.0.title'), description: t('Service_Area.list.0.description'),
-    banner: 'from-zinc-900 to-zinc-800', dot: 'bg-zinc-700',
-  },
-  {
-    icon: { background: 'bg-black/20', text: 'text-black', value: <CarIcon className="w-6 h-6"/> },
-    title: t('Service_Area.list.1.title'), description: t('Service_Area.list.1.description'),
-    banner: 'from-yellow-400 to-yellow-500', dot: 'bg-yellow-300',
-  },
-  {
-    icon: { background: 'bg-pink-500/20', text: 'text-pink-300', value: <TruckIcon className="w-6 h-6"/> },
-    title: t('Service_Area.list.2.title'), description: t('Service_Area.list.2.description'),
-    banner: 'from-zinc-800 to-zinc-900', dot: 'bg-pink-500',
-  },
-  {
-    icon: { background: 'bg-white/15', text: 'text-white', value: <UsersIcon className="w-6 h-6"/> },
-    title: t('Service_Area.list.3.title'), description: t('Service_Area.list.3.description'),
-    banner: 'from-pink-600 to-pink-700', dot: 'bg-pink-300',
-  },
-  {
-    icon: { background: 'bg-yellow-400/20', text: 'text-yellow-300', value: <FileTextIcon className="w-6 h-6"/> },
-    title: t('Service_Area.list.4.title'), description: t('Service_Area.list.4.description'),
-    banner: 'from-green-700 to-green-800', dot: 'bg-green-400',
-  },
-];
-
-const advantages = (t: ReturnType<typeof createTranslator<any, any>>) => [
-  {
-    icon: <DollarSignIcon className="w-5 h-5 text-black"/>,
-    title: t('Trust.list.0.title'),
-    description: t('Trust.list.0.description')
-  },
-  {
-    icon: <ZapIcon className="w-5 h-5 text-black"/>,
-    title: t('Trust.list.1.title'),
-    description: t('Trust.list.1.description')
-  },
-  {
-    icon: <AwardIcon className="w-5 h-5 text-black"/>,
-    title: t('Trust.list.2.title'),
-    description: t('Trust.list.2.description')
-  },
-  {
-    icon: <HeartIcon className="w-5 h-5 text-black"/>,
-    title: t('Trust.list.3.title'),
-    description: t('Trust.list.3.description')
-  },
-  {
-    icon: <LanguagesIcon className="w-5 h-5 text-black"/>,
-    title: t('Trust.list.4.title'),
-    description: t('Trust.list.4.description')
-  },
-];
-
-const contacts = (t: ReturnType<typeof createTranslator<any, any>>) => [
-  {
-    icon: { value: <PhoneIcon className="w-5 h-5 text-black"/>, background: 'bg-yellow-400' },
-    title: t('Contact.list.phone'), href: 'tel:+12123145555',
-    content: { value: '(212) 314-5555', style: 'text-yellow-600 font-semibold' },
-  },
-  {
-    icon: { value: <MailIcon className="w-5 h-5 text-white"/>, background: 'bg-pink-500' },
-    title: t('Contact.list.email'), href: 'mailto:info@samkarabrokerage.com',
-    content: { value: 'info@samkarabrokerage.com', style: 'text-pink-500 font-semibold text-sm' },
-  },
-  {
-    icon: { value: <MapPinIcon className="w-5 h-5 text-white"/>, background: 'bg-zinc-900' },
-    title: t('Contact.list.office'), href: undefined,
-    content: { value: '4710 32nd Place, Long Island City, NY 11101', style: 'text-zinc-500 text-sm' },
-  },
-  {
-    icon: { value: <ClockIcon className="w-5 h-5 text-white"/>, background: 'bg-green-600' },
-    title: t('Contact.list.hours'), href: undefined,
-    content: { value: 'Mon-Fri: 9am - 5pm, Sat: Closed', style: 'text-zinc-500 text-sm' },
-  },
-];
-
-const testimonials = [
-  {
-    platform: 'Uber',
-    platformStyle: 'bg-white/7 text-white/70 border border-white/10',
-    dotColor: 'bg-white/50',
-    cardHoverBorder: 'hover:border-white/25',
-    topLine: 'from-transparent via-white/20 to-transparent',
-    quote: 'They saved me $200/month on my Uber insurance! The team was incredibly helpful and got me covered the same day. Highly recommend to all rideshare drivers.',
-    highlight: '$200/month',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80',
-    name: 'Mohammed R.', role: 'Uber Driver · 4 years',
-  },
-  {
-    platform: 'Lyft',
-    platformStyle: 'bg-pink-500/15 text-pink-300 border border-pink-500/20',
-    dotColor: 'bg-pink-400',
-    cardHoverBorder: 'hover:border-pink-500/30',
-    topLine: 'from-transparent via-pink-500/40 to-transparent',
-    quote: 'After my accident, they handled everything. The claims process was smooth and I was back on the road in no time. Best insurance broker in NYC!',
-    highlight: 'handled everything',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80',
-    name: 'Maria G.', role: 'Lyft & Uber Driver',
-  },
-  {
-    platform: 'Yellow Taxi',
-    platformStyle: 'bg-yellow-400/12 text-yellow-400 border border-yellow-400/20',
-    dotColor: 'bg-yellow-400',
-    cardHoverBorder: 'hover:border-yellow-400/30',
-    topLine: 'from-transparent via-yellow-400/40 to-transparent',
-    quote: "I've been with them for 8 years now. They always find me the best rates and their customer service is outstanding. A+ experience every time.",
-    highlight: '8 years',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80',
-    name: 'Rajesh P.', role: 'Yellow Taxi Owner',
-  },
-];
-
-function AnimatedCounter ({ value, suffix = '' }: { value: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const animate = () => {
-      let start = 0;
-      const duration = 1400;
-      const step = (timestamp: number) => {
-        if (!start) start = timestamp;
-        const progress = Math.min((timestamp - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = (eased * value).toFixed(1) + suffix;
-        if (progress < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    };
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        observer.disconnect();
-        animate();
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(el);
-
-    // Fallback: if element is already in view at mount (e.g. above the fold,
-    // or IntersectionObserver fires late on fast-loading pages), animate immediately
-    const rect = el.getBoundingClientRect();
-    const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-    if (isInViewport) {
-      observer.disconnect();
-      animate();
-    }
-
-    return () => observer.disconnect();
-  }, [value, suffix]);
-
-  // SSR/initial render shows final value instead of 0, so crawlers and
-  // no-JS users see real content instead of "0"
-  return <span ref={ref}>{value}{suffix}</span>;
-}
-
-interface Course {
-  banner: { background: string; iconBackground: string; iconColor: string; icon: React.ReactNode; title: string; };
-  badge: { label: string; style: string; };
-  description: string;
-  modules: string[];
-  price: string;
-  priceSub: string;
-  actionUrl: (locale: string) => string;
-}
-
-export const courseUrls: Record<string, string> = {
-  'new-york-ddc-en': 'https://checkout.americansafetyinstitute.com/cart/53718710649150:1',
-  'new-york-ddc-es': 'https://checkout.americansafetyinstitute.com/cart/53718745153854:1',
-  'new-jersey-ddc-en': 'https://checkout.americansafetyinstitute.com/cart/53718748889406:1',
-  'new-jersey-ddc-es': 'https://checkout.americansafetyinstitute.com/cart/53718754296126:1',
-  'pre-licensing-en': 'https://checkout.americansafetyinstitute.com/cart/53718759080254:1',
-  'pre-licensing-es': 'https://checkout.americansafetyinstitute.com/cart/53718764781886:1',
-}
-
-const courses = (t: ReturnType<typeof createTranslator<any, any>>): Course[] => [
-  {
-    banner: {
-      background: 'bg-yellow-600',
-      iconBackground: 'bg-zinc-900',
-      iconColor: 'text-yellow-600',
-      icon: <ShieldCheckIcon className="w-5 h-5 text-yellow-400"/>,
-      title: t('Courses.ddc.new_york.title'),
-    },
-    badge: { label: t('Courses.ddc.new_york.badge'), style: 'bg-pink-50 text-pink-700 border border-pink-200' },
-    description: t('Courses.ddc.new_york.description'),
-    modules: [
-      t('Courses.ddc.new_york.modules.0'),
-      t('Courses.ddc.new_york.modules.1'),
-      t('Courses.ddc.new_york.modules.2'),
-      t('Courses.ddc.new_york.modules.3'),
-    ],
-    price: '$35',
-    priceSub: t('Courses.ddc.new_york.priceSub'),
-    actionUrl: (locale: string) => {
-      const options: Record<string, string> = {
-        en: courseUrls['new-york-ddc-en'],
-        es: courseUrls['new-york-ddc-es']
-      }
-
-      return options[locale];
-    }
-  },
-  {
-    banner: {
-      background: 'bg-blue-950',
-      iconBackground: 'bg-blue-400/15',
-      iconColor: 'text-blue-400',
-      icon: <CarIcon className="w-5 h-5 text-blue-400"/>,
-      title: t('Courses.ddc.new_jersey.title'),
-    },
-    badge: { label: t('Courses.ddc.new_jersey.badge'), style: 'bg-yellow-50 text-yellow-700 border border-yellow-200' },
-    description: t('Courses.ddc.new_jersey.description'),
-    modules: [
-      t('Courses.ddc.new_jersey.modules.0'),
-      t('Courses.ddc.new_jersey.modules.1'),
-      t('Courses.ddc.new_jersey.modules.2'),
-      t('Courses.ddc.new_jersey.modules.3'),
-    ],
-    price: '$35',
-    priceSub: t('Courses.ddc.new_jersey.priceSub'),
-    actionUrl: (locale: string) => {
-      const options: Record<string, string> = {
-        en: courseUrls['new-jersey-ddc-en'],
-        es: courseUrls['new-jersey-ddc-es']
-      }
-
-      return options[locale];
-    }
-  },
-  {
-    banner: {
-      background: 'bg-green-950',
-      iconBackground: 'bg-green-400/15',
-      iconColor: 'text-green-400',
-      icon: <GraduationCapIcon className="w-5 h-5 text-green-400"/>,
-      title: t('Courses.pre_licensing.title'),
-    },
-    badge: { label: t('Courses.pre_licensing.badge'), style: 'bg-green-50 text-green-700 border border-green-200' },
-    description: t('Courses.pre_licensing.description'),
-    modules: [
-      t('Courses.pre_licensing.modules.0'),
-      t('Courses.pre_licensing.modules.1'),
-      t('Courses.pre_licensing.modules.2'),
-      t('Courses.pre_licensing.modules.3'),
-    ],
-    price: '$79',
-    priceSub: t('Courses.pre_licensing.priceSub'),
-    actionUrl: (locale: string) => {
-      const options: Record<string, string> = {
-        en: courseUrls['pre-licensing-en'],
-        es: courseUrls['pre-licensing-es']
-      }
-
-      return options[locale];
-    }
-  },
-];
-
-const items = [
-  'Rideshare Coverage',
-  'Same-Day TLC',
-  'Fleet Insurance',
-  'Black Car & Livery',
-  'Best Rates Guaranteed',
-  'Multilingual Staff',
-  '30+ Years Experience',
-];
+import { Course, IReviewsData } from "@/types/main.ts";
+import {
+  ad_items,
+  getHomeAdvantages,
+  getHomeContacts,
+  getHomeCourses,
+  getHomeServices, getPlatform, HOME_VISIBLE_REVIEWS, HomeRatingStars,
+} from "@/lib/home.tsx";
 
 export default function Home ({
                                 params
@@ -306,6 +37,20 @@ export default function Home ({
 }) {
   const { locale } = use(params);
   const t = useTranslations('HomePage');
+
+  const [data, setData] = useState<IReviewsData>({
+    reviews: [],
+    rating: 5,
+    total: 0,
+  });
+
+  useEffect(() => {
+    fetch("/reviews.json")
+      .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+      .then(setData)
+      .catch((err) => console.error("Reviews failed to load:", err));
+  }, []);
+
   return (
     <div className="font-[Outfit,sans-serif]">
 
@@ -337,8 +82,9 @@ export default function Home ({
         <div className="bg-amber-400 py-3.5 overflow-hidden border-y border-black/10">
           <Marquee autoFill speed={150}>
             <div className='marquee-group'>
-              {items.map((item) => (
-                <span key={item} className="ticker-item inline-flex items-center gap-4 px-9 font-bold text-xs tracking-widest uppercase text-black shrink-0">
+              {ad_items.map((item) => (
+                <span key={item}
+                      className="ticker-item inline-flex items-center gap-4 px-9 font-bold text-xs tracking-widest uppercase text-black shrink-0">
                     {item}
                   <span className="w-1.5 h-1.5 rounded-full bg-black/25"/>
                 </span>
@@ -467,7 +213,7 @@ export default function Home ({
               className="text-base text-zinc-500 max-w-2xl mx-auto font-light leading-relaxed">{t('Service_Area.description')}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services(t).map((service, idx) => (
+            {getHomeServices(t).map((service, idx) => (
               <div key={idx}
                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 border border-zinc-100 group cursor-pointer">
                 <div
@@ -527,7 +273,7 @@ export default function Home ({
 
           {/* Cards */}
           <div className="grid md:grid-cols-3 gap-6">
-            {courses(t).map((course, i) => (
+            {getHomeCourses(t).map((course, i) => (
               <CourseCard key={`course-card-item-${i}`} course={course} locale={locale}/>
             ))}
           </div>
@@ -572,7 +318,7 @@ export default function Home ({
               </div>
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
-              {advantages(t).map((adv, i) => (
+              {getHomeAdvantages(t).map((adv, i) => (
                 <div key={`why-us-advantages-item-${i}`}
                      className={`flex gap-4 p-5 rounded-2xl border border-zinc-100 hover:border-yellow-400/30 hover:bg-yellow-50/50 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer ${i === 4 ? 'sm:col-span-2' : ''}`}>
                   <div
@@ -617,63 +363,128 @@ export default function Home ({
             </h2>
             <p className="text-base text-zinc-500 max-w-2xl mx-auto font-light">{t('Testimonials.description')}</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-5 mb-12">
-            {testimonials.map((testi, i) => (
-              <div key={`testimonials-item-${i}`}
-                   className={`bg-white/[0.03] border border-white/7 rounded-2xl p-7 relative overflow-hidden group ${testi.cardHoverBorder} hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
-                <div
-                  className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${testi.topLine} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}/>
-                <div
-                  className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase ${testi.platformStyle} mb-4`}>
-                  <span
-                    className={`w-1.5 h-1.5 rounded-full ${testi.dotColor} animate-[pulse_2s_ease-in-out_infinite]`}/>
-                  {testi.platform}
-                </div>
-                <div className="flex gap-0.5 mb-3">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <StarIcon key={s} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400"/>
-                  ))}
-                </div>
-                <div className="text-[56px] font-black text-yellow-400/10 leading-none mb-[-10px]">"</div>
-                <p className="text-zinc-400 text-sm leading-[1.8] mb-6 font-light">
-                  {testi.quote.split(testi.highlight).map((part, idx, arr) => (
-                    idx < arr.length - 1
-                      ? <span key={idx}>{part}<strong
-                        className="text-white font-semibold">{testi.highlight}</strong></span>
-                      : <span key={idx}>{part}</span>
-                  ))}
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-white/6">
-                  <img alt={testi.name} className="w-10 h-10 rounded-full object-cover border-2 border-yellow-400/30"
-                       src={testi.avatar}/>
-                  <div>
-                    <span className="text-white font-semibold text-sm block">{testi.name}</span>
-                    <span className="text-zinc-500 text-xs mt-0.5 block">{testi.role}</span>
-                  </div>
+
+          <>
+            <div className="grid md:grid-cols-3 gap-5 mb-8">
+              {data.reviews.slice(0, HOME_VISIBLE_REVIEWS).map((review, i) => {
+                const p = getPlatform(review.text);
+                return (
                   <div
-                    className="ml-auto bg-yellow-400/8 border border-yellow-400/15 rounded-full px-2.5 py-1 text-[10px] text-yellow-400/60 font-medium">
-                    ✓ Verified
+                    key={`testimonials-item-${i}`}
+                    className={`bg-white/[0.03] border border-white/7 rounded-2xl p-7 relative overflow-hidden group ${p.hover} hover:-translate-y-1 transition-all duration-300 flex flex-col`}
+                  >
+                    <div
+                      className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${p.topLine} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                    />
+
+                    <div
+                      className={`inline-flex self-start items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase ${p.badge} mb-4`}
+                    >
+                      <span className={`w-1.5 h-1.5 rounded-full ${p.dot} animate-[pulse_2s_ease-in-out_infinite]`}/>
+                      {p.label}
+                    </div>
+
+                    <div className="flex gap-0.5 mb-3">
+                      {Array.from({ length: 5 }).map((_, s) => (
+                        <StarIcon
+                          key={s}
+                          className={`w-3.5 h-3.5 ${
+                            s < review.stars ? 'fill-yellow-400 text-yellow-400' : 'fill-transparent text-zinc-600'
+                          }`}
+                        />
+                      ))}
+                    </div>
+
+                    <div className="text-[56px] font-black text-yellow-400/10 leading-none mb-[-10px]">"</div>
+
+                    {/* clamped to 4 lines, flex-1 keeps all cards the same height */}
+                    <p className="text-zinc-400 text-sm leading-[1.8] mb-6 font-light line-clamp-4 flex-1">
+                      {review.text}
+                    </p>
+
+                    <div className="flex items-center gap-3 pt-4 border-t border-white/6">
+                      {review.photo ? (
+                        <img
+                          alt={review.name}
+                          src={review.photo}
+                          referrerPolicy="no-referrer"
+                          loading="lazy"
+                          className="w-10 h-10 rounded-full object-cover border-2 border-yellow-400/30"
+                        />
+                      ) : (
+                        <div
+                          className="w-10 h-10 rounded-full border-2 border-yellow-400/30 bg-white/5 flex items-center justify-center text-white font-semibold text-sm">
+                          {review.name?.charAt(0).toUpperCase()}
+                        </div>
+                      )}
+                      <div className="min-w-0">
+                        <span className="text-white font-semibold text-sm block truncate">{review.name}</span>
+                        <span className="text-zinc-500 text-xs mt-0.5 block">{review.when}</span>
+                      </div>
+                      <div
+                        className="ml-auto shrink-0 bg-yellow-400/8 border border-yellow-400/15 rounded-full px-2.5 py-1 text-[10px] text-yellow-400/60 font-medium">
+                        Google Review
+                      </div>
+                    </div>
                   </div>
+                );
+              })}
+            </div>
+
+            {/* Rating summary + link to Google Maps */}
+            <div
+              className="flex flex-col md:flex-row items-center justify-between gap-5 bg-white/[0.03] border border-white/7 rounded-2xl px-6 py-5 mb-12">
+              <div className="flex items-center gap-4">
+                {/* Google "G" */}
+                <div className="w-11 h-11 rounded-full bg-white flex items-center justify-center shrink-0">
+                  <svg viewBox="0 0 48 48" className="w-6 h-6" aria-hidden="true">
+                    <path fill="#EA4335"
+                          d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/>
+                    <path fill="#4285F4"
+                          d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/>
+                    <path fill="#FBBC05" d="M10.5 28.7a14.5 14.5 0 0 1 0-9.4l-7.9-6.1a24 24 0 0 0 0 21.6l7.9-6.1z"/>
+                    <path fill="#34A853"
+                          d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.9 2.3-8.4 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/>
+                  </svg>
+                </div>
+
+                <div className="text-center md:text-left">
+                  <div className="flex items-center justify-center md:justify-start gap-2">
+                    <span className="text-white text-2xl font-bold leading-none">{Number(data.rating).toFixed(1)}</span>
+                    <HomeRatingStars rating={data.rating} className="w-4 h-4"/>
+                  </div>
+                  <p className="text-zinc-500 text-xs mt-1">
+                    Based on <span className="text-zinc-300 font-medium">{data.total}</span> Google reviews
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-          <div
-            className="bg-white/[0.02] border border-white/7 rounded-2xl px-8 py-7 flex flex-wrap justify-center items-center gap-0">
-            {[
-              { num: 4.9, suffix: '', label: t('Testimonials.statistics.google_rating'), color: 'text-yellow-400' },
-              { num: 500, suffix: '+', label: t('Testimonials.statistics.reviews'), color: 'text-pink-400' },
-              { num: 98, suffix: '%', label: t('Testimonials.statistics.renewal_rate'), color: 'text-yellow-400' },
-            ].map((s, i) => (
-              <div key={`testimonials-statistics-item-${i}`}
-                   className={`text-center px-10 ${i > 0 ? 'border-l border-white/7' : ''}`}>
-                <div className={`text-4xl font-black ${s.color}`}>
-                  <AnimatedCounter value={s.num} suffix={s.suffix}/>
+
+              {/* Google Maps button */}
+              {data.mapsUrl && (
+                <div className="flex justify-center">
+                  <a href={data.mapsUrl}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="group/cta inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-sm px-5 py-3 rounded-full transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
+                  >
+                    {t('Testimonials.cta.see_all_reviews')}
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-4 h-4 transition-transform duration-300 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M8 7h9v9"/>
+                    </svg>
+                  </a>
                 </div>
-                <div className="text-xs text-zinc-500 uppercase tracking-wider mt-1">{s.label}</div>
-              </div>
-            ))}
-          </div>
+              )}
+            </div>
+          </>
         </div>
       </section>
 
@@ -687,7 +498,7 @@ export default function Home ({
             <p className="text-base text-zinc-500 max-w-2xl mx-auto font-light">{t('Contact.description')}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            {contacts(t).map((contact, i) => (
+            {getHomeContacts(t).map((contact, i) => (
               <div key={`contacts-item-${i}`}
                    className="bg-white rounded-2xl border border-zinc-200 p-6 text-center hover:-translate-y-1 hover:shadow-lg hover:border-yellow-400/30 transition-all duration-200 cursor-pointer">
                 <div
@@ -729,7 +540,13 @@ export default function Home ({
   );
 }
 
-const CourseCard = ({ course, locale }: { course: Course, locale: string }) => (
+const CourseCard = ({
+                      course, locale
+                    }: {
+  course: Course, locale
+    :
+    string
+}) => (
   <div
     className="bg-white rounded-2xl overflow-hidden border border-zinc-100 hover:border-yellow-400/50 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
     <div className={`${course.banner.background} h-20 flex items-center px-6 gap-4`}>

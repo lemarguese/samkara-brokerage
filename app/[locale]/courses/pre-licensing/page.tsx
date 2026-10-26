@@ -4,8 +4,11 @@ import './page.css'
 import { Button } from "@/components/ui/button.tsx";
 import { Link } from "@/locale/navigation.ts";
 import { courseUrls } from "@/lib/home.tsx";
+import { useTranslations } from "next-intl";
 
-export default function PreLicensingCoursePage() {
+export default function PreLicensingCoursePage () {
+
+  const t = useTranslations('Courses.pre-licensing-course')
 
   const enroll = (key: 'en' | 'es') => {
     window.open(courseUrls[`pre-licensing-${key}`], '_blank');
@@ -14,16 +17,12 @@ export default function PreLicensingCoursePage() {
   return (
     <section className="plc-page">
       <div className="plc-hero">
-        <span className="plc-hero__tag">Required for Road Test</span>
-        <h1>Pre-Licensing Course (5-Hour Class)</h1>
-        <p>
-          New York DMV-required 5-hour course for new drivers. Complete the
-          class to receive your MV-278 certificate and become eligible to
-          schedule your road test — all online, at your own pace.
-        </p>
+        <span className="plc-hero__tag">{t('chip')}</span>
+        <h1>{t('title')}</h1>
+        <p>{t('description')}</p>
         <div className="plc-hero__price">
           <span className="plc-hero__amount">$79</span>
-          <span className="plc-hero__note">MV-278 certificate included</span>
+          <span className="plc-hero__note">{t('advantage')}</span>
         </div>
         <div className='flex flex-col items-center gap-2'>
           <div className='flex flex-col md:flex-row items-center gap-2'>
@@ -31,35 +30,35 @@ export default function PreLicensingCoursePage() {
             <Button className='plc-cta' onClick={() => enroll('es')}>Enroll (Spanish)</Button>
           </div>
           <Link href='./' className='w-max'>
-            <Button variant='secondary' className='w-[250px]'>Back</Button>
+            <Button variant='secondary' className='w-[250px]'>{t('action')}</Button>
           </Link>
         </div>
       </div>
 
       <div className="plc-details">
-        <h2>What you'll learn</h2>
+        <h2>{t('learning.title')}</h2>
         <ul>
-          <li>Rules of the road & traffic laws</li>
-          <li>Defensive driving and risk awareness</li>
-          <li>Sharing the road with pedestrians and cyclists</li>
-          <li>Alcohol, drugs & impaired driving prevention</li>
+          <li>{t('learning.list.0')}</li>
+          <li>{t('learning.list.1')}</li>
+          <li>{t('learning.list.2')}</li>
+          <li>{t('learning.list.3')}</li>
         </ul>
       </div>
 
       <div className="plc-info">
-        <h2>Good to know</h2>
+        <h2>{t('good_to_know.title')}</h2>
         <div className="plc-info__grid">
           <div className="plc-info__item">
-            <h3>Who needs this</h3>
-            <p>Required for all first-time NY drivers before scheduling a road test.</p>
+            <h3>{t('good_to_know.audience.title')}</h3>
+            <p>{t('good_to_know.audience.description')}</p>
           </div>
           <div className="plc-info__item">
-            <h3>Format</h3>
-            <p>5 hours total, completed online in one or multiple sessions.</p>
+            <h3>{t('good_to_know.format.title')}</h3>
+            <p>{t('good_to_know.format.description')}</p>
           </div>
           <div className="plc-info__item">
-            <h3>Certificate</h3>
-            <p>MV-278 issued upon completion, valid for use with the DMV.</p>
+            <h3>{t('good_to_know.certificate.title')}</h3>
+            <p>{t('good_to_know.certificate.description')}</p>
           </div>
         </div>
       </div>

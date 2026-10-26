@@ -54,7 +54,6 @@
 .course-panel {
     position: relative;
     display: flex;
-    align-items: flex-end;
     border-radius: 20px;
     padding: 2.5rem;
     min-height: 280px;

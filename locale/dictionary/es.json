@@ -155,6 +155,111 @@
       "question_description": "Para cotizaciones, cambio de broker, apoyo con reclamaciones o servicios de DMV y TLC."
     }
   },
+  "Courses": {
+    "main": {
+      "chip": "Cursos en línea",
+      "title": "Obtén tu certificado sin salir de casa",
+      "description": "Ya sea que necesites un certificado de conducción defensiva para obtener un descuento en tu seguro o que estés comenzando y necesites el curso previo a la licencia, tenemos lo que necesitas: cursos aprobados por el estado, completamente en línea y con certificados disponibles el mismo día.",
+      "ddc": {
+        "tag": "Ahorra en tu seguro",
+        "title": "Curso de conducción defensiva",
+        "description": "Reduce los puntos de tu historial de conducción y obtén un descuento en tu seguro durante tres años. Disponible para conductores de Nueva York y Nueva Jersey."
+      },
+      "plc": {
+        "tag": "Requisito para comenzar",
+        "title": "Curso previo a la licencia",
+        "description": "El curso de 5 horas que todos los nuevos conductores de Nueva York deben completar antes de programar su examen práctico. Obtén tu certificado MV-278 rápidamente."
+      },
+      "learnMore": "Más información →"
+    },
+    "defensive-driving-course": {
+      "chip": "Curso en línea",
+      "title": "Curso de conducción defensiva",
+      "description": "Un curso de conducción defensiva aprobado por el estado que te ayuda a desarrollar hábitos más seguros al volante. Reduce los puntos de tu historial de conducción y califica para un descuento en tu seguro, todo desde tu teléfono o computadora y a tu propio ritmo.",
+      "action": "Elige tu estado",
+      "learning": {
+        "title": "Qué aprenderás",
+        "list": {
+          "0": "Fundamentos de la conducción defensiva y prevención de colisiones",
+          "1": "Cómo reconocer los peligros de conducir distraído, bajo los efectos de sustancias o con fatiga",
+          "2": "Cómo controlar la ira al volante y afrontar situaciones de conducción agresiva",
+          "3": "Repaso del curso, evaluación final y obtención del certificado"
+        }
+      },
+      "availability": {
+        "title": "Disponible en",
+        "ny": {
+          "description": "Reduce hasta 4 puntos y ahorra un 10 % en tu seguro durante 3 años."
+        },
+        "nj": {
+          "description": "Califica para descuentos en el seguro y beneficios de reducción de puntos."
+        }
+      },
+      "new-york": {
+        "title": "Curso de conducción defensiva (NY)",
+        "city": "Nueva York",
+        "description": "Curso de conducción defensiva de 6 horas aprobado por el DMV de Nueva York. Reduce hasta 4 puntos de tu historial de conducción y califica para un descuento del 10 % en tu seguro durante tres años.",
+        "period": "Certificado disponible en un plazo de 24 horas",
+        "learning": {
+          "title": "Qué aprenderás",
+          "list": {
+            "0": "Fundamentos de la conducción defensiva y prevención de colisiones",
+            "1": "Cómo reconocer los peligros de conducir distraído, bajo los efectos de sustancias o con fatiga",
+            "2": "Cómo controlar la ira al volante y afrontar situaciones de conducción agresiva",
+            "3": "Repaso del curso, evaluación final y obtención del certificado"
+          }
+        },
+        "action": "Volver"
+      },
+      "new-jersey": {
+        "title": "Curso de conducción defensiva (NJ)",
+        "city": "Nueva Jersey",
+        "description": "Curso de conducción defensiva de 6 horas aprobado por el DMV de Nueva Jersey. Reduce hasta 4 puntos de tu historial de conducción y califica para un descuento del 10 % en tu seguro durante tres años.",
+        "period": "Certificado disponible en un plazo de 24 horas",
+        "learning": {
+          "title": "Qué aprenderás",
+          "list": {
+            "0": "Fundamentos de la conducción defensiva y prevención de colisiones",
+            "1": "Cómo reconocer los peligros de conducir distraído, bajo los efectos de sustancias o con fatiga",
+            "2": "Cómo controlar la ira al volante y afrontar situaciones de conducción agresiva",
+            "3": "Repaso del curso, evaluación final y obtención del certificado"
+          }
+        },
+        "action": "Volver"
+      }
+    },
+    "pre-licensing-course": {
+      "chip": "Obligatorio para el examen práctico",
+      "title": "Curso previo a la licencia (clase de 5 horas)",
+      "description": "Curso de 5 horas exigido por el DMV de Nueva York para nuevos conductores. Completa la clase para recibir tu certificado MV-278 y poder programar tu examen práctico de conducción, todo en línea y a tu propio ritmo.",
+      "advantage": "Certificado MV-278 incluido",
+      "action": "Volver",
+      "learning": {
+        "title": "Qué aprenderás",
+        "list": {
+          "0": "Normas de circulación y leyes de tránsito",
+          "1": "Conducción defensiva y prevención de riesgos",
+          "2": "Cómo compartir la vía con peatones y ciclistas",
+          "3": "Prevención de los riesgos de conducir bajo los efectos del alcohol o las drogas"
+        }
+      },
+      "good_to_know": {
+        "title": "Información importante",
+        "audience": {
+          "title": "Quién lo necesita",
+          "description": "Es obligatorio para todos los conductores que solicitan una licencia de conducir por primera vez en Nueva York, antes de programar el examen práctico."
+        },
+        "format": {
+          "title": "Formato",
+          "description": "5 horas en total, que puedes completar en línea en una sola sesión o en varias sesiones."
+        },
+        "certificate": {
+          "title": "Certificado",
+          "description": "El certificado MV-278 se emite al completar el curso y es válido para presentarlo ante el DMV."
+        }
+      }
+    }
+  },
   "Insurance": {
     "title": "¿Cómo Podemos <help>Ayudarte</help> Hoy?",
     "description": "Selecciona el servicio que necesitas y completa el formulario. Nuestro equipo se comunicará contigo lo antes posible.",

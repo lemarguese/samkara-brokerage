@@ -156,6 +156,111 @@
       "question_description": "For insurance quotes, broker changes, claims support, or DMV & TLC services"
     }
   },
+  "Courses": {
+    "main": {
+      "chip": "Online Courses",
+      "title": "Get certified without leaving your seat",
+      "description": "Whether you need a defensive driving certificate for your insurance discount, or you're just starting out and need your pre-licensing course, we've got you covered — state-approved, fully online, and ready same day.",
+      "ddc": {
+        "tag": "Save on Insurance",
+        "title": "Defensive Driving Course",
+        "description": "Knock points off your record and lock in an insurance discount for three years. Available for NY and NJ drivers."
+      },
+      "plc": {
+        "tag": "Required to Get Started",
+        "title": "Pre-Licensing Course",
+        "description": "The 5-hour class every new NY driver needs before scheduling their road test. Get your MV-278 certificate fast."
+      },
+      "learnMore": "Learn more →"
+    },
+    "defensive-driving-course": {
+      "chip": "Online Course",
+      "title": "Defensive Driving Course",
+      "description": "A state-approved defensive driving course that helps you build safer habits behind the wheel. Reduce points off your driving record and qualify for an insurance discount — all from your phone or computer, at your own pace.",
+      "action": "Choose your state",
+      "learning": {
+        "title": "What you'll learn",
+        "list": {
+          "0": "Defensive driving fundamentals & collision prevention",
+          "1": "Distracted, impaired & fatigued driving awareness",
+          "2": "Managing road rage and aggressive driving situations",
+          "3": "Course review, final assessment & certificate completion"
+        }
+      },
+      "availability": {
+        "title": "Available for",
+        "ny": {
+          "description": "Reduce up to 4 points & save 10% on insurance for 3 years."
+        },
+        "nj": {
+          "description": "Qualify for insurance discounts and point reduction benefits."
+        }
+      },
+      "new-york": {
+        "title": "Defensive Driving Course (NY)",
+        "city": "New York",
+        "description": "New York DMV-approved 6-hour Defensive Driving Course. Reduce up to 4 points from your driving record and qualify for a 10% insurance discount for three years.",
+        "period": "Certificate available within 24 hours",
+        "learning": {
+          "title": "What you'll learn",
+          "list": {
+            "0": "Defensive driving fundamentals & collision prevention",
+            "1": "Distracted, impaired & fatigued driving awareness",
+            "2": "Managing road rage and aggressive driving situations",
+            "3": "Course review, final assessment & certificate completion"
+          }
+        },
+        "action": "Back"
+      },
+      "new-jersey": {
+        "title": "Defensive Driving Course (NJ)",
+        "city": "New Jersey",
+        "description": "New Jersey DMV-approved 6-hour Defensive Driving Course. Reduce up to 4 points from your driving record and qualify for a 10% insurance discount for three years.",
+        "period": "Certificate available within 24 hours",
+        "learning": {
+          "title": "What you'll learn",
+          "list": {
+            "0": "Defensive driving fundamentals & collision prevention",
+            "1": "Distracted, impaired & fatigued driving awareness",
+            "2": "Managing road rage and aggressive driving situations",
+            "3": "Course review, final assessment & certificate completion"
+          }
+        },
+        "action": "Back"
+      }
+    },
+    "pre-licensing-course": {
+      "chip": "Required for Road Test",
+      "title": "Pre-Licensing Course (5-Hour Class)",
+      "description": "New York DMV-required 5-hour course for new drivers. Complete the class to receive your MV-278 certificate and become eligible to schedule your road test — all online, at your own pace.",
+      "advantage": "MV-278 certificate included",
+      "action": "Back",
+      "learning": {
+        "title": "What you'll learn",
+        "list": {
+          "0": "Rules of the road & traffic laws",
+          "1": "Defensive driving and risk awareness",
+          "2": "Sharing the road with pedestrians and cyclists",
+          "3": "Alcohol, drugs & impaired driving prevention"
+        }
+      },
+      "good_to_know": {
+        "title": "Good to know",
+        "audience": {
+          "title": "Who needs this",
+          "description": "Required for all first-time NY drivers before scheduling a road test."
+        },
+        "format": {
+          "title": "Format",
+          "description": "5 hours total, completed online in one or multiple sessions."
+        },
+        "certificate": {
+          "title": "Certificate",
+          "description": "MV-278 issued upon completion, valid for use with the DMV."
+        }
+      }
+    }
+  },
   "Insurance": {
     "title": "How Can We <help>Help You</help> Today?",
     "description": "Select a service below and fill out the form. Our team will get back to you promptly.",

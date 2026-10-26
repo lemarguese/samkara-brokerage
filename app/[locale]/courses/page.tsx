@@ -1,42 +1,36 @@
+"use client"
+
 import Link from 'next/link';
 import './page.css';
+import { useTranslations } from "next-intl";
 
 export default function CoursesPage () {
+  const t = useTranslations('Courses.main');
+
   return (
     <div className="courses-page">
       <section className="courses-hero">
-        <span className="courses-hero__eyebrow">Online Courses</span>
-        <h1>Get certified without leaving your seat</h1>
-        <p>
-          Whether you need a defensive driving certificate for your insurance
-          discount, or you're just starting out and need your pre-licensing
-          course, we've got you covered — state-approved, fully online, and
-          ready same day.
-        </p>
+        <span className="courses-hero__eyebrow">{t('chip')}</span>
+        <h1>{t('title')}</h1>
+        <p>{t('description')}</p>
       </section>
 
       <section className="courses-split">
         <Link href="courses/defensive-driving-course" className="course-panel course-panel--ddc">
           <div className="course-panel__content">
-            <span className="course-panel__tag">Save on Insurance</span>
-            <h2>Defensive Driving Course</h2>
-            <p>
-              Knock points off your record and lock in an insurance discount
-              for three years. Available for NY and NJ drivers.
-            </p>
-            <span className="course-panel__link">Learn more →</span>
+            <span className="course-panel__tag">{t('ddc.tag')}</span>
+            <h2>{t('ddc.title')}</h2>
+            <p>{t('ddc.description')}</p>
+            <span className="course-panel__link">{t('learnMore')}</span>
           </div>
         </Link>
 
         <Link href="courses/pre-licensing" className="course-panel course-panel--plc">
           <div className="course-panel__content">
-            <span className="course-panel__tag">Required to Get Started</span>
-            <h2>Pre-Licensing Course</h2>
-            <p>
-              The 5-hour class every new NY driver needs before scheduling
-              their road test. Get your MV-278 certificate fast.
-            </p>
-            <span className="course-panel__link">Learn more →</span>
+            <span className="course-panel__tag">{t('plc.tag')}</span>
+            <h2>{t('plc.title')}</h2>
+            <p>{t('plc.description')}</p>
+            <span className="course-panel__link">{t('learnMore')}</span>
           </div>
         </Link>
       </section>

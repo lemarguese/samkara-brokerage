@@ -156,6 +156,111 @@
       "question_description": "Sug‘urta narxlari, broker almashtirish, claim yordam yoki DMV & TLC xizmatlari bo‘yicha"
     }
   },
+  "Courses": {
+    "main": {
+      "chip": "Onlayn kurslar",
+      "title": "Uydan chiqmasdan sertifikat oling",
+      "description": "Sug‘urta chegirmasiga ega bo‘lish uchun himoyaviy haydash sertifikati kerakmi yoki haydovchilik guvohnomasini olishni boshlayapsizmi va dastlabki tayyorgarlik kursidan o‘tishingiz kerakmi? Biz sizga yordam beramiz — davlat tomonidan tasdiqlangan, to‘liq onlayn va sertifikatni shu kunning o‘zida olish imkoniyati bilan.",
+      "ddc": {
+        "tag": "Sug‘urtadan tejang",
+        "title": "Himoyaviy haydash kursi",
+        "description": "Haydovchilik tarixingizdagi jarima ballarini kamaytiring va uch yil davomida sug‘urta chegirmasidan foydalaning. Nyu-York va Nyu-Jersi haydovchilari uchun mavjud."
+      },
+      "plc": {
+        "tag": "Boshlash uchun majburiy",
+        "title": "Haydovchilikdan oldingi tayyorgarlik kursi",
+        "description": "Nyu-Yorkda yangi haydovchilar yo‘l imtihoniga yozilishdan oldin o‘tishi kerak bo‘lgan 5 soatlik kurs. MV-278 sertifikatingizni tezda oling."
+      },
+      "learnMore": "Batafsil ma’lumot →"
+    },
+    "defensive-driving-course": {
+      "chip": "Onlayn kurs",
+      "title": "Himoyaviy haydash kursi",
+      "description": "Haydash paytida xavfsizroq odatlarni shakllantirishga yordam beradigan, shtat tomonidan tasdiqlangan himoyaviy haydash kursi. Haydovchilik tarixingizdagi jarima ballarini kamaytiring va sug‘urta chegirmasiga ega bo‘ling — barchasini telefon yoki kompyuteringiz orqali, o‘zingizga qulay vaqtda o‘rganing.",
+      "action": "Shtatingizni tanlang",
+      "learning": {
+        "title": "Nimalarni o‘rganasiz",
+        "list": {
+          "0": "Himoyaviy haydash asoslari va yo‘l-transport hodisalarining oldini olish",
+          "1": "Chalg‘igan, mast yoki charchagan holda haydash xavflari",
+          "2": "Yo‘ldagi tajovuzkor xatti-harakatlar va jahlni boshqarish",
+          "3": "Kursni takrorlash, yakuniy sinov va sertifikatni olish"
+        }
+      },
+      "availability": {
+        "title": "Quyidagi shtatlar uchun mavjud",
+        "ny": {
+          "description": "4 tagacha jarima ballini kamaytiring va 3 yil davomida sug‘urtadan 10% chegirmaga ega bo‘ling."
+        },
+        "nj": {
+          "description": "Sug‘urta chegirmalari va jarima ballarini kamaytirish imkoniyatlaridan foydalaning."
+        }
+      },
+      "new-york": {
+        "title": "Himoyaviy haydash kursi (NY)",
+        "city": "Nyu-York",
+        "description": "Nyu-York DMV tomonidan tasdiqlangan 6 soatlik himoyaviy haydash kursi. Haydovchilik tarixingizdagi 4 tagacha jarima ballini kamaytiring va uch yil davomida avtomobil sug‘urtasidan 10% chegirmaga ega bo‘ling.",
+        "period": "Sertifikat 24 soat ichida tayyor bo‘ladi",
+        "learning": {
+          "title": "Nimalarni o‘rganasiz",
+          "list": {
+            "0": "Himoyaviy haydash asoslari va yo‘l-transport hodisalarining oldini olish",
+            "1": "Chalg‘igan, mast yoki charchagan holda haydash xavflari",
+            "2": "Yo‘ldagi jahl va tajovuzkor haydash holatlarini boshqarish",
+            "3": "Kursni takrorlash, yakuniy sinov va sertifikatni olish"
+          }
+        },
+        "action": "Orqaga"
+      },
+      "new-jersey": {
+        "title": "Himoyaviy haydash kursi (NJ)",
+        "city": "Nyu-Jersi",
+        "description": "Nyu-Jersi DMV tomonidan tasdiqlangan 6 soatlik himoyaviy haydash kursi. Haydovchilik tarixingizdagi 4 tagacha jarima ballini kamaytiring va uch yil davomida avtomobil sug‘urtasidan 10% chegirmaga ega bo‘ling.",
+        "period": "Sertifikat 24 soat ichida tayyor bo‘ladi",
+        "learning": {
+          "title": "Nimalarni o‘rganasiz",
+          "list": {
+            "0": "Himoyaviy haydash asoslari va yo‘l-transport hodisalarining oldini olish",
+            "1": "Chalg‘igan, mast yoki charchagan holda haydash xavflari",
+            "2": "Yo‘ldagi jahl va tajovuzkor haydash holatlarini boshqarish",
+            "3": "Kursni takrorlash, yakuniy sinov va sertifikatni olish"
+          }
+        },
+        "action": "Orqaga"
+      }
+    },
+    "pre-licensing-course": {
+      "chip": "Yo‘l imtihoni uchun majburiy",
+      "title": "Haydovchilik guvohnomasini olishdan oldingi kurs (5 soatlik dars)",
+      "description": "Nyu-York DMV tomonidan yangi haydovchilar uchun talab qilinadigan 5 soatlik kurs. MV-278 sertifikatini olish va yo‘l imtihoniga yozilish huquqiga ega bo‘lish uchun kursni yakunlang — barchasi onlayn, o‘zingizga qulay vaqtda.",
+      "advantage": "MV-278 sertifikati narxga kiritilgan",
+      "action": "Orqaga",
+      "learning": {
+        "title": "Nimalarni o‘rganasiz",
+        "list": {
+          "0": "Yo‘l harakati qoidalari va qonunlari",
+          "1": "Himoyaviy haydash va xavflarni oldindan aniqlash",
+          "2": "Piyodalar va velosipedchilar bilan yo‘ldan birgalikda foydalanish",
+          "3": "Spirtli ichimliklar, giyohvand moddalar va mast holda haydashning oldini olish"
+        }
+      },
+      "good_to_know": {
+        "title": "Bilishingiz kerak",
+        "audience": {
+          "title": "Kimlar uchun kerak",
+          "description": "Nyu-Yorkda birinchi marta haydovchilik guvohnomasini olayotgan barcha haydovchilar yo‘l imtihoniga yozilishdan oldin ushbu kursni o‘tashlari shart."
+        },
+        "format": {
+          "title": "Kurs formati",
+          "description": "Jami 5 soat. Kursni onlayn tarzda bir yoki bir nechta mashg‘ulotda yakunlashingiz mumkin."
+        },
+        "certificate": {
+          "title": "Sertifikat",
+          "description": "Kurs yakunlangach, DMVda foydalanish uchun MV-278 sertifikati beriladi."
+        }
+      }
+    }
+  },
   "Insurance": {
     "title": "Bugun sizga qanday <help>yordam bera olamiz</help>?",
     "description": "Quyidagi xizmatlardan birini tanlang va formani to‘ldiring. Jamoamiz siz bilan tez orada bog‘lanadi.",
